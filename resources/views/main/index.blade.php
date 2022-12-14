@@ -35,6 +35,7 @@
         <div id="reactRoute"></div>
         <script src="{{ mix('js/app.js') }}"></script>
         <script src="{{ mix('js/pages/MainRouter/MainRouter.js') }}"></script>
+        
     </body>
 
 </html>
