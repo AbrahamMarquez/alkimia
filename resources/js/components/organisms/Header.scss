@@ -1,5 +1,3 @@
-
-
 .Header {
     height: 65px;
     width: 100%;
@@ -23,6 +21,7 @@
         height: 100vh;
         transition: all 0.5s;
         display: flex;
+        z-index: 1;
 
         &.OpenSide {
             right: 0;
@@ -69,15 +68,14 @@
         }
     }
 
-
-    .header-right{
+    .header-right {
         display: flex;
         gap: 20px;
         align-items: center;
         width: 620px;
-        margin-right: 200pxg;
+        margin-right: 150px;
 
-        .enlaces-header{
+        .enlaces-header {
             display: flex;
             gap: 54px;
             font-size: 14.72px;
@@ -85,19 +83,19 @@
             font-family: "Metropolis";
         }
     }
-
-
-   
-  
 }
 
-@media  (max-width: 1870px) {
+.bgColorA{
+    background: rgb(250, 247, 247);
+}
+
+@media (min-width: 1870px) {
     .Header {
-        height: 90px !important;
+        height: 90px;
         display: flex;
         justify-content: space-between;
 
-        .Header-logo{
+        .Header-logo {
             width: 79px;
         }
     }
