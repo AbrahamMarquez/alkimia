@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 //Assets
-import Alkimia from "../../assets/icons/Alkimia.png";
-import Menu from "../../assets/icons/menu.svg";
-import Close from "../../assets/icons/close.svg";
+import Alkimia from "../../../assets/icons/Alkimia.png";
+import Menu from "../../../assets/icons/menu.svg";
+import Close from "../../../assets/icons/close.svg";
 
 import "./Header.scss";
-import Button from "../atoms/Button/Button";
+import Button from "../../atoms/Button/Button";
 
 const Header = ({className}) => {
     const [openSide, setOpenSide] = useState(false);
