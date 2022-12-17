@@ -65,20 +65,15 @@
                 gap: 15px;
                 justify-content: flex-end;
 
-                .border{
+                .border {
                     height: 40px;
-
-                    &:hover{
-                        background-color: #000;
-                    }
-                  
                 }
             }
         }
     }
 
     .header-right {
-        display: flex;
+        display: none;
         gap: 20px;
         align-items: center;
         width: 620px;
@@ -95,7 +90,7 @@
     }
 }
 
-.bgColorA{
+.bgColorA {
     background: rgb(250, 247, 247);
 }
 
@@ -108,10 +103,41 @@
         .Header-logo {
             width: 79px;
         }
+        .navA {
+            display: none;
+        }
+        .header-right {
+            display: inline-flex;
+        }
 
-        .border{
+        .linkA {
+            font-family: "Metropolis" !important;
+            font-size: 14.72px !important;
+            cursor: pointer !important;
+
+            &:hover {
+                color: #df1683 !important;
+            }
+        }
+
+        .border {
             height: 50px !important;
             font-size: 14.72px !important;
+            // transition: all 0.3s;
+
+           
+           
+            transition: background-position 0.5s;
+
+            &:hover {
+                // background-color: #df1683 !important;
+                // border: 1px solid #df1683 !important;
+                background: linear-gradient(to right, #df1683 0%, #df1683 100%);
+                background-size: 200% 100%;
+                background-position: left top;
+                background-position: right top;
+            }
+           
         }
     }
 }

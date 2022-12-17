@@ -60,12 +60,27 @@ import Experiencias from "../../../assets/icons/Experiencias.svg";
 import "./LandingPage.scss";
 import PostCardViewx from "../../../components/molecules/PostCardView/PostCardViewx";
 import Carousel from "../../../components/molecules/Carousel/Carousel";
+import Map from "../../../components/molecules/Maps/Maps";
 
 const LandingPage = () => {
     const [openPlace, setOpenPlace] = useState(false);
     const [openCategory, setOpenCategory] = useState(false); //-250
-    const [margen, setMargen] = useState((window.innerWidth <= 450) ? -100 : -250)
+    const [margen, setMargen] = useState(
+        window.innerWidth <= 450 ? -100 : -250
+    );
 
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 400) {
+                    document.getElementById("secct-3-device").style.left =
+                        "20px";
+                    document.getElementById("secct-3-device").style.transition =
+                        "all 0.5s";
+                }
+            });
+        }
+    }, []);
 
     const helpTravel = [
         {
@@ -98,77 +113,99 @@ const LandingPage = () => {
         },
     ];
 
-    const destPlace = [
+    const [destPlace, setDestPlace] = useState([
         {
+            id: 1,
             place: "Aguascalientes",
         },
         {
+            id: 2,
             place: "Baja california",
         },
         {
+            id: 3,
             place: "Chihuahua",
         },
         {
+            id: 4,
             place: "Durango",
         },
         {
+            id: 5,
             place: "Guanajato",
         },
         {
+            id: 6,
             place: "Jalisco",
         },
         {
+            id: 7,
             place: "Puebla",
         },
         {
+            id: 8,
             place: "Queretaro",
         },
         {
+            id: 9,
             place: "Zacatecas",
         },
         {
+            id: 10,
             place: "Sonora",
         },
         {
+            id: 11,
             place: "Coahuila",
         },
         {
+            id: 12,
             place: "Nuevo León",
         },
         {
+            id: 13,
             place: "San Luis Potosi",
         },
-    ];
+    ]);
 
-    const category = [
+    const [category, setCategory] = useState([
         {
+            id: 1,
             category: "Viñedos",
         },
         {
+            id: 2,
             category: "Naturaleza",
         },
         {
+            id: 3,
             category: "Welness",
         },
         {
+            id: 4,
             category: "Hospedaje",
         },
         {
+            id: 5,
             category: "Cartas de vinos",
         },
         {
+            id: 6,
             category: "Productos",
         },
         {
+            id: 7,
             category: "Experiencias",
         },
         {
+            id: 8,
             category: "Eno-Tours",
         },
         {
+            id: 9,
             category: "Gastronomía",
         },
-    ];
+    ]);
 
     const anfintriones = [
         {
@@ -404,6 +441,63 @@ const LandingPage = () => {
         },
     ];
 
+    const ubicationPlace = [
+        {
+            lat: 30.153815,
+            lng: -115.23181,
+            color: "rgba(242, 174, 212, 0.7)",
+        },
+        {
+            lat: 29.899816,
+            lng: -111.761276,
+            color: "rgba(255, 200, 68, 0.7)",
+        },
+        {
+            lat: 30.947496,
+            lng: -109.417839,
+            color: "rgba(180, 189, 0, 0.7)",
+        },
+        {
+            lat: 26.774068,
+            lng: -107.976654,
+            color: "rgba(125, 185, 245, 0.7)",
+        },
+        {
+            lat: 25.896449,
+            lng: -98.62743,
+            color: "rgba(226, 164, 252, 0.7)",
+        },
+        {
+            lat: 16.845153,
+            lng: -96.765453,
+            color: "rgba(242, 174, 212, 0.7)",
+        },
+        {
+            lat: 20.632944,
+            lng: -88.647916,
+            color: "rgba(255, 200, 68, 0.7)",
+        },
+        {
+            lat: 20.6597712,
+            lng: -103.349762,
+            color: "rgba(255, 0, 0, 0.7)",
+        },
+    ];
+
+    const updateCheckboxPlace = (e) => {
+        const copy = [...destPlace];
+        const updateIdx = copy.findIndex((item) => item.id === e);
+        copy[updateIdx].value = !copy[updateIdx].value;
+        setDestPlace(copy);
+    };
+
+    const updateCheckboxCategory = (e) => {
+        const copy = [...category];
+        const updateIdx = copy.findIndex((item) => item.id === e);
+        copy[updateIdx].value = !copy[updateIdx].value;
+        setCategory(copy);
+    };
+
     return (
         <>
             <Header />
@@ -462,13 +556,13 @@ const LandingPage = () => {
                                 }`}
                             >
                                 {destPlace.map((place) => (
-                                    <div
-                                        key={place.place}
-                                        className="place-pick"
-                                    >
+                                    <div key={place.id} className="place-pick">
                                         <input
                                             type="checkbox"
                                             className="checkBox"
+                                            onClick={() =>
+                                                updateCheckboxPlace(items.id)
+                                            }
                                         />
                                         <p className="p-placePick">
                                             {place.place}
@@ -483,12 +577,15 @@ const LandingPage = () => {
                             >
                                 {category.map((item) => (
                                     <div
-                                        key={item.category}
+                                        key={item.id}
                                         className="category-pick"
                                     >
                                         <input
                                             type="checkbox"
                                             className="checkBoxCat"
+                                            onClick={() =>
+                                                updateCheckboxCategory(item.id)
+                                            }
                                         />
                                         <p className="p-categoryPick">
                                             {item.category}
@@ -513,7 +610,7 @@ const LandingPage = () => {
                     ))}
                 </div>
                 <div className="secct-3">
-                    <div>
+                    <div className="secct-3-device" id="secct-3-device">
                         <img
                             src={Phone}
                             alt="phone"
@@ -557,7 +654,40 @@ const LandingPage = () => {
                     </div>
 
                     {/* Aqui es donde va el mapa */}
-                    <div className="secct4-map"></div>
+                    <div className="secct4-map">
+                        <Map
+                            places={ubicationPlace}
+                            key={"patrol-map-wrap"}
+                            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMt7WCF_38RRjjj4cihiEO2kTf_eXGg9k&v=3.exp&libraries=geometry,drawing,places"
+                            loadingElement={
+                                <div
+                                    key={"table-patrols-load"}
+                                    style={{
+                                        height: `100%`,
+                                        background: "#000",
+                                    }}
+                                />
+                            }
+                            containerElement={
+                                <div
+                                    key={"table-patrols-cont"}
+                                    style={{
+                                        height: "100%",
+                                        width: "100%",
+                                        zIndex: "300",
+                                    }}
+                                />
+                            }
+                            mapElement={
+                                <div
+                                    key={"table-patrols-elme"}
+                                    style={{
+                                        height: `100%`,
+                                    }}
+                                />
+                            }
+                        />
+                    </div>
                     {/* Aqui termina el mapa */}
                     <div className="secct5">
                         <h1 className="secct-5-title">
@@ -601,19 +731,19 @@ const LandingPage = () => {
                             <h1 className="secct-6-B-title">
                                 Explora por viñedo
                             </h1>
-                            <Carousel object={vinedo} device={margen}/>
+                            <Carousel object={vinedo} device={margen} />
                         </div>
                         <div className="secct-6-B secB">
                             <h1 className="secct-6-B-title">
                                 Explora por experiencia
                             </h1>
-                            <Carousel object={exper} device={margen}/>
+                            <Carousel object={exper} device={margen} />
                         </div>
                         <div className="secct-6-B secC">
                             <h1 className="secct-6-B-title">
                                 Explora por gastronomia
                             </h1>
-                            <Carousel object={gastro} device={margen}/>
+                            <Carousel object={gastro} device={margen} />
                         </div>
                     </div>
                     <div className="secct7">

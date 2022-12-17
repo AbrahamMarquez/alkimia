@@ -19,14 +19,15 @@
         "lodash": "^4.17.19",
         "node-sass": "^8.0.0",
         "postcss": "^8.1.14",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
         "sass": "^1.56.1",
         "sass-loader": "^13.2.0"
     },
     "dependencies": {
         "jquery": "^3.6.2",
         "primereact": "^8.7.3",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-google-maps": "^9.4.5",
         "react-router-dom": "^6.4.5",
         "react-slick": "^0.29.0",
         "swiper": "^8.4.5",

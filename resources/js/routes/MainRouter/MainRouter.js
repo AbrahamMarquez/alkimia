@@ -1,41 +1,44 @@
 import React, { useState } from "react";
-import ReactDOM from 'react-dom/client';
-import {  BrowserRouter as Router } from "react-router-dom";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Auth from "./Auth/Auth";
 import Guest from "./Guest/Guest";
 
-export default function  MainRoute(){
+export default function MainRoute() {
+    const [auth, setAuth] = useState(false);
 
-    const [auth, setAuth] = useState(false)
-
-    return(
-      <main>
-
-        <Router>
-            {auth ? (
-                <>
-                    <Auth />
-                </>
-            ):(
-                <>
-                    <Guest />
-                </>
-            )}
-
-        </Router>
-
-      </main>
-    )
-
+    return (
+        <main>
+            <Router>
+                {auth ? (
+                    <>
+                        <Auth />
+                    </>
+                ) : (
+                    <>
+                        <Guest />
+                    </>
+                )}
+            </Router>
+        </main>
+    );
 }
 
+// if (document.getElementById('reactRoute')) {
+//     const Index = ReactDOM.createRoot(document.getElementById("reactRoute"));
 
-if (document.getElementById('reactRoute')) {
-    const Index = ReactDOM.createRoot(document.getElementById("reactRoute"));
-
-    Index.render(
-        <React.StrictMode>
-            <MainRoute/>
-        </React.StrictMode>
-    )
+//     Index.render(
+//         <React.StrictMode>
+//             <MainRoute/>
+//         </React.StrictMode>
+//     )
+// }
+if (document.getElementById("reactRoute")) {
+    ReactDOM.render(
+        // <React.StrictMode>
+            <MainRoute />,
+            document.getElementById("reactRoute")
+        // </React.StrictMode>,
+        
+    );
 }

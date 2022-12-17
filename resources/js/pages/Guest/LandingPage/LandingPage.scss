@@ -305,7 +305,7 @@
         .secct4-map {
             width: 100%;
             height: 866px;
-            background: #000;
+            // background: #000;
         }
 
         .secct5 {
@@ -770,9 +770,15 @@
     .secct-3 {
         flex-direction: row !important;
 
-        .secct-3-phone {
-            height: 772px !important;
-            width: 697px !important;
+        .secct-3-device {
+            position: relative !important;
+            left: -225px;
+            transition: all 0.5s;
+
+            .secct-3-phone {
+                height: 772px !important;
+                width: 697px !important;
+            }
         }
 
         .secct-3-container {
