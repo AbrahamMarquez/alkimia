@@ -1,0 +1,114 @@
+.container-carrousel-team {
+    width: 100%;
+    display: flex;
+
+    .Slide-img {
+        width: 160px;
+        height: 110px;
+    }
+
+    .Slide-prices-container {
+        width: 160px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+
+        .Slide-price {
+            font-family: "Metropolis";
+            font-size: 16.56px;
+            color: #df1683;
+            text-decoration: none solid rgb(223, 22, 131);
+            margin-right: 15px;
+        }
+
+        .Slide-priceReal {
+            font-family: "Metropolis";
+            font-size: 11.96px;
+            color: #8a8a8a;
+            text-decoration: line-through;
+        }
+    }
+
+    .Slide-descr-container {
+        width: 160px;
+        .Slide-descr {
+            font-weight: bold;
+            font-family: "Metropolis";
+            font-size: 16.56px;
+            color: #3b3b3b;
+            text-decoration: none solid rgb(59, 59, 59);
+        }
+    }
+
+    .Slide-score {
+        width: 160px;
+
+        .score-start {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cal-start {
+            font-family: "Metropolis";
+            font-size: 11.4px;
+            color: #3b3b3b;
+            text-decoration: none solid rgb(59, 59, 59);
+        }
+    }
+
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        content: "prev";
+        color: #df1683;
+        font-weight: bold;
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        content: "next";
+        color: #df1683;
+        font-weight: bold;
+    }
+
+   
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .Slide-img {
+        // width: 440px !important;
+        width: 328px !important;
+        height: 456px !important;
+    }
+
+    .Slide-prices-container {
+        height: 60px !important;
+        padding-left: 15px !important;
+
+        .Slide-price {
+            font-size: 27.6px !important;
+        }
+
+        .Slide-priceReal {
+            font-size: 18.4px !important;
+        }
+    }
+
+    .Slide-descr-container {
+        padding-left: 15px !important;
+
+        .Slide-descr {
+            font-size: 18.4px !important;
+        }
+    }
+
+    .Slide-score{
+        padding-left: 15px !important;
+        width: 200px !important;
+
+        .score-start {
+            
+            width: 30px !important;
+            height: 30px !important;
+        }
+    }
+}

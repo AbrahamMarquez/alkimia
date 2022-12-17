@@ -29,6 +29,7 @@
         "primereact": "^8.7.3",
         "react-router-dom": "^6.4.5",
         "react-slick": "^0.29.0",
+        "swiper": "^8.4.5",
         "webpack": "^5.74.0",
         "webpack-dev-server": "^4.11.1"
     }

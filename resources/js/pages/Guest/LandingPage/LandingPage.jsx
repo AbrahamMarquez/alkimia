@@ -29,6 +29,27 @@ import Campeche from "../../../assets/icons/campeche.png";
 import Breanch_grape from "../../../assets/icons/breanch_grape.png";
 import Olive from "../../../assets/icons/olive.png";
 
+import ExpA from "../../../assets/icons/expA.svg";
+import ExpB from "../../../assets/icons/expB.svg";
+import ExpC from "../../../assets/icons/expC.svg";
+import ExpD from "../../../assets/icons/expD.svg";
+import ExpE from "../../../assets/icons/expE.svg";
+import ExpF from "../../../assets/icons/expF.svg";
+
+import PaseoA from "../../../assets/icons/Paseo.svg";
+import PaseoB from "../../../assets/icons/PaseoB.svg";
+import PaseoC from "../../../assets/icons/PaseoC.svg";
+import PaseoD from "../../../assets/icons/PaseoD.svg";
+import PaseoE from "../../../assets/icons/PaseoE.svg";
+import PaseoF from "../../../assets/icons/PaseoF.svg";
+
+import GasA from "../../../assets/icons/gasA.svg";
+import GasB from "../../../assets/icons/gasB.svg";
+import GasC from "../../../assets/icons/gasC.svg";
+import GasD from "../../../assets/icons/gasD.svg";
+import GasE from "../../../assets/icons/gasE.svg";
+import GasF from "../../../assets/icons/gasF.svg";
+
 import AlkimiaB from "../../../assets/icons/alkimiaB.png";
 import GoogleStore from "../../../assets/icons/googleStore.png";
 import AppleStore from "../../../assets/icons/appleStore.png";
@@ -38,10 +59,13 @@ import Experiencias from "../../../assets/icons/Experiencias.svg";
 
 import "./LandingPage.scss";
 import PostCardViewx from "../../../components/molecules/PostCardView/PostCardViewx";
+import Carousel from "../../../components/molecules/Carousel/Carousel";
 
 const LandingPage = () => {
     const [openPlace, setOpenPlace] = useState(false);
-    const [openCategory, setOpenCategory] = useState(false);
+    const [openCategory, setOpenCategory] = useState(false); //-250
+    const [margen, setMargen] = useState((window.innerWidth <= 450) ? -100 : -250)
+
 
     const helpTravel = [
         {
@@ -109,7 +133,7 @@ const LandingPage = () => {
             place: "Coahuila",
         },
         {
-            place: "Nurvo León",
+            place: "Nuevo León",
         },
         {
             place: "San Luis Potosi",
@@ -245,6 +269,141 @@ const LandingPage = () => {
         },
     ];
 
+    const vinedo = [
+        {
+            id: 1,
+            img: PaseoA,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 2,
+            img: PaseoB,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 3,
+            img: PaseoC,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 4,
+            img: PaseoD,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 5,
+            img: PaseoE,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 6,
+            img: PaseoF,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+    ];
+
+    const exper = [
+        {
+            id: 1,
+            img: ExpA,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 2,
+            img: ExpB,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 3,
+            img: ExpC,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 4,
+            img: ExpD,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 5,
+            img: ExpE,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 6,
+            img: ExpF,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+    ];
+
+    const gastro = [
+        {
+            id: 1,
+            img: GasA,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 2,
+            img: GasB,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 3,
+            img: GasC,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 4,
+            img: GasD,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 5,
+            img: GasE,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+        {
+            id: 6,
+            img: GasF,
+            price: "$500.00",
+            priceReal: "$700.00",
+            title: "Paseo matutino",
+        },
+    ];
+
     return (
         <>
             <Header />
@@ -257,9 +416,9 @@ const LandingPage = () => {
                     />
                     <div className="sub-filter-img">
                         <InputSearch
+                            classInput={"input"}
                             className={"inputsearch"}
                             sizeLup={"tamanio"}
-                            sizeSi={"12px"}
                             placeholder={"¿Cual es tu siguiente destino?"}
                         />
                         <div className="landing-btn-search">
@@ -346,8 +505,7 @@ const LandingPage = () => {
                             <img
                                 src={item.img}
                                 alt="imge"
-                                width={40}
-                                height={40}
+                                className="secct-2-card-img"
                             />
                             <p className="secct2-title">{item.title}</p>
                             <p className="secct2-desc">{item.descriptions}</p>
@@ -355,24 +513,33 @@ const LandingPage = () => {
                     ))}
                 </div>
                 <div className="secct-3">
-                    <img src={Phone} alt="phone" width={225} height={250} />
-                    <h3 className="secct3-title">¿Qué es ALKIMIA?</h3>
-                    <p className="secct3-subTitle">
-                        Ofrecemos las mejores experiencias de enoturismo en
-                        México para los amantes del vino.
-                    </p>
-                    <p className="secct3-subTitle">
-                        ALKMIA TRAVEL es la primera plataforma digital de
-                        enoturismo en México, que combina todos los elementos
-                        que hacen de una actividad en torno al vino, una
-                        experiencia mágica y memorable. A través de nuestra
-                        plataforma digital, podrás reservar tu hospedaje y
-                        recorridos a las mejores vinícolas del país, hoteles
-                        boutique, haciendas, museos, restaurantes y un sinfín de
-                        actividades más. Además, somos creadores de
-                        experiencias, tenemos tours privados y semiprivados que
-                        no encontrarás en ningún otro lugar.
-                    </p>
+                    <div>
+                        <img
+                            src={Phone}
+                            alt="phone"
+                            className="secct-3-phone"
+                        />
+                    </div>
+                    <div className="secct-3-container">
+                        <h3 className="secct3-title">¿Qué es ALKIMIA?</h3>
+                        <p className="secct3-subTitle">
+                            Ofrecemos las mejores experiencias de enoturismo en
+                            México para los amantes del vino.
+                        </p>
+                        <p className="secct3-subTitle">
+                            ALKMIA TRAVEL es la primera plataforma digital de
+                            enoturismo en México, que combina todos los
+                            elementos que hacen de una actividad en torno al
+                            vino, una experiencia mágica y memorable. A través
+                            de nuestra plataforma digital, podrás reservar tu
+                            hospedaje y recorridos a las mejores vinícolas del
+                            país, hoteles boutique, haciendas, museos,
+                            restaurantes y un sinfín de actividades más. Además,
+                            somos creadores de experiencias, tenemos tours
+                            privados y semiprivados que no encontrarás en ningún
+                            otro lugar.
+                        </p>
+                    </div>
                 </div>
                 <div className="secct4">
                     <div className="secct-4-body">
@@ -394,7 +561,7 @@ const LandingPage = () => {
                     {/* Aqui termina el mapa */}
                     <div className="secct5">
                         <h1 className="secct-5-title">
-                            Descubre todo tipo de anfintriones
+                            Descubre todo tipo de anfitriones
                         </h1>
                         <div className="secct-5-anfin">
                             {anfintriones.map((item) => (
@@ -406,8 +573,7 @@ const LandingPage = () => {
                                         <img
                                             src={item.img}
                                             alt="Descovery"
-                                            width={30.36}
-                                            height={30.36}
+                                            className="secct-5-icons"
                                         />
                                     </div>
                                     <p className="secct5-descrip">
@@ -423,28 +589,37 @@ const LandingPage = () => {
                                 Descubre experiencias mágicas
                             </h2>
                             <span className="secct-6-A-des">
-                                Comienza a vivir el apasionante mundo del vino
+                                Comienza a vivir el apasionante mundo del vino.
                             </span>
                             <br />
                             <span className="secct-6-A-des">
                                 Visita los mejores destinos del enoturismo en
-                                México
+                                México.
                             </span>
                         </div>
-                        <CarouselSlick
-                            mappedItems={products.map(
-                                ({ colab, note, image }) => (
-                                    <PostCardViewx
-                                        colab={colab}
-                                        note={note}
-                                        image={image}
-                                    />
-                                )
-                            )}
-                        />
+                        <div className="secct-6-B">
+                            <h1 className="secct-6-B-title">
+                                Explora por viñedo
+                            </h1>
+                            <Carousel object={vinedo} device={margen}/>
+                        </div>
+                        <div className="secct-6-B secB">
+                            <h1 className="secct-6-B-title">
+                                Explora por experiencia
+                            </h1>
+                            <Carousel object={exper} device={margen}/>
+                        </div>
+                        <div className="secct-6-B secC">
+                            <h1 className="secct-6-B-title">
+                                Explora por gastronomia
+                            </h1>
+                            <Carousel object={gastro} device={margen}/>
+                        </div>
                     </div>
                     <div className="secct7">
-                        <h1 className="secct7-title">¿Quieres ser anfitrión</h1>
+                        <h1 className="secct7-title">
+                            ¿Quieres ser anfitrión?
+                        </h1>
                         <div className="secct7-bodyA">
                             Conviértete en anfitrión y deja que miles de
                             alkimistas visiten tu vinícola, hotel, restaurante,
@@ -456,12 +631,12 @@ const LandingPage = () => {
                             Si quieres saber más a cerca de volverte anfitrión,
                             da click
                         </p>
+
                         <div className="secct7-btn">
-                            <div style={{ width: 160 }}>
+                            <div className="secct-7-btn">
                                 <Button
                                     btnTitle={"Saber más"}
                                     className={"border"}
-                                    height={"40px"}
                                 />
                             </div>
                         </div>
@@ -517,7 +692,6 @@ const LandingPage = () => {
                                         <Button
                                             btnTitle={"Saber más"}
                                             className={"border"}
-                                            height={"40px"}
                                         />
                                     </div>
                                 </div>

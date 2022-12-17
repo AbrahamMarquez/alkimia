@@ -50,12 +50,10 @@ const Header = ({className}) => {
                                 <div className="side-btns">
                                     <Button
                                         btnTitle={"¡Comenzar ahora!"}
-                                        height={"40px"}
                                         className={"border"}
                                     />
                                     <Button
                                         btnTitle={"Descargar la app"}
-                                        height={"40px"}
                                         className={"border"}
                                     />
                                 </div>

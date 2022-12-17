@@ -19,7 +19,7 @@ const InputSearch = ({
     onChange,
     onKeyDown,
     sizeLup,
-    sizeSi,
+    classInput,
 }) => {
     return !skeleton ? (
         <>
@@ -30,6 +30,7 @@ const InputSearch = ({
                 style={{ width: width, ...style }}
             >
                 <input
+                    className={classInput}
                     id={id}
                     value={value}
                     disabled={disabled}
@@ -38,7 +39,7 @@ const InputSearch = ({
                     onBlur={onBlur}
                     onChange={onChange}
                     onKeyDown={onKeyDown}
-                    style={{fontSize: sizeSi}}
+                    
                     // autoComplete={autoComplete}
                 />
 
