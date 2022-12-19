@@ -33,7 +33,10 @@
                 height: 50px;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
-                // z-index: -1;
+            }
+
+            .input {
+                font-size: 12px;
             }
 
             .tamanio {
@@ -219,6 +222,11 @@
             text-align: center;
             align-items: center;
 
+            .secct-2-card-img {
+                width: 40px;
+                height: 40px;
+            }
+
             .secct2-title {
                 font-family: "Abril Fatface";
                 font-size: 16.56px;
@@ -247,10 +255,16 @@
         flex-direction: column;
         align-items: center;
 
+        .secct-3-phone {
+            width: 225px;
+            height: 250px;
+        }
+
         .secct3-title {
             font-family: "Metropolis";
             font-size: 18.4px;
             color: #ffffff;
+            text-align: center;
         }
 
         .secct3-subTitle {
@@ -259,9 +273,6 @@
             color: #fff;
             line-height: 20px;
             text-align: justify;
-        }
-
-        .secct3-descrip {
         }
     }
 
@@ -294,7 +305,7 @@
         .secct4-map {
             width: 100%;
             height: 866px;
-            background: #000;
+            // background: #000;
         }
 
         .secct5 {
@@ -322,7 +333,6 @@
 
                 .secct5-descovery {
                     width: 51px;
-                    height: 107px;
                     display: flex;
                     flex-direction: column;
                     text-align: center;
@@ -342,6 +352,11 @@
                             #8331a7 47%,
                             #df1683 100%
                         );
+
+                        .secct-5-icons {
+                            width: 30.36px;
+                            height: 30.36px;
+                        }
                     }
 
                     .secct5-descrip {
@@ -364,8 +379,6 @@
                     color: #df1683;
                     text-decoration: none solid rgb(223, 22, 131);
                     line-height: 48px;
-
-                  
                 }
                 .secct-6-A-des {
                     font-family: "Metropolis";
@@ -373,6 +386,27 @@
                     color: #3b3b3b;
                     text-decoration: none solid rgb(59, 59, 59);
                 }
+            }
+
+            .secct-6-B {
+                width: 100%;
+                height: 220px;
+
+                .secct-6-B-title {
+                    font-family: "Abril Fatface";
+                    font-size: 18.4px;
+                    color: #3b3b3b;
+                    text-decoration: none solid rgb(59, 59, 59);
+                    line-height: 48px;
+                }
+            }
+
+            .secB {
+                margin-top: 80px;
+            }
+            .secC {
+                margin-top: 80px;
+                margin-bottom: 30px;
             }
         }
         .secct7 {
@@ -410,6 +444,18 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                .secct-7-btn {
+                    width: 160px;
+                    .border {
+                        height: 40px;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: #df1683;
+                        }
+                    }
+                }
             }
         }
 
@@ -441,10 +487,17 @@
                     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
                     padding: 9px;
                     margin-bottom: 30px;
+                    cursor: pointer;
+                    color: #000;
+
+                    &:hover {
+                        color: #df1683;
+                    }
 
                     .card-container {
                         width: 146px;
                         height: 95px;
+                        border-radius: 15px;
                         overflow: hidden;
 
                         .card-img {
@@ -458,7 +511,6 @@
 
                         .card-img:hover {
                             background-size: auto;
-                            width: 300px;
                             height: 300px;
                         }
                     }
@@ -466,7 +518,7 @@
                     .card-title {
                         font-family: "Metropolis";
                         font-size: 11.4px;
-                        color: #000000;
+
                         text-decoration: none solid rgb(0, 0, 0);
                         line-height: 20px;
                     }
@@ -474,7 +526,7 @@
                     .card-descrip {
                         font-family: "Metropolis";
                         font-size: 10.12px;
-                        color: #000;
+
                         text-decoration: none solid rgb(0, 0, 0);
                         line-height: 20px;
                     }
@@ -529,6 +581,10 @@
 
                     .secct-9-cont {
                         width: 213px;
+
+                        .border {
+                            height: 40px;
+                        }
                     }
                 }
             }
@@ -536,6 +592,8 @@
             .secct-9-container-logo {
                 widows: 196px;
                 height: 196px;
+                display: flex;
+                justify-content: center;
 
                 .secct-9-logo {
                     width: 100%;
@@ -594,37 +652,337 @@
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1670px) {
-    .subLandingPage{
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .subLandingPage {
         height: 624px !important;
 
-        .sub-filter-img{
+        .sub-filter-img {
             padding: 181px 277px 332px 277px !important;
             height: 624px !important;
+
+            .input {
+                font-size: 23px !important;
+
+                &::placeholder {
+                    font-size: 23px !important;
+                }
+            }
+
+            .tamanio {
+                width: 50px !important;
+                height: 50px !important;
+            }
         }
-        .sub-background{
+        .sub-background {
             height: 624px !important;
         }
-
 
         .inputsearch {
             height: 111px !important;
         }
-        .landing-btn-search{
+        .landing-btn-search {
             height: 111px !important;
 
-            .btn-select{
-
-                .select-pick{
+            .btn-select {
+                .select-pick {
                     font-size: 23px !important;
                 }
-                .arrow{
+                .arrow {
                     width: 50px !important;
                     height: 50px !important;
                 }
             }
+
+            .place-selct-pick {
+                top: 90px !important;
+
+                &.place-hidden {
+                    max-height: 317px !important;
+                }
+
+                .place-pick {
+                    width: 271px !important;
+                    padding-left: 63px !important;
+                }
+
+                .checkBox {
+                    width: 20px !important;
+                    height: 20px !important;
+                }
+
+                .p-placePick {
+                    font-size: 23px !important;
+                }
+            }
+
+            .category-selct-pick {
+                top: 90px !important;
+
+                &.category-hidden {
+                    max-height: 242px !important;
+                }
+
+                .category-pick {
+                    width: 271px !important;
+                    padding-left: 63px !important;
+                }
+
+                .checkBoxCat {
+                    width: 20px !important;
+                    height: 20px !important;
+                }
+
+                .p-categoryPick {
+                    font-size: 23px !important;
+                }
+            }
+
+            .btns {
+                padding-left: 111px !important;
+                padding-right: 31px !important;
+            }
+
+            .solid {
+                font-size: 21.16px !important;
+                height: 50px !important;
+            }
         }
     }
- 
 
+    .secct2-card {
+        width: 349px !important;
+        height: 365px !important;
+        margin: 15px !important;
+
+        .secct-2-card-img {
+            width: 100px !important;
+            height: 100px !important;
+        }
+
+        .secct2-title {
+            font-size: 27.6px !important;
+        }
+        .secct2-desc {
+            font-size: 18.4px !important;
+        }
+    }
+
+    .secct-3 {
+        flex-direction: row !important;
+
+        .secct-3-device {
+            position: relative !important;
+            left: -225px;
+            transition: all 0.5s;
+
+            .secct-3-phone {
+                height: 772px !important;
+                width: 697px !important;
+            }
+        }
+
+        .secct-3-container {
+            margin-right: 195px !important;
+
+            .secct3-title {
+                font-size: 50.6px !important;
+            }
+
+            .secct3-subTitle {
+                font-size: 23px !important;
+                line-height: 36px !important;
+            }
+        }
+    }
+
+    .secct-4-body {
+        padding-right: 193px !important;
+        padding-left: 193px !important;
+
+        .secct4-title {
+            font-size: 46px !important;
+        }
+
+        .secct-4-description {
+            font-size: 32.2px !important;
+            line-height: 55px !important;
+        }
+    }
+
+    .secct-5-title {
+        margin-top: 109px !important;
+        margin-bottom: 123px !important;
+        font-size: 46px !important;
+    }
+
+    .secct5-descovery {
+        width: 350px !important;
+
+        .descovey-img {
+            width: 200px !important;
+            height: 200px !important;
+            .secct-5-icons {
+                width: 110px !important;
+                height: 110px !important;
+            }
+        }
+
+        .secct5-descrip {
+            font-size: 32.2px !important;
+        }
+    }
+
+    .secct-6-A {
+        margin-top: 163px !important;
+        margin-left: 193px !important;
+        .secct-6-A-title {
+            font-size: 46px !important;
+        }
+
+        .secct-6-A-des {
+            font-size: 32.2px !important;
+        }
+    }
+
+    .secct-6-B {
+        width: 100%;
+        height: 714px !important;
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+
+        .secct-6-B-title {
+            padding-left: 87px !important;
+            font-family: "Abril Fatface" !important;
+            font-size: 46px !important;
+            color: #3b3b3b !important;
+            line-height: 48px !important;
+        }
+    }
+
+    .secct7 {
+        padding-left: 191px !important;
+        padding-right: 191px !important;
+
+        .secct7-title {
+            font-size: 46px !important;
+        }
+
+        .secct7-bodyA {
+            font-size: 32.2px !important;
+            line-height: 55px !important;
+        }
+
+        .secct-7-btn {
+            margin-top: 53px !important;
+            margin-bottom: 135px !important;
+            width: 263px !important;
+            height: 60px !important;
+
+            .border {
+                height: 60px !important;
+                font-size: 17.6px !important;
+            }
+        }
+    }
+
+    .secct8 {
+        margin-top: 149px !important;
+
+        .secct-8-body {
+            margin-bottom: 217px !important;
+        }
+
+        .secct8-title {
+            font-size: 55.2px !important;
+        }
+
+        .card-blog {
+            width: 371px !important;
+            height: 528px !important;
+            padding: 23px !important;
+
+            .card-container {
+                width: 100% !important;
+                height: 50% !important;
+            }
+
+            .card-title {
+                font-size: 18.4px !important;
+                font-weight: bold;
+            }
+
+            .card-descrip {
+                font-size: 13.8px !important;
+            }
+        }
+    }
+
+    .secct9 {
+        display: flex;
+
+        .secct-9-texto {
+            width: 647px !important;
+            margin-top: 47px !important;
+            margin-left: 109px !important;
+
+            .secct-9-logo {
+                width: 196px !important;
+                height: 196px !important;
+            }
+
+            .secct-body-title {
+                font-size: 55.2px !important;
+                margin-top: 19px !important;
+                height: 0 !important;
+            }
+
+            .secct-body-span {
+                margin-top: 5px !important;
+                font-size: 27.6px !important;
+            }
+
+            .secct-body-descr {
+                font-size: 18.4px !important;
+            }
+
+            .border {
+                height: 62px !important;
+                font-size: 18px !important;
+            }
+        }
+
+        .secct-9-Store {
+            margin-top: 48px !important;
+            justify-content: space-evenly !important;
+
+            .containStore {
+                height: 51px !important;
+            }
+        }
+
+        .secct-phone-container {
+            right: 176px !important;
+            top: -221px !important;
+            width: 611px !important;
+            left: unset !important;
+            bottom: unset !important;
+
+            .secct-9-sub {
+                width: 666px !important;
+                height: 1182px !important;
+            }
+
+            .secct-9-sub {
+                object-fit: cover !important;
+            }
+        }
+
+        .div-hiiden {
+            height: 52px !important;
+        }
+    }
+
+    .secct404 {
+        height: 203px !important;
+    }
 }

@@ -1,4 +1,5 @@
-import React from "react";
+
+import React from 'react'
 
 import { Skeleton } from "primereact/skeleton";
 
@@ -9,7 +10,7 @@ const Button = ({ btnTitle, className, height, onClick, skelton }) => {
         <>
             {!skelton ? (
                 <button
-                    style={{ height: height }}
+                    // style={{ height: height }}
                     className={`styleButton ${className}`}
                     onClick={onClick}
                 >

@@ -16,6 +16,14 @@
         .footer-socalNetwork {
             display: flex;
             gap: 20px;
+
+            .card-network{
+                cursor: pointer;
+
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
         }
     }
 
@@ -35,6 +43,7 @@
             color: #ffffff;
             text-decoration: none solid rgb(255, 255, 255);
             line-height: 20px;
+            text-align: center;
         }
         .input-btn {
             display: flex;
@@ -55,21 +64,20 @@
                 border-top-left-radius: 30px;
                 border-bottom-left-radius: 30px;
                 font-family: "Metropolis";
-                font-size: 14px;
+                font-size: 12.88px;
                 color: #ffffff;
                 text-decoration: none solid rgb(255, 255, 255);
                 box-shadow: inset 2px 1px 5px rgba(0, 0, 0, 0.12);
                 outline: none;
 
-                &::placeholder{
+                &::placeholder {
                     color: #fff;
                 }
 
-                &:hover{
+                &:hover {
                     background-color: rgba(255, 255, 255, 0.1);
                 }
             }
-          
 
             .footer-btn {
                 cursor: pointer;
@@ -87,14 +95,15 @@
                 text-align: center;
                 box-shadow: inset 2px 1px 5px rgba(0, 0, 0, 0.12);
 
-                &:hover{
+                &:hover {
                     background-color: #fff;
                     color: rgb(223, 22, 131);
                 }
             }
-
         }
+    }
 
+    .footer-finish {
         .footer-ter-Con {
             display: flex;
             flex-direction: column;
@@ -114,6 +123,70 @@
             text-decoration: none solid rgb(255, 255, 255);
             line-height: 20px;
             text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .subFooter {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .footer-title {
+            font-size: 23px !important;
+        }
+
+        .footer-socalNetwork {
+            .networks {
+                width: 50px !important;
+                height: 50px !important;
+            }
+        }
+
+        .footer-secct2 {
+            margin-top: 0 !important;
+
+            .footer-comunity {
+                font-size: 23px !important;
+                width: 483px !important;
+
+                .input-default {
+                    height: 48px !important;
+                }
+
+                .footer-btn {
+                    height: 48px !important;
+                }
+            }
+        }
+    }
+
+    .footer-line{
+        top: 214px !important;
+        width: 80% !important;
+        left: 157px !important;
+    }
+
+    .footer-finish {
+        display: flex !important;
+        flex-direction: row-reverse;
+        margin-top: 159px !important;
+
+        justify-content: space-around;
+        align-items: center;
+
+        padding-left: 91px;
+        padding-right: 108px;
+
+        .footer-ter-Con {
+            flex-direction: row !important;
+            gap: 28px !important;
+            font-size: 16.56px !important;
+        }
+
+        .footer-derechos-reservdos{
+            font-size: 16.56px !important;
         }
     }
 }
