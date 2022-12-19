@@ -1,20 +1,24 @@
 .hosts {
     width: 100%;
-    height: 100vh;
-    background-image: url(../../../assets/icons/fono.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: auto;
+    position: relative;
 
-    .secct1 {
+    .hosts-fir {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .host-secct1 {
         background-color: #fff;
-        // display: flex;
-        // justify-content: center;
-        // flex-direction: column;
-        // align-items: center;
         padding: 35px 21px 19px 21px;
 
-        .secct-1-A {
+        .host-secct-1-A {
             font-family: "Abril Fatface";
             font-size: 18.4px;
             color: #df1683;
@@ -22,7 +26,7 @@
             line-height: 48px;
         }
 
-        .secct-B-body {
+        .host-secct-B-body {
             font-family: "Metropolis";
             font-size: 11.04px;
             color: #3b3b3b;
@@ -31,17 +35,17 @@
             line-height: 20px;
         }
 
-        .secct-c {
+        .host-secct-c {
             width: 100%;
         }
     }
 
     .first-div-sep {
         width: 100%;
-        height: 90px;
+        height: 133px;
     }
 
-    .secct2 {
+    .host-secct2 {
         padding: 40px 20px;
         background: linear-gradient(
             120deg,
@@ -50,25 +54,23 @@
             #df1683 100%
         );
 
-        .secct-2-title {
+        .host-secct-2-title {
             font-family: "Abril Fatface";
             font-size: 18.4px;
             color: #ffffff;
             text-decoration: none solid rgb(255, 255, 255);
-            line-height: 20px;
             text-align: center;
         }
 
-        .secct-2-body {
+        .host-secct-2-body {
             font-family: "Metropolis";
             font-size: 13.8px;
             color: #ffffff;
             text-decoration: none solid rgb(255, 255, 255);
-            line-height: 20px;
             text-align: center;
         }
 
-        .secct-2-btn {
+        .host-secct-2-btn {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -81,24 +83,24 @@
         }
     }
 
-    .secct3 {
+    .host-secct3 {
         background-color: #fff;
 
-        .secct-3-photo {
+        .host-secct-3-photo {
             height: 618px;
             width: 100%;
 
-            .secct-3-img {
+            .host-secct-3-img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
         }
 
-        .secct-3-B {
+        .host-secct-3-B {
             padding: 34px 20px;
 
-            .secct-3-title {
+            .host-secct-3-title {
                 font-family: "Abril Fatface";
                 font-size: 18.4px;
                 color: #df1683;
@@ -107,7 +109,7 @@
                 text-align: center;
             }
 
-            .secct-3-arrowUp {
+            .host-secct-3-arrowUp {
                 width: 100%;
                 height: 50px;
                 display: flex;
@@ -116,7 +118,7 @@
                 cursor: pointer;
             }
 
-            .secct-3-scroll {
+            .host-secct-3-scroll {
                 height: 533px;
                 overflow: auto;
                 background-color: #fff;
@@ -125,7 +127,7 @@
                 -webkit-box-shadow: 0px 12px 5px 0px rgba(153, 153, 153, 0.75);
                 -moz-box-shadow: 0px 12px 5px 0px rgba(153, 153, 153, 0.75);
 
-                .secct-3-card {
+                .host-secct-3-card {
                     display: flex;
                     align-items: center;
                     margin-bottom: 20px;
@@ -135,7 +137,7 @@
                     background-color: #faf7f7;
                     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
 
-                    .secct-3-question {
+                    .host-secct-3-question {
                         font-family: "Metropolis";
                         font-size: 12.88px;
                         color: #8a8a8a;
@@ -144,7 +146,7 @@
                         width: 253px;
                     }
 
-                    .secct-3-plus {
+                    .host-secct-3-plus {
                         background-color: #df1683;
                         height: 30px;
                         width: 30px;
@@ -154,11 +156,186 @@
                         align-items: center;
                         cursor: pointer;
 
-                        .secct-3-Icon {
+                        .host-secct-3-Icon {
                             width: 15px;
                             height: 15px;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .host-secct4 {
+        // margin-top: 55px;
+        margin: 55px 0;
+        padding: 0 13px;
+
+        .host-secct-4-form {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 22px 8px 69px 8px;
+
+            .host-secct-4-title {
+                font-family: "Abril Fatface";
+                font-size: 27.6px;
+                color: #df1683;
+                text-decoration: none solid rgb(223, 22, 131);
+                line-height: 48px;
+                text-align: center;
+            }
+
+            .host-secct-4-descrip {
+                font-family: "Metropolis";
+                font-size: 12.88px;
+                color: #3b3b3b;
+                text-decoration: none solid rgb(59, 59, 59);
+                line-height: 20px;
+                padding: 0 21px;
+            }
+
+            .host-secct-4-btn {
+                width: 180px;
+                margin-top: 45px;
+
+                .solid {
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .hosts {
+        .host-secct1 {
+            .host-secct-1-A {
+                font-size: 46px !important;
+                text-align: center;
+            }
+
+            .host-secct-1-B {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 463px;
+                margin-top: 83px;
+            }
+
+            .host-secct-B-body {
+                font-size: 23px !important;
+                margin-top: 43px !important;
+            }
+
+            .host-secct-c {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 23px;
+                margin-bottom: 123px;
+            }
+
+            .host-secct-b-sub {
+                width: 50%;
+                margin-top: 43px !important;
+            }
+        }
+
+        .first-div-sep {
+            height: 685px !important;
+        }
+
+        .host-secct2 {
+            padding: 135px 195px 115px 195px !important;
+            .host-secct-2-title {
+                font-size: 46px !important;
+            }
+
+            .host-secct-2-body {
+                font-size: 32.2px !important;
+                line-height: 55px !important;
+                margin-top: 35px !important;
+            }
+
+            .border {
+                height: 60px;
+                font-size: 21.16px !important;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #df1683;
+                }
+            }
+        }
+
+        .host-secct3 {
+            display: flex;
+
+            .host-secct-3-photo {
+                width: 40% !important;
+                height: 1077px !important;
+            }
+
+            .host-secct-3-B {
+                width: 60%;
+
+                .host-secct-3-title {
+                    font-size: 41.4px !important;
+                    margin-bottom: 84px !important;
+                }
+
+                .host-secct-3-arrow {
+                    width: 78px !important;
+                    height: 78px !important;
+                }
+
+                .host-secct-3-scroll {
+                    margin-top: 35px !important;
+                    height: 759px !important;
+
+                    .host-secct-3-card {
+                        height: 79px !important;
+                        margin-bottom: 30px !important;
+
+                        .host-secct-3-question {
+                            font-size: 16.56px !important;
+                            font-weight: bold !important;
+                            width: 100% !important;
+                        }
+
+                        .host-secct-3-plus {
+                            width: 41px !important;
+                            height: 41px !important;
+
+                            .host-secct-3-Icon {
+                                width: 27px !important;
+                                height: 27px !important;
+                            }
+                        }
+                    }
+                }
+
+                .dow {
+                    margin-top: 34px !important;
+                }
+            }
+        }
+
+        .host-secct4 {
+            display: flex;
+            justify-content: center;
+            .host-secct-4-form {
+                width: 761px !important;
+                padding: 104px 104px 79px 104px !important;
+                .host-secct-4-title {
+                    font-size: 46px !important;
+                }
+
+                .host-secct-4-descrip {
+                    margin-top: 38px !important;
+                    margin-bottom: 41px !important;
+                    font-size: 18.4px !important;
                 }
             }
         }

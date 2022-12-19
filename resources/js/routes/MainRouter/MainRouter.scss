@@ -17,17 +17,21 @@ a {
 /* Firefox */
 * {
     scrollbar-width: auto;
-    scrollbar-color: #7f7f7f #ffffff;
+    scrollbar-color: #7f7f7f;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 13px;
-    height: 13px;
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
     background-color: #7f7f7f;
     border-radius: 10px;
-    border: 3px solid #ffffff;
+    border: 0 solid #ffffff;
 }
