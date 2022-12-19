@@ -500,7 +500,6 @@ const LandingPage = () => {
 
     return (
         <>
-            <Header />
             <div className="LandingPage">
                 <div className="subLandingPage">
                     <img
@@ -689,175 +688,165 @@ const LandingPage = () => {
                         />
                     </div>
                     {/* Aqui termina el mapa */}
-                    <div className="secct5">
-                        <h1 className="secct-5-title">
-                            Descubre todo tipo de anfitriones
-                        </h1>
-                        <div className="secct-5-anfin">
-                            {anfintriones.map((item) => (
-                                <div
-                                    className="secct5-descovery"
-                                    key={item.title}
-                                >
-                                    <div className="descovey-img">
-                                        <img
-                                            src={item.img}
-                                            alt="Descovery"
-                                            className="secct-5-icons"
-                                        />
-                                    </div>
-                                    <p className="secct5-descrip">
-                                        {item.title}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="secct6">
-                        <div className="secct-6-A">
-                            <h2 className="secct-6-A-title">
-                                Descubre experiencias mágicas
-                            </h2>
-                            <span className="secct-6-A-des">
-                                Comienza a vivir el apasionante mundo del vino.
-                            </span>
-                            <br />
-                            <span className="secct-6-A-des">
-                                Visita los mejores destinos del enoturismo en
-                                México.
-                            </span>
-                        </div>
-                        <div className="secct-6-B">
-                            <h1 className="secct-6-B-title">
-                                Explora por viñedo
-                            </h1>
-                            <Carousel object={vinedo} device={margen} />
-                        </div>
-                        <div className="secct-6-B secB">
-                            <h1 className="secct-6-B-title">
-                                Explora por experiencia
-                            </h1>
-                            <Carousel object={exper} device={margen} />
-                        </div>
-                        <div className="secct-6-B secC">
-                            <h1 className="secct-6-B-title">
-                                Explora por gastronomia
-                            </h1>
-                            <Carousel object={gastro} device={margen} />
-                        </div>
-                    </div>
-                    <div className="secct7">
-                        <h1 className="secct7-title">
-                            ¿Quieres ser anfitrión?
-                        </h1>
-                        <div className="secct7-bodyA">
-                            Conviértete en anfitrión y deja que miles de
-                            alkimistas visiten tu vinícola, hotel, restaurante,
-                            o cualquier negocio que ofrezca experiencias y
-                            servicios enoturísticos. Si quieres saber más a
-                            cerca de volverte anfitrión, da click
-                        </div>
-                        <p className="secct7-bodyA marg">
-                            Si quieres saber más a cerca de volverte anfitrión,
-                            da click
-                        </p>
-
-                        <div className="secct7-btn">
-                            <div className="secct-7-btn">
-                                <Button
-                                    btnTitle={"Saber más"}
-                                    className={"border"}
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="secct8">
-                        <h1 className="secct8-title">Blog</h1>
-                        <div className="secct-8-body">
-                            {blog.map((blog) => (
-                                <div className="card-blog" key={blog.id}>
-                                    <div className="card-container">
-                                        <img
-                                            src={blog.img}
-                                            alt="Card"
-                                            className="card-img"
-                                        />
-                                    </div>
-                                    <p className="card-title">{blog.title}</p>
-                                    <p className="card-descrip">
-                                        {blog.descriptions}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="secct9">
-                        <div className="secct-9-texto">
-                            <div className="secct-9-container-logo">
-                                <img
-                                    src={AlkimiaB}
-                                    alt="Alkimia"
-                                    className="secct-9-logo"
-                                />
-                            </div>
-                            <div className="secct-body">
-                                <h3 className="secct-body-title">
-                                    Descarga la app
-                                </h3>
-                                <p className="secct-body-span">
-                                    {" "}
-                                    y comienza a catar México
-                                </p>
-                                <p className="secct-body-descr">
-                                    Alkimia es la primer app de enoturismo en
-                                    México. Descarga la app y reserva tus
-                                    visitas a vinícolas, descubre viñedos,
-                                    gastronomía de autor, hoteles únicos,
-                                    experiencias y mucho más.
-                                </p>
-                                <div className="secct-9-btn">
-                                    <div className="secct-9-cont">
-                                        <Button
-                                            btnTitle={"Saber más"}
-                                            className={"border"}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="secct-9-Store">
-                                    <div className="containStore">
-                                        <img
-                                            src={GoogleStore}
-                                            alt="GoogleStore"
-                                            className="appStore"
-                                        />
-                                    </div>
-                                    <div className="containStore">
-                                        <img
-                                            src={AppleStore}
-                                            alt="AppleStore"
-                                            className="appStore"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="div-hiiden"></div>
-                            </div>
-                        </div>
-
-                        <div className="secct-phone-container">
-                            <div className="secct-9-sub">
-                                <img
-                                    src={PhoneB}
-                                    alt="phone"
-                                    className="phone-secc"
-                                />
-                            </div>
-                        </div>
-                    </div>
 
                     <div className="secct404"></div>
-                    <Footer />
+                </div>
+                <div className="secct5">
+                    <h1 className="secct-5-title">
+                        Descubre todo tipo de anfitriones
+                    </h1>
+                    <div className="secct-5-anfin">
+                        {anfintriones.map((item) => (
+                            <div className="secct5-descovery" key={item.title}>
+                                <div className="descovey-img">
+                                    <img
+                                        src={item.img}
+                                        alt="Descovery"
+                                        className="secct-5-icons"
+                                    />
+                                </div>
+                                <p className="secct5-descrip">{item.title}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="secct6">
+                    <div className="secct-6-A">
+                        <h2 className="secct-6-A-title">
+                            Descubre experiencias mágicas
+                        </h2>
+                        <span className="secct-6-A-des">
+                            Comienza a vivir el apasionante mundo del vino.
+                        </span>
+                        <br />
+                        <span className="secct-6-A-des">
+                            Visita los mejores destinos del enoturismo en
+                            México.
+                        </span>
+                    </div>
+                    <div className="secct-6-B">
+                        <h1 className="secct-6-B-title">Explora por viñedo</h1>
+                        <Carousel object={vinedo} device={margen} />
+                    </div>
+                    <div className="secct-6-B secB">
+                        <h1 className="secct-6-B-title">
+                            Explora por experiencia
+                        </h1>
+                        <Carousel object={exper} device={margen} />
+                    </div>
+                    <div className="secct-6-B secC">
+                        <h1 className="secct-6-B-title">
+                            Explora por gastronomia
+                        </h1>
+                        <Carousel object={gastro} device={margen} />
+                    </div>
+                </div>
+                <div className="secct7">
+                    <h1 className="secct7-title">¿Quieres ser anfitrión?</h1>
+                    <div className="secct7-bodyA">
+                        Conviértete en anfitrión y deja que miles de alkimistas
+                        visiten tu vinícola, hotel, restaurante, o cualquier
+                        negocio que ofrezca experiencias y servicios
+                        enoturísticos. Si quieres saber más a cerca de volverte
+                        anfitrión, da click
+                    </div>
+                    <p className="secct7-bodyA marg">
+                        Si quieres saber más a cerca de volverte anfitrión, da
+                        click
+                    </p>
+
+                    <div className="secct7-btn">
+                        <div className="secct-7-btn">
+                            <Button
+                                btnTitle={"Saber más"}
+                                className={"border"}
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="secct8">
+                    <h1 className="secct8-title">Blog</h1>
+                    <div className="secct-8-body">
+                        {blog.map((blog) => (
+                            <div className="card-blog" key={blog.id}>
+                                <div className="card-container">
+                                    <img
+                                        src={blog.img}
+                                        alt="Card"
+                                        className="card-img"
+                                    />
+                                </div>
+                                <p className="card-title">{blog.title}</p>
+                                <p className="card-descrip">
+                                    {blog.descriptions}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="secct9">
+                    <div className="secct-9-texto">
+                        <div className="secct-9-container-logo">
+                            <img
+                                src={AlkimiaB}
+                                alt="Alkimia"
+                                className="secct-9-logo"
+                            />
+                        </div>
+                        <div className="secct-body">
+                            <h3 className="secct-body-title">
+                                Descarga la app
+                            </h3>
+                            <p className="secct-body-span">
+                                {" "}
+                                y comienza a catar México
+                            </p>
+                            <p className="secct-body-descr">
+                                Alkimia es la primer app de enoturismo en
+                                México. Descarga la app y reserva tus visitas a
+                                vinícolas, descubre viñedos, gastronomía de
+                                autor, hoteles únicos, experiencias y mucho más.
+                            </p>
+                            <div className="secct-9-btn">
+                                <div className="secct-9-cont">
+                                    <Button
+                                        btnTitle={"Saber más"}
+                                        className={"border"}
+                                    />
+                                </div>
+                            </div>
+                            <div className="secct-9-Store">
+                                <div className="containStore">
+                                    <img
+                                        src={GoogleStore}
+                                        alt="GoogleStore"
+                                        className="appStore"
+                                    />
+                                </div>
+                                <div className="containStore">
+                                    <img
+                                        src={AppleStore}
+                                        alt="AppleStore"
+                                        className="appStore"
+                                    />
+                                </div>
+                            </div>
+                            <div className="div-hiiden"></div>
+                        </div>
+                    </div>
+
+                    <div className="secct-phone-container">
+                        <div className="secct-9-sub">
+                            <img
+                                src={PhoneB}
+                                alt="phone"
+                                className="phone-secc"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="secct404">
+
                 </div>
             </div>
         </>

@@ -50,7 +50,7 @@ const Header = ({ className }) => {
                                         <a className="linkA" href="/hosts">
                                             Anfitriones
                                         </a>
-                                        <a className="linkA" href="#">
+                                        <a className="linkA" href="/blog">
                                             Blog
                                         </a>
                                     </div>
@@ -76,7 +76,7 @@ const Header = ({ className }) => {
                                 <a className="linkA" href="/hosts">
                                     Anfitriones
                                 </a>
-                                <a className="linkA" href="#">
+                                <a className="linkA" href="blog">
                                     Blog
                                 </a>
                             </div>

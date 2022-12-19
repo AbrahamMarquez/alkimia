@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main.index');
-});
 
-Route::get('/hosts', function () {
-    return view('main.index');
-});
+// Route::middleware('route.mapping')->group(function () {
+
+  
+
+// });
+
+require (__DIR__ . '/Guest.php');
+require (__DIR__ . '/Auth.php');
+
