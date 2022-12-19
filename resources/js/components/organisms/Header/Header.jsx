@@ -44,10 +44,10 @@ const Header = ({ className }) => {
                                         />
                                     </div>
                                     <div className="Side-links">
-                                        <a className="linkA" href="#">
+                                        <a className="linkA" href="/">
                                             Inicio
                                         </a>
-                                        <a className="linkA" href="#">
+                                        <a className="linkA" href="/hosts">
                                             Anfitriones
                                         </a>
                                         <a className="linkA" href="#">
@@ -70,10 +70,10 @@ const Header = ({ className }) => {
 
                         <div className="header-right">
                             <div className="enlaces-header">
-                                <a className="linkA" href="#">
+                                <a className="linkA" href="/">
                                     Inicio
                                 </a>
-                                <a className="linkA" href="#">
+                                <a className="linkA" href="/hosts">
                                     Anfitriones
                                 </a>
                                 <a className="linkA" href="#">

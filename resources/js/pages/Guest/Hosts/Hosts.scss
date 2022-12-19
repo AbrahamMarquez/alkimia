@@ -1,0 +1,166 @@
+.hosts {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../../assets/icons/fono.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+
+    .secct1 {
+        background-color: #fff;
+        // display: flex;
+        // justify-content: center;
+        // flex-direction: column;
+        // align-items: center;
+        padding: 35px 21px 19px 21px;
+
+        .secct-1-A {
+            font-family: "Abril Fatface";
+            font-size: 18.4px;
+            color: #df1683;
+            text-decoration: none solid rgb(223, 22, 131);
+            line-height: 48px;
+        }
+
+        .secct-B-body {
+            font-family: "Metropolis";
+            font-size: 11.04px;
+            color: #3b3b3b;
+            text-decoration: none solid rgb(59, 59, 59);
+            line-height: 37px;
+            line-height: 20px;
+        }
+
+        .secct-c {
+            width: 100%;
+        }
+    }
+
+    .first-div-sep {
+        width: 100%;
+        height: 90px;
+    }
+
+    .secct2 {
+        padding: 40px 20px;
+        background: linear-gradient(
+            120deg,
+            #3a8dde 3%,
+            #8331a7 47%,
+            #df1683 100%
+        );
+
+        .secct-2-title {
+            font-family: "Abril Fatface";
+            font-size: 18.4px;
+            color: #ffffff;
+            text-decoration: none solid rgb(255, 255, 255);
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .secct-2-body {
+            font-family: "Metropolis";
+            font-size: 13.8px;
+            color: #ffffff;
+            text-decoration: none solid rgb(255, 255, 255);
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .secct-2-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+
+            .border {
+                width: 192px;
+                height: 40px;
+            }
+        }
+    }
+
+    .secct3 {
+        background-color: #fff;
+
+        .secct-3-photo {
+            height: 618px;
+            width: 100%;
+
+            .secct-3-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .secct-3-B {
+            padding: 34px 20px;
+
+            .secct-3-title {
+                font-family: "Abril Fatface";
+                font-size: 18.4px;
+                color: #df1683;
+                text-decoration: none solid rgb(223, 22, 131);
+                line-height: 20px;
+                text-align: center;
+            }
+
+            .secct-3-arrowUp {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .secct-3-scroll {
+                height: 533px;
+                overflow: auto;
+                background-color: #fff;
+                // border: 1px solid red;
+                box-shadow: 0px 12px 5px 0px rgba(153, 153, 153, 0.75);
+                -webkit-box-shadow: 0px 12px 5px 0px rgba(153, 153, 153, 0.75);
+                -moz-box-shadow: 0px 12px 5px 0px rgba(153, 153, 153, 0.75);
+
+                .secct-3-card {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    justify-content: space-between;
+                    padding: 5px 20px;
+                    border-radius: 20px;
+                    background-color: #faf7f7;
+                    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+
+                    .secct-3-question {
+                        font-family: "Metropolis";
+                        font-size: 12.88px;
+                        color: #8a8a8a;
+                        text-decoration: none solid rgb(138, 138, 138);
+                        line-height: 20px;
+                        width: 253px;
+                    }
+
+                    .secct-3-plus {
+                        background-color: #df1683;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+
+                        .secct-3-Icon {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
