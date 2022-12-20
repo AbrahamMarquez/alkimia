@@ -164,43 +164,66 @@
                 height: 524px;
             }
 
-            .secct-2-cards-a{
+            .secct-2-cards-a {
                 padding: 35px 20px 0 34px !important;
-                .secct-2-name{
+                .secct-2-name {
                     font-weight: bold;
                     font-size: 15.64px !important;
                 }
-                .secct-2-date{
+                .secct-2-date {
                     font-weight: bold;
                     font-size: 16.56px !important;
                     margin-top: 15px !important;
                 }
-    
-                .card-a-puntos{
-                    height: 44px!important;
+
+                .card-a-puntos {
+                    height: 44px !important;
                     top: -30px !important;
                 }
             }
 
-            .secct-2-share{
+            .secct-2-share {
                 width: 212px !important;
                 height: 52px !important;
 
-                &.openModal{
+                &.openModal {
                     right: 30px !important;
                     top: 10px !important;
                 }
 
-                .secct-2-text{
+                .secct-2-text {
                     font-size: 16.56px !important;
                 }
 
-                .share{
+                .share {
                     height: 24px !important;
                     width: 24px !important;
                 }
             }
 
+            .secct-2-c {
+                height: 72px !important;
+                justify-content: space-evenly !important;
+                padding: 0 35px !important;
+
+                .secct-2-c-title {
+                    font-size: 27.6px !important;
+                    margin-top: 0 !important;
+                }
+
+                .secct-2-heart {
+                    width: 30px !important;
+                    height: 30px !important;
+                    margin-top: 0 !important;
+                }
+            }
+
+            .secct-2-btn-cont {
+                top: calc(50% - 33px) !important;
+                left: calc(50% - 82px) !important;
+                width: 183px !important;
+                height: 51px !important;
+            }
         }
     }
 }

@@ -7,7 +7,6 @@ import Allmexicancheese from "../../../assets/icons/allmexicancheese.jpeg";
 import BgCampeche from "../../../assets/icons/bgCampeche.jpg";
 import Maridar from "../../../assets/icons/maridar.png";
 
-
 //Styles 😂
 import "./Blog.scss";
 import CardViews from "../../../components/organisms/CardViews/CardViews";
@@ -53,13 +52,12 @@ const Blog = () => {
             <div className="secct1">
                 <h1 className="secct-1-title">La guía del alkimista</h1>
             </div>
-            <div>
+            <div className="first-cards">
                 <CardViews elements={cards} />
             </div>
-            <div style={{marginTop: 35}}>
-              <CardViewShort elements={cards}/>
+            <div className="seconds-cards">
+                <CardViewShort elements={cards} />
             </div>
-           
         </div>
     );
 };

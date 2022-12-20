@@ -12,7 +12,6 @@
     .Header-logo {
         width: 51px;
     }
-
     .HeadSide {
         position: fixed;
         right: -100%;
@@ -21,7 +20,7 @@
         height: 100vh;
         transition: all 0.5s;
         display: flex;
-        z-index: 1;
+        z-index: 2;
 
         &.OpenSide {
             right: 0;
@@ -29,13 +28,15 @@
 
         .side-black {
             background: rgba(0, 0, 0, 0.5);
-            width: 160px;
+            // width: 160px;
+            width: 43%;
             height: 100vh;
         }
 
         .side-color {
             padding: 22px 22px 20px 25px;
-            width: 215px;
+            // width: 215px;
+            width: 60%;
             height: 100vh;
             background: linear-gradient(
                 -120deg,
@@ -56,10 +57,11 @@
                 font-size: 12.88px;
                 font-family: "Metropolis";
                 margin-top: 19px;
+                gap: 29px;
             }
 
             .side-btns {
-                height: calc(100vh - 232px);
+                height: calc(100vh - 198px);
                 display: flex;
                 flex-direction: column;
                 gap: 15px;

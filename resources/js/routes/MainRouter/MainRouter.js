@@ -6,6 +6,11 @@ import Guest from "./Guest/Guest";
 
 import "./MainRouter.scss"
 
+// prime react
+import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
+import "primereact/resources/primereact.min.css";                  //core css
+import "primeicons/primeicons.css";                                //icons
+
 export default function MainRoute() {
     const [auth, setAuth] = useState(false);
 

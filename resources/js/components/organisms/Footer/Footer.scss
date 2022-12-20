@@ -16,6 +16,7 @@
         .footer-socalNetwork {
             display: flex;
             gap: 20px;
+            margin-top: 11px;
 
             .card-network{
                 cursor: pointer;
@@ -37,17 +38,19 @@
 
     .footer-secct2 {
         margin-top: 50px;
+
         .footer-comunity {
             font-family: "Metropolis";
             font-size: 16.56px;
             color: #ffffff;
             text-decoration: none solid rgb(255, 255, 255);
             line-height: 20px;
-            text-align: center;
+
         }
         .input-btn {
             display: flex;
             width: 100%;
+            margin-top: 27px;
 
             .footer-form {
                 width: 100%;
@@ -108,21 +111,21 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-
             font-family: "Metropolis";
             font-size: 12px;
             color: #fff;
             text-decoration: none solid rgb(255, 255, 255);
-            line-height: 24px;
+            gap: 20px;
+            margin-top: 27px;
         }
 
         .footer-derechos-reservdos {
             font-family: "Metropolis";
             font-size: 12.88px;
             color: #ffffff;
-            text-decoration: none solid rgb(255, 255, 255);
             line-height: 20px;
             text-align: center;
+            margin-top: 34px;
         }
     }
 }
@@ -138,6 +141,7 @@
         }
 
         .footer-socalNetwork {
+            margin-top: 21px !important;
             .networks {
                 width: 50px !important;
                 height: 50px !important;
@@ -150,6 +154,8 @@
             .footer-comunity {
                 font-size: 23px !important;
                 width: 483px !important;
+                margin-bottom: 21px !important;
+                text-align: center !important;
 
                 .input-default {
                     height: 48px !important;

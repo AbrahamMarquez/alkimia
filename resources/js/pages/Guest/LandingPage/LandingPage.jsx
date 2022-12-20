@@ -61,6 +61,7 @@ import "./LandingPage.scss";
 import PostCardViewx from "../../../components/molecules/PostCardView/PostCardViewx";
 import Carousel from "../../../components/molecules/Carousel/Carousel";
 import Map from "../../../components/molecules/Maps/Maps";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
     const [openPlace, setOpenPlace] = useState(false);
@@ -81,6 +82,8 @@ const LandingPage = () => {
             });
         }
     }, []);
+
+    const navigate = useNavigate()
 
     const helpTravel = [
         {
@@ -171,39 +174,39 @@ const LandingPage = () => {
     const [category, setCategory] = useState([
         {
             id: 1,
-            category: "Viñedos",
+            category: "Avión",
         },
         {
             id: 2,
-            category: "Naturaleza",
+            category: "Motocicleta",
         },
         {
             id: 3,
-            category: "Welness",
+            category: "Museos",
         },
         {
             id: 4,
-            category: "Hospedaje",
+            category: "Globo",
         },
         {
             id: 5,
-            category: "Cartas de vinos",
+            category: "Tren",
         },
         {
             id: 6,
-            category: "Productos",
+            category: "Avión",
         },
         {
             id: 7,
-            category: "Experiencias",
+            category: "Motocicleta",
         },
         {
             id: 8,
-            category: "Eno-Tours",
+            category: "Museos",
         },
         {
             id: 9,
-            category: "Gastronomía",
+            category: "Globo",
         },
     ]);
 
@@ -719,7 +722,7 @@ const LandingPage = () => {
                             Comienza a vivir el apasionante mundo del vino.
                         </span>
                         <br />
-                        <span className="secct-6-A-des">
+                        <span className="secct-6-B-des">
                             Visita los mejores destinos del enoturismo en
                             México.
                         </span>
@@ -760,6 +763,7 @@ const LandingPage = () => {
                             <Button
                                 btnTitle={"Saber más"}
                                 className={"border"}
+                                onClick={() => navigate("hosts")}
                             />
                         </div>
                     </div>
@@ -812,6 +816,7 @@ const LandingPage = () => {
                                     <Button
                                         btnTitle={"Saber más"}
                                         className={"border"}
+                                        onClick={() => navigate("downloadApp")}
                                     />
                                 </div>
                             </div>

@@ -14,8 +14,11 @@ import "./Hosts.scss";
 import Input from "../../../components/atoms/Input/Input";
 import TextArea from "../../../components/atoms/TeaxtArea/TextArea";
 import Footer from "../../../components/organisms/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Hosts = () => {
+
+    const navigate = useNavigate()
 
 
 
@@ -188,7 +191,7 @@ const Hosts = () => {
                             servicios enoturísticos.
                         </p>
                         <div className="host-secct-2-btn">
-                            <Button className={"border"} btnTitle={"Unirme"} />
+                            <Button className={"border"} btnTitle={"Unirme"} onClick={() => navigate("register")}/>
                         </div>
                     </div>
                 </div>
