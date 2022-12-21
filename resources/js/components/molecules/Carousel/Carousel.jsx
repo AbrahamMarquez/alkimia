@@ -1,24 +1,35 @@
-import React, { useState } from "react";
+
+
+// export default Carousel;
+import React, { useEffect, useState } from "react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-// import required modules
-import { EffectCoverflow, Pagination, Navigation, Controller } from "swiper";
-
- import Start from "../../../assets/icons/start.svg";
+import Start from "../../../assets/icons/start.svg";
 
 //Styles 🤞
 import "./Carousel.scss";
 
-const Carousel = ({object, device}) => {
+const Carousel = ({ object }) => {
     const [viewStart, setViewStart] = useState(5);
+    const [desvice, setDesvice] = useState(window.innerWidth);
+    const [space, setSpace] = useState(0);
+    const [margen, setMargen] = useState(0)
 
-    console.log("desde el carrusel", device)
+    useEffect(() => {
+        if (desvice <= 440) {
+            setSpace(2);
+        } else {
+            setSpace(3);
+        }
+    }, []);
 
     const score = [
         {
@@ -42,35 +53,23 @@ const Carousel = ({object, device}) => {
             img: Start,
         },
     ];
-
-    const [desvice, setDesvice] = useState(window.innerWidth)
-
     return (
         <div className="container-carrousel-team">
             <Swiper
-                effect={"coverflow"}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={"5"}
-                initialSlide={2}
-                slideToClickedSlide={true}
-                coverflowEffect={{
-                    rotate: 0,
-                    // stretch: -100,
-                    stretch: device,
-                    depth: 0,
-                    modifier: 1,
-                    slideShadows: false,
-                }}
-                pagination={false}
-                navigation={true}
-                modules={[EffectCoverflow, Pagination, Navigation, Controller]}
-                className="mySwiper"
+                // install Swiper modules
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={50}
+                slidesPerView={space}
+                navigation
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => console.log("slide change")}
             >
                 {object.map((e, id) => (
-                    <div key={id}>
-                        <SwiperSlide key={id}>
-                            <img src={e.img} className="Slide-img" />
+                    <SwiperSlide id={e.id}>
+                        <div className="laSLide">
+                            <div className="Slide-container">
+                                <img src={e.img} className="Slide-img" />
+                            </div>
                             <div className="Slide-prices-container">
                                 <h1 className="Slide-price">{e.price}</h1>
                                 <p className="Slide-priceReal">{e.priceReal}</p>
@@ -82,19 +81,17 @@ const Carousel = ({object, device}) => {
                                 {score.map(({ id, img }, idx) => {
                                     if (idx < viewStart) {
                                         return (
-                                            
-                                                <img
-                                                    className="score-start"
-                                                    src={img}
-                                                    key={id}
-                                                />
-                                            
+                                            <img
+                                                className="score-start"
+                                                src={img}
+                                                key={id}
+                                            />
                                         );
                                     }
                                 })}
                             </div>
-                        </SwiperSlide>
-                    </div>
+                        </div>
+                    </SwiperSlide>
                 ))}
             </Swiper>
         </div>

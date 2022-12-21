@@ -7,10 +7,11 @@ import Close from "../../../assets/icons/close.svg";
 
 import "./Header.scss";
 import Button from "../../atoms/Button/Button";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = ({ className }) => {
     const [openSide, setOpenSide] = useState(false);
+    const navigate = useNavigate()
 
     return (
         <>
@@ -56,6 +57,7 @@ const Header = ({ className }) => {
                                 <Button
                                     btnTitle={"Descargar la app"}
                                     className={"border"}
+                                    onClick={() => navigate("downloadApp")}
                                 />
                             </div>
                         </div>
@@ -84,6 +86,7 @@ const Header = ({ className }) => {
                         btnTitle={"Descargar la app"}
                         height={"40px"}
                         className={"border"}
+                        onClick={() => navigate("downloadApp")}
                     />
                 </div>
             </nav>
