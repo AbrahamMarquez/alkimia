@@ -8,6 +8,7 @@ import Facebook from "../../../assets/icons/facebook.svg";
 import Instagram from "../../../assets/icons/instagram.svg";
 import Whatsapp from "../../../assets/icons/whatsapp.svg";
 import Youtube from "../../../assets/icons/youtube.svg";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     const socialNetwork = [
@@ -73,9 +74,9 @@ const Footer = () => {
 
             <div className="footer-finish">
                 <div className="footer-ter-Con">
-                    <p>Términos y condiciones</p>
-                    <p>Políticas de privacidad</p>
-                    <p>Preguntas frecuentes</p>
+                    <NavLink to="Terminos">Términos y condiciones</NavLink>
+                    <NavLink to="Politicas">Políticas de privacidad</NavLink>
+                    <NavLink to="Questions">Preguntas frecuentes</NavLink>
                 </div>
                 <div className="footer-derechos-reservdos">
                     © 2021 Alkimia Experiencias Mágicas S.A. de C.V. Todos los

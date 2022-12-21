@@ -104,6 +104,8 @@
                 flex-wrap: wrap;
                 width: 100%;
                 overflow: hidden;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
 
                 &.place-hidden {
                     max-height: 204px;
@@ -115,6 +117,7 @@
                     padding-left: 7px;
                     padding-right: 7px;
                     width: 110px;
+                    margin-top: 15px;
 
                     .checkBox {
                         cursor: pointer;
@@ -161,6 +164,8 @@
                 flex-wrap: wrap;
                 width: 100%;
                 overflow: hidden;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
 
                 &.category-hidden {
                     max-height: 204px;
@@ -172,6 +177,7 @@
                     padding-left: 7px;
                     padding-right: 7px;
                     width: 110px;
+                    margin-top: 15px;
 
                     .checkBoxCat {
                         cursor: pointer;
@@ -230,13 +236,15 @@
             .secct2-title {
                 font-family: "Abril Fatface";
                 font-size: 16.56px;
-                font-weight: bold;
+                margin-top: 10px;
             }
 
             .secct2-desc {
                 font-family: "Metropolis";
                 font-size: 10.12px;
                 color: #3b3b3b;
+                line-height: 20px;
+                margin-top: 10px;
             }
         }
     }
@@ -380,6 +388,12 @@
                 line-height: 48px;
             }
             .secct-6-A-des {
+                font-family: "Metropolis";
+                font-size: 11.4px;
+                color: #3b3b3b;
+                text-decoration: none solid rgb(59, 59, 59);
+            }
+            .secct-6-B-des {
                 font-family: "Metropolis";
                 font-size: 11.4px;
                 color: #3b3b3b;
@@ -699,8 +713,10 @@
                 }
 
                 .place-pick {
-                    width: 271px !important;
+                    width: 339px !important;
                     padding-left: 63px !important;
+                    margin-bottom: 76px !important;
+                    gap: 10px !important;
                 }
 
                 .checkBox {
@@ -721,8 +737,10 @@
                 }
 
                 .category-pick {
-                    width: 271px !important;
+                    width: 339px !important;
                     padding-left: 63px !important;
+                    margin-bottom: 76px !important;
+                    gap: 10px !important;
                 }
 
                 .checkBoxCat {
@@ -759,8 +777,10 @@
 
         .secct2-title {
             font-size: 27.6px !important;
+            margin-top: 24px !important;
         }
         .secct2-desc {
+            margin-top: 24px !important;
             font-size: 18.4px !important;
         }
     }
@@ -793,24 +813,23 @@
         }
     }
 
-    .secct4{
+    .secct4 {
         flex-direction: column;
 
         .secct-4-body {
             padding-right: 193px !important;
             padding-left: 193px !important;
-    
+
             .secct4-title {
                 font-size: 46px !important;
             }
-    
+
             .secct-4-description {
                 font-size: 32.2px !important;
                 line-height: 55px !important;
             }
         }
     }
-
 
     .secct-5-title {
         margin-top: 109px !important;
@@ -838,12 +857,20 @@
     .secct-6-A {
         margin-top: 163px !important;
         margin-left: 193px !important;
+        margin-bottom: 168px !important;
+
+
         .secct-6-A-title {
             font-size: 46px !important;
         }
 
         .secct-6-A-des {
             font-size: 32.2px !important;
+            margin-top: 25px !important;
+        }
+        .secct-6-B-des {
+            font-size: 32.2px !important;
+           
         }
     }
 
@@ -859,6 +886,7 @@
             font-size: 46px !important;
             color: #3b3b3b !important;
             line-height: 48px !important;
+            margin-bottom: 40px !important;
         }
     }
 
@@ -936,7 +964,7 @@
             .secct-body-title {
                 font-size: 55.2px !important;
                 margin-top: 19px !important;
-                height: 0 !important;
+                // height: 0 !important;
             }
 
             .secct-body-span {
@@ -986,6 +1014,6 @@
     }
 
     .secct404 {
-        height: 203px !important;
+        height: 300px !important;
     }
 }

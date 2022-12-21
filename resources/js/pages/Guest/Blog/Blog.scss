@@ -18,154 +18,28 @@
         }
     }
 
-    // .seect2 {
-    //     padding: 33px 20px 60px 20px;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     flex-wrap: wrap;
-    //     gap: 21px;
+    .seconds-cards{
+        margin-top: 35px;
+    }
 
-    //     .secct-2-cards {
-    //         position: relative;
-    //         width: 157px;
-    //         height: 271px;
+}
 
-    //         &:hover {
-    //             background-color: rgba(223, 22, 131, 0.5) !important;
-    //             cursor: pointer;
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .Blog{
+        .secct1{
+            height: 194px !important;
 
-    //             .secct-2-btn-cont {
-    //                 display: flex;
-    //             }
-    //         }
+            .secct-1-title{
+                font-size: 36.8px !important;
+            }
+        }
 
-    //         .secct-2-bg {
-    //             position: absolute;
-    //             width: 100%;
-    //             height: 100%;
-    //             object-fit: cover;
-    //             top: 0;
-    //             right: 0;
-    //             bottom: 0;
-    //             left: 0;
-    //             z-index: -1;
-    //         }
+        .first-cards{
+            margin-top: 120px !important;
+        }
 
-    //         .secct-2-cards-a {
-    //             height: 59px;
-    //             position: relative;
-
-    //             .secct-2-div-a {
-    //                 padding: 10px 0px 10px 7px;
-    //                 display: flex;
-    //                 justify-content: space-between;
-
-    //                 .secct-2-name {
-    //                     font-family: "Metropolis";
-    //                     font-size: 11.04px;
-    //                     color: #ffffff;
-    //                     text-decoration: none solid rgb(255, 255, 255);
-    //                 }
-
-    //                 .card-a-puntos {
-    //                     height: 27px;
-    //                     position: relative;
-    //                     z-index: 1;
-    //                 }
-    //             }
-
-    //             .secct-2-date {
-    //                 font-family: "Metropolis";
-    //                 font-size: 11.04px;
-    //                 color: #ffffff;
-    //             }
-
-    //             .secct-2-share {
-    //                 position: absolute;
-    //                 display: flex;
-    //                 justify-content: space-evenly;
-    //                 top: 6px;
-    //                 right: -135px;
-    //                 width: 135px;
-    //                 height: 33px;
-    //                 border-top-left-radius: 30px;
-    //                 border-bottom-left-radius: 30px;
-    //                 background-color: #3b3b3b;
-    //                 align-items: center;
-    //                 transition: all 0.2s;
-
-    //                 &.openModal{
-    //                     right: 0;
-    //                 }
-
-    //                 .secct-2-text {
-    //                     font-family: "Metropolis";
-    //                     font-size: 13.8px;
-    //                     color: #ffffff;
-    //                     text-decoration: none solid rgb(255, 255, 255);
-    //                     line-height: 37px;
-    //                 }
-
-    //                 .share {
-    //                     widows: 15px;
-    //                     height: 15px;padding-right: 10px;
-    //                 }
-    //             }
-    //         }
-
-    //         .secct-2-b {
-    //             width: 157px;
-    //             height: 150px;
-
-    //             .secct-2-bg-cont {
-    //                 height: 100%;
-
-    //                 .secct-2-bg-b {
-    //                     position: relative;
-    //                     width: 100%;
-    //                     height: 100%;
-    //                     object-fit: cover;
-    //                     z-index: -1;
-    //                 }
-    //             }
-    //         }
-
-    //         .secct-2-c {
-    //             height: 59px;
-    //             display: flex;
-    //             justify-content: space-between;
-    //             padding: 0 7px;
-    //             gap: 4px;
-
-    //             .secct-2-c-title {
-    //                 font-family: "Metropolis";
-    //                 font-size: 10.12px;
-    //                 font-weight: bold;
-    //                 color: #fff;
-    //                 margin-top: calc(61px - 31px);
-    //             }
-
-    //             .secct-2-heart {
-    //                 width: 20px;
-    //                 height: 20px;
-    //                 margin-top: calc(61px - 31px);
-    //             }
-    //         }
-
-    //         .secct-2-btn-cont {
-    //             position: absolute;
-    //             top: calc(50% - 17px);
-    //             left: calc(50% - 36px);
-    //             width: 71px;
-    //             height: 29px;
-    //             background-color: rgba(0, 0, 0, 0.8);
-    //             color: #fff;
-    //             border-radius: 15px;
-    //             display: none;
-    //             justify-content: center;
-    //             align-items: center;
-    //         }
-    //     }
-    // }
+        .seconds-cards{
+            margin-top: 221px !important;
+        }
+    }
 }
