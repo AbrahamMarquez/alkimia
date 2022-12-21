@@ -25,7 +25,7 @@ import Sol from "../../../assets//icons/test/Combined Shape (6).svg";
 import Globo from "../../../assets//icons/test/globo-aerostatico.svg";
 
 import Cheese from "../../../assets/icons/cheese.png";
-import Campeche from "../../../assets/icons/campeche.png";
+import Campeche from "../../../assets/icons/campeche.PNG";
 import Breanch_grape from "../../../assets/icons/breanch_grape.png";
 import Olive from "../../../assets/icons/olive.png";
 
