@@ -2,6 +2,23 @@
     width: 100%;
     position: relative;
 
+    .responses {
+        font-family: "Metropolis";
+        font-size: 14.72px;
+        color: #3b3b3b;
+        text-decoration: none solid rgb(59, 59, 59);
+        line-height: 20px;
+        text-align: justify;
+
+        .respo-a{
+            margin-top: 21px;
+        }
+
+        .resp-list{
+            padding-left: 10px;
+        }
+    }
+
     .hosts-fir {
         position: fixed;
         top: 0;
@@ -120,47 +137,11 @@
 
             .host-secct-3-scroll {
                 height: 533px;
-                overflow: auto;
                 background-color: #fff;
-                // border: 1px solid red;
-                box-shadow: 0px 12px 5px 0px rgba(153, 153, 153, 0.75);
-                -webkit-box-shadow: 0px 12px 5px 0px rgba(153, 153, 153, 0.75);
-                -moz-box-shadow: 0px 12px 5px 0px rgba(153, 153, 153, 0.75);
 
-                .host-secct-3-card {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 20px;
-                    justify-content: space-between;
-                    padding: 5px 20px;
-                    border-radius: 20px;
-                    background-color: #faf7f7;
-                    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
-
-                    .host-secct-3-question {
-                        font-family: "Metropolis";
-                        font-size: 12.88px;
-                        color: #8a8a8a;
-                        text-decoration: none solid rgb(138, 138, 138);
-                        line-height: 20px;
-                        width: 253px;
-                    }
-
-                    .host-secct-3-plus {
-                        background-color: #df1683;
-                        height: 30px;
-                        width: 30px;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        cursor: pointer;
-
-                        .host-secct-3-Icon {
-                            width: 15px;
-                            height: 15px;
-                        }
-                    }
+                .swiper {
+                    height: 100%;
+                    width: 100%;
                 }
             }
         }
@@ -239,6 +220,7 @@
             .host-secct-b-sub {
                 width: 50%;
                 margin-top: 43px !important;
+                line-height: 37px !important;
             }
         }
 

@@ -245,6 +245,7 @@
                 color: #3b3b3b;
                 line-height: 20px;
                 margin-top: 10px;
+                font-weight: 100;
             }
         }
     }
@@ -273,6 +274,7 @@
             font-size: 18.4px;
             color: #ffffff;
             text-align: center;
+            margin-bottom: 15px;
         }
 
         .secct3-subTitle {
@@ -292,7 +294,6 @@
 
             .secct4-title {
                 font-family: "Abril Fatface";
-                font-weight: bold;
                 font-size: 18.4px;
                 color: #df1683;
                 text-decoration: none solid rgb(223, 22, 131);
@@ -329,7 +330,7 @@
             text-decoration: none solid rgb(223, 22, 131);
             line-height: 48px;
             text-align: center;
-            font-weight: bold;
+            
         }
 
         .secct-5-anfin {
@@ -386,18 +387,21 @@
                 color: #df1683;
                 text-decoration: none solid rgb(223, 22, 131);
                 line-height: 48px;
+                margin-bottom: 23px !important;
             }
             .secct-6-A-des {
                 font-family: "Metropolis";
                 font-size: 11.4px;
                 color: #3b3b3b;
                 text-decoration: none solid rgb(59, 59, 59);
+                line-height: 55px;
             }
             .secct-6-B-des {
                 font-family: "Metropolis";
                 font-size: 11.4px;
                 color: #3b3b3b;
                 text-decoration: none solid rgb(59, 59, 59);
+                line-height: 55px;
             }
         }
 
@@ -420,6 +424,33 @@
         .secC {
             margin-top: 80px;
             margin-bottom: 30px;
+        }
+        .swiper {
+            .swiper-button-prev,
+            .swiper-rtl .swiper-button-next {
+                left: 10px;
+                right: auto;
+                top: 50%;
+                color: #df1683;
+                font-weight: bold;
+
+                &::after {
+                    font-size: 25px;
+                }
+            }
+
+            .swiper-button-next,
+            .swiper-rtl .swiper-button-prev {
+                right: 10px;
+                left: auto;
+                top: 50%;
+                color: #df1683;
+                font-weight: bold;
+
+                &::after {
+                    font-size: 25px;
+                }
+            }
         }
     }
     .secct7 {
@@ -457,6 +488,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 30px;
 
             .secct-7-btn {
                 width: 160px;
@@ -859,7 +891,6 @@
         margin-left: 193px !important;
         margin-bottom: 168px !important;
 
-
         .secct-6-A-title {
             font-size: 46px !important;
         }
@@ -870,7 +901,6 @@
         }
         .secct-6-B-des {
             font-size: 32.2px !important;
-           
         }
     }
 
@@ -887,6 +917,31 @@
             color: #3b3b3b !important;
             line-height: 48px !important;
             margin-bottom: 40px !important;
+        }
+
+        .swiper {
+            .swiper-button-prev,
+            .swiper-rtl .swiper-button-next {
+             
+                top: 50% !important;
+
+                &::after {
+                    font-size: 50px !important;
+                }
+            }
+
+            .swiper-button-next,
+            .swiper-rtl .swiper-button-prev {
+                
+                left: auto !important;
+                top: 50% !important;
+                color: #df1683;
+                font-weight: bold;
+
+                &::after {
+                    font-size: 50px !important;
+                }
+            }
         }
     }
 
@@ -1014,6 +1069,10 @@
     }
 
     .secct404 {
+        height: 169px !important;
+    }
+
+    .fina {
         height: 300px !important;
     }
 }

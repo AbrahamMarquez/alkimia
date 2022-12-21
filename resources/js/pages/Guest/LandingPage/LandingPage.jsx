@@ -62,13 +62,11 @@ import PostCardViewx from "../../../components/molecules/PostCardView/PostCardVi
 import Carousel from "../../../components/molecules/Carousel/Carousel";
 import Map from "../../../components/molecules/Maps/Maps";
 import { useNavigate } from "react-router-dom";
+import Carrusel from "../../../components/organisms/Carrusel/Carrusel";
 
 const LandingPage = () => {
     const [openPlace, setOpenPlace] = useState(false);
     const [openCategory, setOpenCategory] = useState(false); //-250
-    const [margen, setMargen] = useState(
-        window.innerWidth <= 450 ? -100 : -250
-    );
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -642,9 +640,9 @@ const LandingPage = () => {
                 </div>
                 <div className="secct4">
                     <div className="secct-4-body">
-                        <h1 className="secct4-title">
+                        <p className="secct4-title">
                             Visita los mejores viñedos mexicanos
-                        </h1>
+                        </p>
                         <p className="secct-4-description">
                             El mundo del vino mexicano es mucho más grande de lo
                             que piensan. Nuevos viñedos abren sus puestas
@@ -695,9 +693,9 @@ const LandingPage = () => {
                     <div className="secct404"></div>
                 </div>
                 <div className="secct5">
-                    <h1 className="secct-5-title">
+                    <p className="secct-5-title">
                         Descubre todo tipo de anfitriones
-                    </h1>
+                    </p>
                     <div className="secct-5-anfin">
                         {anfintriones.map((item) => (
                             <div className="secct5-descovery" key={item.title}>
@@ -715,9 +713,9 @@ const LandingPage = () => {
                 </div>
                 <div className="secct6">
                     <div className="secct-6-A">
-                        <h2 className="secct-6-A-title">
+                        <p className="secct-6-A-title">
                             Descubre experiencias mágicas
-                        </h2>
+                        </p>
                         <span className="secct-6-A-des">
                             Comienza a vivir el apasionante mundo del vino.
                         </span>
@@ -729,19 +727,19 @@ const LandingPage = () => {
                     </div>
                     <div className="secct-6-B">
                         <h1 className="secct-6-B-title">Explora por viñedo</h1>
-                        <Carousel object={vinedo} device={margen} />
+                        <Carousel object={vinedo}/>
                     </div>
                     <div className="secct-6-B secB">
                         <h1 className="secct-6-B-title">
                             Explora por experiencia
                         </h1>
-                        <Carousel object={exper} device={margen} />
+                        <Carousel object={exper}/>
                     </div>
                     <div className="secct-6-B secC">
                         <h1 className="secct-6-B-title">
                             Explora por gastronomia
                         </h1>
-                        <Carousel object={gastro} device={margen} />
+                        <Carousel object={gastro}/>
                     </div>
                 </div>
                 <div className="secct7">
@@ -850,7 +848,7 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="secct404">
+                <div className="secct404 fina">
 
                 </div>
             </div>
