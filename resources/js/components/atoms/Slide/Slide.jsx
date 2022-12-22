@@ -10,6 +10,7 @@
 // import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Accordion, AccordionTab } from "primereact/accordion";
 
 // Import Swiper styles
 import "swiper/css";
@@ -25,10 +26,10 @@ const Slide = ({ object }) => {
     const [openModalQu, setOpenModalQu] = useState(false);
 
     const OpenShareModal = (id) => {
-        if (openModalQu) {
-            setOpenModalQu(false);
-        } else {
+        if (openModalQu != id) {
             setOpenModalQu(id);
+        } else {
+            setOpenModalQu(false);
         }
     };
     return (
@@ -36,8 +37,8 @@ const Slide = ({ object }) => {
             direction={"vertical"}
             navigation
             spaceBetween={10}
-            slidesPerView={7}
-            slidesPerGroup={7}
+            slidesPerView={6}
+            slidesPerGroup={6}
             modules={[Navigation, A11y]}
             className="mySwiper"
         >
@@ -47,7 +48,7 @@ const Slide = ({ object }) => {
                         <p className="host-secct-3-question">{ques.question}</p>
                         <div
                             className="host-secct-3-plus"
-                            onClick={() => setOpenModalQu(ques.id)}
+                            onClick={() => OpenShareModal(ques.id)}
                         >
                             <img
                                 src={ques.icon}
@@ -62,7 +63,6 @@ const Slide = ({ object }) => {
                             }`}
                         >
                             {ques.respose}
-                            hola
                         </div>
                     </div>
                 </SwiperSlide>

@@ -4,18 +4,24 @@
 
     .responses {
         font-family: "Metropolis";
-        font-size: 14.72px;
+        font-size: 10.12px;
         color: #3b3b3b;
         text-decoration: none solid rgb(59, 59, 59);
-        line-height: 20px;
+
         text-align: justify;
 
-        .respo-a{
+        .respo-a {
             margin-top: 21px;
+            line-height: 20px;
         }
 
-        .resp-list{
-            padding-left: 10px;
+        .resp-list {
+            margin-left: 10px;
+
+            .repo-li {
+                line-height: 20px;
+                margin-left: 10px;
+            }
         }
     }
 
@@ -136,19 +142,30 @@
             }
 
             .host-secct-3-scroll {
+                padding-top: 35px;
                 height: 533px;
                 background-color: #fff;
 
                 .swiper {
                     height: 100%;
                     width: 100%;
+                    overflow: auto;
+
+                    .swiper-button-prev,
+                    .swiper-rtl .swiper-button-next {
+                        display: none;
+                    }
+
+                    .swiper-button-next,
+                    .swiper-rtl .swiper-button-prev {
+                        display: none;
+                    }
                 }
             }
         }
     }
 
     .host-secct4 {
-        // margin-top: 55px;
         margin: 55px 0;
         padding: 0 13px;
 
@@ -189,6 +206,24 @@
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
     .hosts {
+
+        .responses {
+            font-size: 14.72px !important;
+    
+            .respo-a {
+                margin-top: 21px;
+                line-height: 20px;
+            }
+    
+            .resp-list {
+                margin-left: 10px;
+    
+                .repo-li {
+                    line-height: 20px;
+                    margin-left: 10px;
+                }
+            }
+        }
         .host-secct1 {
             .host-secct-1-A {
                 font-size: 46px !important;
@@ -275,6 +310,7 @@
                 .host-secct-3-scroll {
                     margin-top: 35px !important;
                     height: 759px !important;
+                    padding: 0px 100px !important;
 
                     .host-secct-3-card {
                         height: 79px !important;
