@@ -26,6 +26,8 @@ mix.webpackConfig({
     },
 });
 
+mix.copyDirectory('resources/js/assets/icons', 'public/images');
+
 mix.js("resources/js/app.js", "public/js")
     .react()
     .postCss("resources/css/app.css", "public/css", [

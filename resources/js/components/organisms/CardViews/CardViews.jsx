@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Share from "../../../assets/icons/share.svg";
 
@@ -6,6 +7,7 @@ import "./CardViews.scss";
 
 const CardViews = ({ elements }) => {
     const [openShare, setOpenShare] = useState(false);
+    const navigate = useNavigate()
 
     const OpenShareModal = (id) => {
         if (openShare) {
@@ -76,7 +78,7 @@ const CardViews = ({ elements }) => {
                             className="secct-2-heart"
                         />
                     </div>
-                    <div className="secct-2-btn-cont" onClick={() => {}}>
+                    <div className="secct-2-btn-cont" onClick={() => navigate(`${crd.id}/show`)}>
                         Leer
                     </div>
                 </div>

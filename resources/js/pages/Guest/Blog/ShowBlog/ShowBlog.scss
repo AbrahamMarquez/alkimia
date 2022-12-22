@@ -1,0 +1,324 @@
+.ShowBlog {
+    // padding: 41px 380px 212px 380px; Es es en el deskatop
+    padding: 17px 20px 70px 20px;
+
+    .ssecct1 {
+        .ssecct-1-cont-img {
+            width: 335px;
+            height: 188px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .ssecct-1-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .ssecct-1-b {
+            margin-top: 75px;
+            width: 100%;
+
+            .ssecct-1-sub {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 2px solid #000;
+
+                height: 30px;
+
+                .ssecct-1-nmas {
+                    display: flex;
+                    gap: 10px;
+
+                    font-family: "Metropolis";
+                    font-size: 12.88px;
+                    color: #3b3b3b;
+                    line-height: 37px;
+                }
+
+                .conqwe {
+                    height: 24px;
+                    position: relative;
+
+                    .ssecct-1-sub-img {
+                        height: 100%;
+                    }
+                }
+
+                .ssecct-1-modal-a {
+                    position: absolute;
+                    top: -5px;
+                    right: 0;
+                    width: 145px;
+                    height: 30px;
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                    background-color: #3b3b3b;
+
+                    display: flex;
+                    align-items: center;
+                    padding: 0 10px 0 29px;
+                    gap: 10px;
+                    z-index: -1;
+
+                    .modal-a {
+                        font-family: "Metropolis";
+                        font-size: 13.8px;
+                        color: #fff;
+                    }
+
+                    .ShareWhite {
+                        width: 15px;
+                        height: 15px;
+                    }
+
+                    .ssecct-1-modal-b {
+                        position: absolute;
+                        top: 30px;
+                        left: 0;
+                        background-color: #3b3b3b;
+
+                        border-bottom-right-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        height: 162px;
+                        width: 145px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        padding: 8px 28px;
+                        gap: 21px;
+
+                        .modal-b-conta {
+                            background-color: transparent;
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+
+                            .modal-b-net {
+                                font-family: "Metropolis";
+                                font-size: 13.8px;
+                                color: #ffffff;
+                            }
+
+                            .modal-b-networks {
+                                width: 21px;
+                                height: 21px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ssecct-1-networks {
+                display: flex;
+                gap: 5px;
+                margin-top: 6px;
+
+                .net-a {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    .icons-icons {
+                        height: 20px;
+                        width: 20px;
+                    }
+
+                    .eye {
+                        width: 20px;
+                        height: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ssecct2 {
+        margin-top: 15px;
+        .ssecct2-title {
+            font-family: "Metropolis";
+            font-size: 23px;
+            color: #3b3b3b;
+            text-decoration: none solid rgb(59, 59, 59);
+            line-height: 20px;
+        }
+        .ssecct-2-descrip {
+            margin-top: 20px;
+
+            .favorite {
+                margin-top: 25px;
+                font-family: "Metropolis";
+                font-size: 12px;
+                color: #3b3b3b;
+            }
+        }
+    }
+
+    .ssecct3 {
+        margin-top: 83px;
+
+        .ssecct-3-img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .ssecct4 {
+        .ssecct-4-comen {
+            font-family: "Metropolis";
+            font-size: 18.4px;
+            color: #3b3b3b;
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 10px 0;
+            padding-left: 10px;
+        }
+        .ssecct-4-min-form {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+
+            .ssecct-4-cont {
+                width: 40px;
+                height: 40px;
+
+                .img-dfg {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .ssecct-4-in-btn {
+                width: 100%;
+
+                .textArea-4 {
+                    height: 59px;
+                }
+                .ssecct-4-cont {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .btns45 {
+                        margin-top: 20px;
+                        width: 180px;
+
+                        .solid {
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ssecct5 {
+        margin-top: 39px;
+        .ssecct-5-cms {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 14px;
+
+            .cms-5 {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+
+                .ssecct-5-img {
+                    width: 1005;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+
+            .ssecct-5-come {
+                font-family: "Metropolis";
+                font-size: 14.72px;
+                color: #3b3b3b;
+            }
+
+            .ssecct-5-line {
+                margin-top: 8px;
+                width: 100%;
+                border-bottom: 2px solid #000;
+            }
+        }
+    }
+
+    .ssect6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 25px;
+
+        .ssect-6-cards {
+            width: 158px;
+            position: relative;
+
+            &:hover {
+                .asdfg {
+                    display: flex;
+                }
+            }
+
+            .new-cards- {
+                width: 100%;
+                height: 166px;
+            }
+
+            .line-line-cards {
+                margin: 10px 0;
+                width: 100%;
+                border-bottom: 2px solid #000;
+            }
+
+            .title-cardss {
+                font-family: "Metropolis";
+                font-size: 9.2px;
+                color: #3b3b3b;
+                font-weight: bold;
+            }
+
+            .asdfg {
+                cursor: pointer;
+                position: absolute;
+                width: 68px;
+                height: 31px;
+                background-color: rgba(0, 0, 0, 0.8);
+                top: calc(50% - 34px);
+                left: calc(50% - 31px);
+                color: #fff;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+.Info {
+    font-family: "Metropolis";
+    font-size: 12px;
+    color: #3b3b3b;
+    text-decoration: none solid rgb(59, 59, 59);
+    line-height: 20px;
+
+    p {
+        padding-left: 20px;
+    }
+
+    div {
+        margin-top: 20px;
+    }
+}

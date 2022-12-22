@@ -1,24 +1,52 @@
-import React, { useState } from "react";
-import Slider from "react-slick";
-import Button from "../../../components/atoms/Button/Button";
-import Header from "../../../components/organisms/Header/Header";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 //Assets 😁
 import FondoA from "../../../assets/icons/fono.jpg";
-import ArrowUp from "../../../assets/icons/arrowUp.svg";
-import ArrowDown from "../../../assets/icons/arrowDown.svg";
 import Plus from "../../../assets/icons/plus.svg";
 import Don from "../../../assets/icons/Don.jpeg";
 
+//Styles 😊
 import "./Hosts.scss";
+
+//Components 👌
+import Button from "../../../components/atoms/Button/Button";
 import Input from "../../../components/atoms/Input/Input";
 import TextArea from "../../../components/atoms/TeaxtArea/TextArea";
-import Footer from "../../../components/organisms/Footer/Footer";
-import { useNavigate } from "react-router-dom";
 import Slide from "../../../components/atoms/Slide/Slide";
+import {
+    ColorValidation,
+    SubmitValidation,
+    UpdateValue,
+} from "../../../utilities/Validations";
 
 const Hosts = () => {
     const navigate = useNavigate();
+
+    const [inputList, setInputList] = useState({
+        email: { value: null, validationType: "email" },
+        name: { value: null, validationType: "empty" },
+        lastName: { value: null, validationType: "empty" },
+        message: { value: null, validationType: "empty" },
+    });
+
+    useEffect(() => {
+        for (const propertyName in inputList) {
+            if (document.getElementById(propertyName)) {
+                ColorValidation(propertyName, inputList);
+            }
+            if (propertyName === "email") {
+                ColorValidation(propertyName, inputList, "email");
+            }
+        }
+    }, [inputList]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (SubmitValidation(inputList, setInputList)) {
+            navigate("/");
+        }
+    };
 
     const position = [
         {
@@ -1155,24 +1183,44 @@ const Hosts = () => {
                         title={"Email"}
                         placeholder={"Email"}
                         type={"email"}
+                        id={"email"}
+                        onChange={(e) =>
+                            UpdateValue(e, "email", inputList, setInputList)
+                        }
                     />
                     <Input
                         title={"Nombre"}
                         placeholder={"Nombre"}
                         type={"text"}
+                        id={"name"}
+                        onChange={(e) =>
+                            UpdateValue(e, "name", inputList, setInputList)
+                        }
                     />
                     <Input
                         title={"Apellido"}
                         placeholder={"Apellido"}
                         type={"text"}
+                        id={"lastName"}
+                        onChange={(e) =>
+                            UpdateValue(e, "lastName", inputList, setInputList)
+                        }
                     />
                     <TextArea
                         title={"Mensaje"}
                         placeholder={"Escribe aquí..."}
+                        id={"message"}
+                        onChange={(e) =>
+                            UpdateValue(e, "message", inputList, setInputList)
+                        }
                     />
 
                     <div className="host-secct-4-btn">
-                        <Button btnTitle={"Enviar"} className={"solid"} />
+                        <Button
+                            btnTitle={"Enviar"}
+                            className={"solid"}
+                            onClick={handleSubmit}
+                        />
                     </div>
                 </form>
             </div>
