@@ -23,7 +23,7 @@ import Oval2 from "../../../../assets/icons/Oval (2).png";
 import Oval3 from "../../../../assets/icons/Oval (3).png";
 import Oval4 from "../../../../assets/icons/Oval (4).png";
 
-import Campeche from "../../../../assets/icons/campeche.png";
+import Campeche from "../../../../assets/icons/campechex.png";
 import Maridar from "../../../../assets/icons/maridar.png";
 
 //styles
