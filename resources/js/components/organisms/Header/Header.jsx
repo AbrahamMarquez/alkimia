@@ -7,15 +7,23 @@ import Close from "../../../assets/icons/close.svg";
 
 import "./Header.scss";
 import Button from "../../atoms/Button/Button";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
 
 const Header = ({ className }) => {
     const [openSide, setOpenSide] = useState(false);
     const navigate = useNavigate()
 
+    const url = useLocation()
+    useEffect(() => {
+       if(url.pathname === "/hosts"){
+        console.log("first")
+        document.getElementById("HeaderColor").style.background = "linear-gradient(120deg, #3a8dde 3%, #8331a7 47%, #df1683 100%);"
+       }
+    }, [url])
+
     return (
         <>
-            <nav className={`Header ${className}`}>
+            <nav className={`Header ${className}`} id="HeaderColor">
                 <div>
                     <img src={Alkimia} alt="Logo" className="Header-logo" />
                 </div>
