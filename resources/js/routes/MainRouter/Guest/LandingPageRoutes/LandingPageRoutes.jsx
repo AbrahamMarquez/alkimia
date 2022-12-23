@@ -8,6 +8,8 @@ import DownloadApp from "../../../../pages/Guest/DownloadApp/DownloadApp";
 import FormAnfitrion from "../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfitrion";
 import Hosts from "../../../../pages/Guest/Hosts/Hosts";
 import LandingPage from "../../../../pages/Guest/LandingPage/LandingPage";
+import Privacy from "../../../../pages/Guest/Privacy/Privacy";
+import Start from "../../../../pages/Guest/Start/Start";
 import TmsCds from "../../../../pages/Guest/Terminos/TmsCds";
 
 const LandingPageRoutes = () => {
@@ -75,6 +77,22 @@ const LandingPageRoutes = () => {
                     element={
                         <Suspense fallback={<></>}>
                             <TmsCds />
+                        </Suspense>
+                    }
+                />
+                  <Route
+                    path="/politics-privacy"
+                    element={
+                        <Suspense fallback={<></>}>
+                            <Privacy />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="/start"
+                    element={
+                        <Suspense fallback={<></>}>
+                            <Start />
                         </Suspense>
                     }
                 />

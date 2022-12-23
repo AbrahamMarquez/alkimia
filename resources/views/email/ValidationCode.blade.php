@@ -7,12 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Metrophobic&display=swap" rel="stylesheet">
     <title>Email</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Metrophobic&display=swap');
         body
         {
-            height: 1003px
+            height: 1003px;
+            font-family: "Jost";
+            
         }
         table{
             display:flex;
@@ -89,6 +93,7 @@
             font-family: "Jost";
             font-weight: bold;
         }
+      
         .text-content-box
         {
             display:flex;
@@ -106,7 +111,7 @@
         {
             width: 546px;
             height: 198px;
-            font-family: "Roboto";
+            font-family: "Metropolis";
             font-size: 14.72px;
             color: #000000;
             text-decoration: none solid rgb(0, 0, 0);
@@ -245,15 +250,20 @@
                 
                 <tr class="nombre">
                     <td>
-                        <div class="title">Hola, Carlos Mauricio</div>
+                        
+                        <div class="title">¡Bienvenido anfitrión!</div>
+                        
                     </td>
                 </tr>
                 <tr class="text-content-box">
                     <td>
                        <div class="text-content-container">
                                 <div class="text-content">
-                                    <p>
+                                    Hola <b>Carlos Mauricio</b>
+                                    <br />
+                                    <span>
                                     Ya formas parte de nuestra comunidad, Inicia sesión y comparte tus experiencias con los alkimistas.
+    </span>
                                 </div>
                         </div>
                     </td>
@@ -271,7 +281,7 @@
                                     </div>
                                     <div class="footer-logo-icons">
                                         <div class="icons">
-                                            <img src="{{asset('images/Alkimia.png')}}"  class="iconP"/>
+                                            <img src="{{asset('images/logo.png')}}"  class="iconP"/>
                                             <div>
                                                 <img src="{{asset('images/facebook.svg')}}"  class="icon"/>
                                                 <img src="{{asset('images/instagram.svg')}}"  class="icon"/>

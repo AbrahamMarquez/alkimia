@@ -71,7 +71,7 @@ const Contact = () => {
                         />
                         <Input
                             title={"Asunto: "}
-                            placeholder={"Email"}
+                            placeholder={"Asunto"}
                             type={"text"}
                             id={"asunto"}
                             onChange={(e) =>
@@ -79,7 +79,7 @@ const Contact = () => {
                             }
                         />
                         <TextArea
-                            title={"Escribe un breve mesanje"}
+                            title={"Escribe un breve mesange"}
                             viewTitle
                             placeholder={"Escribe aquí..."}
                             id={"message"}

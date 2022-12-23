@@ -1,13 +1,13 @@
 import React from "react";
 
 //Styles 😊
-import "./TmsCds.scss";
+import "./Privacy.scss";
 
-const TmsCds = () => {
+const Privacy = () => {
     return (
-        <div className="TmsCds">
+        <div className="Privacy">
             <div className="tm-title">
-                <p>Terminos y condiciones</p>
+                <p>Políticas de privacidad</p>
             </div>
             <div className="cards">
                 <p>
@@ -111,4 +111,4 @@ const TmsCds = () => {
     );
 };
 
-export default TmsCds;
+export default Privacy;

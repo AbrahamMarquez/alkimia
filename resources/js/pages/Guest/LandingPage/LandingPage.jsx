@@ -13,6 +13,7 @@ import Shape from "../../../assets/icons/Shape.svg";
 import Pago from "../../../assets/icons/pago.svg";
 import Phone from "../../../assets/icons/phoneA.png";
 import Vino from "../../../assets//icons/vino.png";
+import LogoColor from '../../../assets/icons/logob.png'
 
 import Bed from "../../../assets//icons/test/034-bed.svg";
 import Vela from "../../../assets//icons/test/Combined Shape.svg";
@@ -252,25 +253,25 @@ const LandingPage = () => {
             id: 1,
             img: Cheese,
             title: "Conoce México a través de sus Quesos",
-            descriptions: "México es un país lleno de sabores y hoy toca.....",
+            descriptions: "México es un país lleno de sabores y hoy toca descubrirlo con un alimento que ha sido parte de nuestra cultura por cientos de años: Los...",
         },
         {
             id: 2,
             img: Campeche,
             title: "Guía de viaje por Campeche",
-            descriptions: "Desde zonas arqueológicas milenarias....",
+            descriptions: "Desde zonas arqueológicas milenarias, hasta zonas que denotan la modernidad y actualidad que se vive en este estado sureño. Hoy te...",
         },
         {
             id: 3,
             img: Breanch_grape,
             title: "Las uvas y sus grandes aportaciones a la salud de tu piel",
-            descriptions: "Desde la antigüedad....",
+            descriptions: "Desde la antigüedad se conoce que las propiedades de las uvas aportan beneficios para la salud. Hipócrates, mejor conocido como el padre de la medicina recomendó el uso del vino...",
         },
         {
             id: 4,
             img: Olive,
             title: "El olivo en México",
-            descriptions: "Primero que nada, debemos tener claro...",
+            descriptions: "Primero que nada, debemos tener claro que el aceite de oliva proviene del fruto del olivo, es decir, las aceitunas; y puesto que casi la...",
         },
     ];
 
@@ -314,6 +315,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 2,
@@ -321,6 +323,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 3,
@@ -328,6 +331,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 4,
@@ -335,6 +339,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 5,
@@ -342,6 +347,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 6,
@@ -349,6 +355,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
     ];
 
@@ -782,6 +789,11 @@ const LandingPage = () => {
                                 <p className="card-descrip">
                                     {blog.descriptions}
                                 </p>
+
+                                <div className="small-windows">
+                                    <img src={LogoColor} alt="Logo" className="smaall-icon"/>
+                                    <p className="akiloi">Alkimia</p>
+                                </div>
                             </div>
                         ))}
                     </div>

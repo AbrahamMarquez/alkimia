@@ -81,6 +81,7 @@ const Header = ({ className }) => {
                         btnTitle={"¡Comenzar ahora!"}
                         height={"40px"}
                         className={"border"}
+                        onClick={() => navigate("/start")}
                     />
                     <Button
                         btnTitle={"Descargar la app"}

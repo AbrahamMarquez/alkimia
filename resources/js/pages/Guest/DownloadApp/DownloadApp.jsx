@@ -40,7 +40,7 @@ const DownloadApp = () => {
         {
             id: 3,
             img: PhoneGastro,
-            title: "Gastronimía",
+            title: "Gastronomía",
             description:
                 "Los mejores restaurantes y bares se encuentran en ALKIMIA. Reserva desde la app experiencias gastronómicas, cenas maridaje y menús degustación de cocina de autor.",
         },
