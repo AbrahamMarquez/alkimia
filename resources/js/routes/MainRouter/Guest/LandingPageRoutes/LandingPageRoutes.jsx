@@ -3,14 +3,15 @@ import { Route, Routes } from "react-router-dom";
 import GuestLayout from "../../../../components/organisms/GuestLayout/GuestLayout";
 import Blog from "../../../../pages/Guest/Blog/Blog";
 import ShowBlog from "../../../../pages/Guest/Blog/ShowBlog/ShowBlog";
+import Contact from "../../../../pages/Guest/Contact/Contact";
 import DownloadApp from "../../../../pages/Guest/DownloadApp/DownloadApp";
 import FormAnfitrion from "../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfitrion";
 import Hosts from "../../../../pages/Guest/Hosts/Hosts";
 import LandingPage from "../../../../pages/Guest/LandingPage/LandingPage";
 
 const LandingPageRoutes = () => {
-  return (
-     <GuestLayout>
+    return (
+        <GuestLayout>
             <Routes>
                 <Route
                     path="/"
@@ -28,7 +29,7 @@ const LandingPageRoutes = () => {
                         </Suspense>
                     }
                 />
-               <Route
+                <Route
                     path="/hosts"
                     element={
                         <Suspense fallback={<></>}>
@@ -44,29 +45,33 @@ const LandingPageRoutes = () => {
                         </Suspense>
                     }
                 />
-                   <Route
+                <Route
                     path="/blog"
                     element={
                         <Suspense fallback={<></>}>
                             <Blog />
                         </Suspense>
                     }
-
-                    
                 />
-                     <Route
+                <Route
                     path="/blog/:id/show"
                     element={
                         <Suspense fallback={<></>}>
                             <ShowBlog />
                         </Suspense>
                     }
-
-                    
+                />
+                   <Route
+                    path="/contact"
+                    element={
+                        <Suspense fallback={<></>}>
+                            <Contact />
+                        </Suspense>
+                    }
                 />
             </Routes>
         </GuestLayout>
-  )
-}
+    );
+};
 
-export default LandingPageRoutes
+export default LandingPageRoutes;
