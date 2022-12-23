@@ -42,9 +42,9 @@ const Footer = () => {
             <div className="subFooter">
                 <div className="footer-network">
                     <div>
-                        <h1 className="footer-title">
+                        <p className="footer-title">
                             Siguenos en nuestras redes
-                        </h1>
+                        </p>
                         <div className="footer-socalNetwork">
                             {socialNetwork.map((network) => (
                                 <div className="card-network" key={network.id}>
@@ -58,7 +58,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="contact-as">
-                        <h3 className="contactar-title">Contactar</h3>
+                        <p className="contactar-title">Contactato</p>
                         <button
                             className="contac-as-a"
                             onClick={() => navigate("contact")}
@@ -91,9 +91,9 @@ const Footer = () => {
 
             <div className="footer-finish">
                 <div className="footer-ter-Con">
-                    <NavLink to="/terms-conditions">Términos y condiciones</NavLink>
-                    <NavLink to="/politica-privacidad">Políticas de privacidad</NavLink>
-                    <NavLink to="/preguntas">Preguntas frecuentes</NavLink>
+                    <NavLink to="/terms-conditions" className="con-a">Términos y condiciones</NavLink>
+                    <NavLink to="/politics-privacy" className="con-a">Políticas de privacidad</NavLink>
+                    <NavLink to="/preguntas" className="con-a">Preguntas frecuentes</NavLink>
                 </div>
                 <div className="footer-derechos-reservdos">
                     © 2021 Alkimia Experiencias Mágicas S.A. de C.V. Todos los

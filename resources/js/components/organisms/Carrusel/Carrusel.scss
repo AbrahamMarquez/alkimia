@@ -70,6 +70,12 @@
                 .border{
                     height: 50px;
                     font-size: 14.76px;
+                    transition: all 0.6s;
+
+                    &:hover{
+                        border: 1px solid #df1683;
+                        background: linear-gradient(to right, #df1683, #df1683);
+                    }
                 }
             }
 
@@ -101,7 +107,7 @@
 
             .slide-body-title{
                 font-size: 64.4px !important;
-                margin-right: 324px !important;
+                margin-right: 229px !important;
             }
 
             .div-hidden{
@@ -112,7 +118,7 @@
             .slide-body-descrip{
                 margin-top: 40px !important;
                 font-size: 27.6px !important;
-                margin-right: 324px !important;
+                margin-right: 229px !important;
                 line-height: 35px !important;
             }
 
