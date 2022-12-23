@@ -5,7 +5,7 @@ import { Skeleton } from "primereact/skeleton";
 
 import "./Button.scss";
 
-const Button = ({ btnTitle, className, height, onClick, skelton }) => {
+const Button = ({ btnTitle, className, onClick, skelton }) => {
     return (
         <>
             {!skelton ? (

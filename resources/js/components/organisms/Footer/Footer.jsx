@@ -8,9 +8,12 @@ import Facebook from "../../../assets/icons/facebook.svg";
 import Instagram from "../../../assets/icons/instagram.svg";
 import Whatsapp from "../../../assets/icons/whatsapp.svg";
 import Youtube from "../../../assets/icons/youtube.svg";
-import { NavLink } from "react-router-dom";
+import Contacto from '../../../assets/icons/contacto.svg'
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+    const navigate = useNavigate();
+
     const socialNetwork = [
         {
             id: 1,
@@ -38,17 +41,31 @@ const Footer = () => {
         <div className="footer">
             <div className="subFooter">
                 <div className="footer-network">
-                    <h1 className="footer-title">Siguenos en nuestras redes</h1>
-                    <div className="footer-socalNetwork">
-                        {socialNetwork.map((network) => (
-                            <div className="card-network" key={network.id}>
-                                <img
-                                    src={network.img}
-                                    alt={network.alt}
-                                    className="networks"
-                                />
-                            </div>
-                        ))}
+                    <div>
+                        <h1 className="footer-title">
+                            Siguenos en nuestras redes
+                        </h1>
+                        <div className="footer-socalNetwork">
+                            {socialNetwork.map((network) => (
+                                <div className="card-network" key={network.id}>
+                                    <img
+                                        src={network.img}
+                                        alt={network.alt}
+                                        className="networks"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="contact-as">
+                        <h3 className="contactar-title">Contactar</h3>
+                        <button
+                            className="contac-as-a"
+                            onClick={() => navigate("contact")}
+                        >
+                            <img src={Contacto} alt="contacto" className="contacto-img"/>
+                            Contactar
+                        </button>
                     </div>
                 </div>
 

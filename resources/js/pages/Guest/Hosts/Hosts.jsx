@@ -1213,6 +1213,7 @@ const Hosts = () => {
                         onChange={(e) =>
                             UpdateValue(e, "message", inputList, setInputList)
                         }
+                        viewTitle
                     />
 
                     <div className="host-secct-4-btn">
