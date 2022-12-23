@@ -1,0 +1,80 @@
+.TmsCds {
+    width: 100%;
+    height: 100vh;
+
+    .subTmsCds {
+        position: relative;
+
+        .TmsCds-fondo-a {
+            width: 100%;
+            height: 50vh;
+            padding-top: 51px;
+            background: linear-gradient(
+                120deg,
+                #3a8dde 3%,
+                #8331a7 47%,
+                #df1683 100%
+            );
+
+            .fondo-a-h1 {
+                font-family: "Metropolis";
+                font-weight: bold;
+                font-size: 18.4px;
+                color: #ffffff;
+                text-decoration: none solid rgb(255, 255, 255);
+                text-align: center;
+
+                // margin-top: 51px;
+            }
+        }
+        .TmsCds-fondo-b {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+                0deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+        }
+
+        .tCard {
+            position: absolute;
+            top: 119px;
+            width: 338px;
+            z-index: 2;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            background-color: #ffffff;
+            left: calc(50% - 168px);
+
+            padding: 28px 15px;
+            text-align: justify;
+            font-family: "Metropolis";
+            font-size: 11.4px;
+            color: #8a8a8a;
+            text-decoration: none solid rgb(138, 138, 138);
+            line-height: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .fondo-a-h1{
+        font-size: 27.6px !important;
+        font-family: "Metropolis" !important;
+    }
+    .tCard {
+        width: 1455px !important;
+        border-top-left-radius: 50px !important;
+        border-top-right-radius: 50px !important;
+        font-size: 12.88px !important;
+        top: 119px !important;
+        left: calc(50% - 727.5px) !important;
+        padding: 79px 293px !important;
+    }
+}

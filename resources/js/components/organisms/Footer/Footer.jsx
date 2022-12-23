@@ -91,9 +91,9 @@ const Footer = () => {
 
             <div className="footer-finish">
                 <div className="footer-ter-Con">
-                    <NavLink to="Terminos">Términos y condiciones</NavLink>
-                    <NavLink to="Politicas">Políticas de privacidad</NavLink>
-                    <NavLink to="Questions">Preguntas frecuentes</NavLink>
+                    <NavLink to="/terms-conditions">Términos y condiciones</NavLink>
+                    <NavLink to="/politica-privacidad">Políticas de privacidad</NavLink>
+                    <NavLink to="/preguntas">Preguntas frecuentes</NavLink>
                 </div>
                 <div className="footer-derechos-reservdos">
                     © 2021 Alkimia Experiencias Mágicas S.A. de C.V. Todos los
