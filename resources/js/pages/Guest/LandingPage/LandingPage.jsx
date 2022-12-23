@@ -366,6 +366,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 2,
@@ -373,6 +374,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 3,
@@ -380,6 +382,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 4,
@@ -387,6 +390,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 5,
@@ -394,6 +398,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 6,
@@ -401,6 +406,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
     ];
 
@@ -411,6 +417,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 2,
@@ -418,6 +425,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 3,
@@ -425,6 +433,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 4,
@@ -432,6 +441,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 5,
@@ -439,6 +449,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
         {
             id: 6,
@@ -446,6 +457,7 @@ const LandingPage = () => {
             price: "$500.00",
             priceReal: "$700.00",
             title: "Paseo matutino",
+            number: "(1512)"
         },
     ];
 
