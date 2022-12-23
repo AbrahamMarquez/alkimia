@@ -20,7 +20,7 @@
         height: 100vh;
         transition: all 0.5s;
         display: flex;
-        z-index: 2;
+        z-index: 5;
 
         &.OpenSide {
             right: 0;

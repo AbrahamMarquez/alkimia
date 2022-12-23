@@ -15,7 +15,6 @@
 
 
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Metrophobic&display=swap" rel="stylesheet">
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script> 
 
@@ -28,7 +27,7 @@
 
         <style>
             body:not(i) {
-                font-family: 'Rubik', sans-serif!important;
+                font-family: 'Metropolis', sans-serif!important;
             }
         </style>
 

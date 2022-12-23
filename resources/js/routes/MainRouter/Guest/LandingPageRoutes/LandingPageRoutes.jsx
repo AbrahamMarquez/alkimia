@@ -8,6 +8,7 @@ import DownloadApp from "../../../../pages/Guest/DownloadApp/DownloadApp";
 import FormAnfitrion from "../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfitrion";
 import Hosts from "../../../../pages/Guest/Hosts/Hosts";
 import LandingPage from "../../../../pages/Guest/LandingPage/LandingPage";
+import TmsCds from "../../../../pages/Guest/Terminos/TmsCds";
 
 const LandingPageRoutes = () => {
     return (
@@ -61,11 +62,19 @@ const LandingPageRoutes = () => {
                         </Suspense>
                     }
                 />
-                   <Route
+                <Route
                     path="/contact"
                     element={
                         <Suspense fallback={<></>}>
                             <Contact />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="/terms-conditions"
+                    element={
+                        <Suspense fallback={<></>}>
+                            <TmsCds />
                         </Suspense>
                     }
                 />

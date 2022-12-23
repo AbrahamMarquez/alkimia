@@ -35,3 +35,11 @@ a {
     border-radius: 10px;
     border: 0 solid #ffffff;
 }
+
+@font-face{
+    font-family: 'Metropolis';
+    src: local('Metropolis'), url(../../assets/fonts/metropolis/Metropolis-Regular.otf) format('truetype');
+}
+body{
+    font-family: "Metropolis", sans-serif;
+}
