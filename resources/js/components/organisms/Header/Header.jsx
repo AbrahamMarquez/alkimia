@@ -11,15 +11,15 @@ import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
 
 const Header = ({ className }) => {
     const [openSide, setOpenSide] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-    const url = useLocation()
+    const url = useLocation();
     useEffect(() => {
-       if(url.pathname === "/hosts"){
-        console.log("first")
-        document.getElementById("HeaderColor").style.background = "linear-gradient(120deg, #3a8dde 3%, #8331a7 47%, #df1683 100%);"
-       }
-    }, [url])
+        // if (url.pathname === "/hosts") {
+        //     console.log("first");
+            document.getElementById("HeaderColor").style.backgroundColor = "white";
+        // }
+    }, [url]);
 
     return (
         <>

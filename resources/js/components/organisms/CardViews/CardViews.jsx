@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Share from "../../../assets/icons/share.svg";
@@ -7,13 +7,26 @@ import "./CardViews.scss";
 
 const CardViews = ({ elements }) => {
     const [openShare, setOpenShare] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const [viewActive, setViewActive] = useState(false);
 
     const OpenShareModal = (id) => {
         if (openShare) {
             setOpenShare(false);
         } else {
             setOpenShare(id);
+        }
+    };
+
+    const activeHeart = (id) => {
+        if (viewActive) {
+            setViewActive(false);
+            document.getElementById("heart").style.filter =
+                "invert(19%) sepia(96%) saturate(2809%) hue-rotate(311deg) brightness(93%) contrast(101%)";
+        } else {
+            setViewActive(id)
+            document.getElementById("heart").style.filter =
+                "invert(0%) sepia(6%) saturate(7500%) hue-rotate(337deg) brightness(107%) contrast(105%)";
         }
     };
 
@@ -76,9 +89,14 @@ const CardViews = ({ elements }) => {
                             src={crd.icon2}
                             alt="Heart"
                             className="secct-2-heart"
+                            id="heart"
+                            onClick={() => activeHeart(crd.id)}
                         />
                     </div>
-                    <div className="secct-2-btn-cont" onClick={() => navigate(`${crd.id}/show`)}>
+                    <div
+                        className="secct-2-btn-cont"
+                        onClick={() => navigate(`${crd.id}/show`)}
+                    >
                         Leer
                     </div>
                 </div>

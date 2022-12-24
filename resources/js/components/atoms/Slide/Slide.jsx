@@ -1,21 +1,9 @@
-// import React from 'react'
-// // import Swiper core and required modules
-// import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Accordion, AccordionTab } from "primereact/accordion";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "./Slide.scss";
 
 // import required modules
@@ -43,8 +31,8 @@ const Slide = ({ object }) => {
             className="mySwiper"
         >
             {object.map((ques) => (
-                <SwiperSlide className="slidepor">
-                    <div className="host-secct-3-card" key={ques.id}>
+                <SwiperSlide className="slidepor" key={ques.id}>
+                    <div className="host-secct-3-card" >
                         <p className="host-secct-3-question">{ques.question}</p>
                         <div
                             className="host-secct-3-plus"

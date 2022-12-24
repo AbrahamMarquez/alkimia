@@ -131,6 +131,11 @@
                 width: 20px;
                 height: 20px;
                 margin-top: calc(61px - 31px);
+
+                // &:active{
+                
+                //     filter: invert(19%) sepia(96%) saturate(2809%) hue-rotate(311deg) brightness(93%) contrast(101%);
+                // }
             }
         }
 
@@ -142,7 +147,9 @@
             height: 29px;
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
-            border-radius: 15px;
+            border-radius: 30px;
+            font-size: 23px;
+            font-family: "Metropolis";
             display: none;
             justify-content: center;
             align-items: center;
@@ -185,6 +192,7 @@
             .secct-2-share {
                 width: 212px !important;
                 height: 52px !important;
+                padding-right: 0 !important;
 
                 &.openModal {
                     right: 30px !important;
