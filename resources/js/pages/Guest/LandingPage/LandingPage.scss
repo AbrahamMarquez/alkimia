@@ -426,9 +426,11 @@
             margin-bottom: 30px;
         }
         .swiper {
+            
+
             .swiper-button-prev,
             .swiper-rtl .swiper-button-next {
-                left: 10px;
+                // left: 10px;
                 right: auto;
                 top: 50%;
                 color: #df1683;
@@ -957,6 +959,9 @@
         }
 
         .swiper {
+
+            padding-left: 54px !important;
+            padding-right: 54px !important;
             .swiper-button-prev,
             .swiper-rtl .swiper-button-next {
                 top: 50% !important;
@@ -1044,11 +1049,11 @@
                 width: 137px !important;
                 height: 39px !important;
 
-                .smaall-icon{
+                .smaall-icon {
                     width: 28px !important;
                     height: 28px !important;
                 }
-                .akiloi{
+                .akiloi {
                     font-size: 14.72px !important;
                 }
             }

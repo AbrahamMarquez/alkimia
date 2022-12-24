@@ -1,5 +1,3 @@
-
-
 // export default Carousel;
 import React, { useEffect, useState } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
@@ -21,7 +19,7 @@ const Carousel = ({ object }) => {
     const [viewStart, setViewStart] = useState(5);
     const [desvice, setDesvice] = useState(window.innerWidth);
     const [space, setSpace] = useState(0);
-    const [margen, setMargen] = useState(0)
+    const [margen, setMargen] = useState(0);
 
     useEffect(() => {
         if (desvice <= 440) {
@@ -76,7 +74,9 @@ const Carousel = ({ object }) => {
                             </div>
                             <div className="Slide-descr-container">
                                 <span className="Slide-descr">{e.title}</span>
+                                <div className="numberlk">{e.number}</div>
                             </div>
+
                             <div className="Slide-score">
                                 {score.map(({ id, img }, idx) => {
                                     if (idx < viewStart) {
