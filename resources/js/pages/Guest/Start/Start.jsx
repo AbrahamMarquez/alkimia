@@ -11,7 +11,7 @@ const Start = () => {
     const nextPage = () => {
         console.log("first")
         
-        navigate("login")
+        navigate("/login")
     }
     return (
         <div className="Start">

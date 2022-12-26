@@ -21,7 +21,6 @@
             font-size: 18.4px;
             color: #3b3b3b;
             line-height: 30px;
-            
         }
         .lsecct-1-sub-title {
             font-family: "Metropolis";
@@ -83,11 +82,29 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
-                margin-top: 37px; 
+                margin-top: 37px;
 
                 .degradado {
                     height: 40px;
                     width: 278px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .Login {
+        .lsecct1 {
+            width: 360px !important;
+
+            .lsecct-1-title{
+                font-weight: bold;
+            }
+
+            .lsecct-1-btns {
+                .degradado {
+                    width: 278px !important;
                 }
             }
         }

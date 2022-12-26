@@ -136,7 +136,10 @@
                 .secct-2-heart {
                     width: 30px;
                     height: 30px;
-                    // margin-top: calc(61px - 31px);
+
+                    &.likedFilter {
+                        filter: invert(28%) sepia(90%) saturate(6529%) hue-rotate(316deg) brightness(90%) contrast(94%);
+                    }
                 }
 
                 .secct-2-viewss {
@@ -220,6 +223,7 @@
                 .share{
                     width: 24px !important;
                     height: 24px !important;
+                    padding-right: 0 !important;
                 }
             }
 

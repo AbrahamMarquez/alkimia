@@ -16,117 +16,90 @@ import TmsCds from "../../../../pages/Guest/Terminos/TmsCds";
 
 const LandingPageRoutes = () => {
     return (
-        <GuestLayout>
-            <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <LandingPage />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/downloadApp"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <DownloadApp />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/hosts"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <Hosts />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/hosts/register"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <FormAnfitrion />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/blog"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <Blog />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/blog/:id/show"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <ShowBlog />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/contact"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <Contact />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/terms-conditions"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <TmsCds />
-                        </Suspense>
-                    }
-                />
-                  <Route
-                    path="/politics-privacy"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <Privacy />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/start"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <Start />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/start/login"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <Login />
-                        </Suspense>
-                    }
-                />
-                 <Route
-                    path="/start/login"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <Login />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path="/recover-account"
-                    element={
-                        <Suspense fallback={<></>}>
-                            <RecoverAccount />
-                        </Suspense>
-                    }
-                />
-
-                {/* De aqui empieza lo que son los login */}
-
-            </Routes>
-        </GuestLayout>
+        // <GuestLayout>
+        <Routes>
+            <Route
+                path="/"
+                element={
+                    <Suspense fallback={<></>}>
+                        <LandingPage />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/downloadApp"
+                element={
+                    <Suspense fallback={<></>}>
+                        <DownloadApp />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/hosts"
+                element={
+                    <Suspense fallback={<></>}>
+                        <Hosts />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/hosts/register"
+                element={
+                    <Suspense fallback={<></>}>
+                        <FormAnfitrion />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/blog"
+                element={
+                    <Suspense fallback={<></>}>
+                        <Blog />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/blog/:id/show"
+                element={
+                    <Suspense fallback={<></>}>
+                        <ShowBlog />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/contact"
+                element={
+                    <Suspense fallback={<></>}>
+                        <Contact />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/terms-conditions"
+                element={
+                    <Suspense fallback={<></>}>
+                        <TmsCds />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/politics-privacy"
+                element={
+                    <Suspense fallback={<></>}>
+                        <Privacy />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/start"
+                element={
+                    <Suspense fallback={<></>}>
+                        <Start />
+                    </Suspense>
+                }
+            />
+        </Routes>
+        // </GuestLayout>
     );
 };
 
