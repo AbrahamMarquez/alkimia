@@ -179,7 +179,7 @@
         }
         .ssecct-4-min-form {
             display: flex;
-            align-items: center;
+           
             gap: 22px;
 
             .ssecct-4-cont {
@@ -200,7 +200,7 @@
                 .textArea-4 {
                     height: 59px;
                 }
-                .ssecct-4-cont {
+                .ssecct-4-cont-gh {
                     width: 100%;
                     display: flex;
                     justify-content: flex-end;
@@ -320,5 +320,127 @@
 
     div {
         margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .ShowBlog {
+        padding: 41px 392px 212px 392px !important;
+
+        .ssecct-1-cont-img {
+            width: 100% !important;
+            height: 651px !important;
+        }
+
+        .ssecct-1-nmas {
+            font-size: 15.64px !important;
+        }
+
+        .conqwe {
+            height: 30px !important;
+        }
+
+        .ssecct2 {
+            margin-top: 37px !important;
+
+            .ssecct2-title {
+                font-size: 32.2px !important;
+            }
+
+            .Info {
+                font-size: 16.56px !important;
+            }
+
+            .favorite {
+                font-size: 16.56px !important;
+            }
+        }
+
+        .ssecct3 {
+            .ssecct-3-img {
+                width: 633px !important;
+                height: 850px !important;
+            }
+        }
+
+        .ssecct4{
+            margin-top: 90px !important;
+
+            .ssecct-4-comen{
+                padding: 15px 50px !important;
+                font-size: 36.8px !important;
+                font-weight: bold;
+            }
+
+            .ssecct-4-min-form{
+                margin-top: 35px !important;
+                padding: 0px 47px !important;
+
+                .ssecct-4-cont{
+                    width: 87px !important;
+                    height: 87px !important;
+                }
+
+                .textArea-4{
+                    height: 71px !important;
+                }
+            }
+
+            .ssecct-4-cont{
+                width: 180px !important;
+            }
+        }
+
+
+        .ssecct5{
+            padding: 0px 47px !important;
+
+            .ssecct-5-cms{
+
+                .cms-5{
+                    width: 58px !important;
+                    height: 58px !important;
+                }
+
+                .ssecct-5-come{
+                    font-size: 14.72px !important;
+                }
+
+                .ssecct-5-line{
+                    width: 96% !important;
+                }
+            }
+        }
+
+        .ssect6{
+
+            .ssect6-liine{
+                width: 100%;
+                margin-top: 50px !important;
+                border-bottom: 2px solid #000 !important;
+            }
+
+            .ssect-6-cards{
+                margin-top: 30px !important;
+                width: 49% !important;
+
+                .new-cards-{
+                    height: 556px !important;
+                }
+
+                .line-line-cards{
+                    margin-top: 30px !important;
+                }
+
+                .title-cardss{
+                    margin-top: 30px !important;
+                    font-size: 27.2px !important;
+                }
+
+                .asdfg{
+                    width: 100px !important;
+                }
+            }
+        }
     }
 }

@@ -207,6 +207,7 @@ const ShowBlog = () => {
         e.preventDefault();
         if (publisher.message === "") return 0;
     };
+
     return (
         <div className="ShowBlog">
             <div className="ssecct1">
@@ -219,8 +220,8 @@ const ShowBlog = () => {
                 </div>
                 <div className="ssecct-1-b">
                     {datas.map((dt) => (
-                        <>
-                            <div className="ssecct-1-sub">
+                        <div key={dt.id}>
+                            <div className="ssecct-1-sub" >
                                 <div className="ssecct-1-nmas">
                                     <p>{dt.name}</p>
                                     <p>{dt.date}</p>
@@ -300,7 +301,7 @@ const ShowBlog = () => {
                                     <p>{dt.countMs}</p>
                                 </div>
                             </div>
-                        </>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -331,7 +332,7 @@ const ShowBlog = () => {
                             onChange={handleChange}
                         />
 
-                        <div className="ssecct-4-cont">
+                        <div className="ssecct-4-cont-gh">
                             <div className="btns45">
                                 <Button
                                     btnTitle={"Publicar"}
@@ -344,7 +345,7 @@ const ShowBlog = () => {
                 </div>
                 <div className="ssecct5">
                     {comments.map((cms) => (
-                        <div className="ssecct-5-cms">
+                        <div className="ssecct-5-cms" key={cms.id}>
                             <div className="cms-5">
                                 <img
                                     src={cms.img}
@@ -360,6 +361,7 @@ const ShowBlog = () => {
                     ))}
                 </div>
                 <div className="ssect6">
+                    <div className="ssect6-liine"></div>
                     {newCards.map((crd) => {
                         if (crd.id == id) {
                             null;

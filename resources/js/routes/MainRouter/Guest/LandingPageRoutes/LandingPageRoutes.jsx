@@ -9,6 +9,8 @@ import FormAnfitrion from "../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfit
 import Hosts from "../../../../pages/Guest/Hosts/Hosts";
 import LandingPage from "../../../../pages/Guest/LandingPage/LandingPage";
 import Privacy from "../../../../pages/Guest/Privacy/Privacy";
+import Login from "../../../../pages/Guest/SessionLogin/Login/Login";
+import RecoverAccount from "../../../../pages/Guest/SessionLogin/RecoverAccount/RecoverAccount";
 import Start from "../../../../pages/Guest/Start/Start";
 import TmsCds from "../../../../pages/Guest/Terminos/TmsCds";
 
@@ -96,6 +98,33 @@ const LandingPageRoutes = () => {
                         </Suspense>
                     }
                 />
+                <Route
+                    path="/start/login"
+                    element={
+                        <Suspense fallback={<></>}>
+                            <Login />
+                        </Suspense>
+                    }
+                />
+                 <Route
+                    path="/start/login"
+                    element={
+                        <Suspense fallback={<></>}>
+                            <Login />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="/recover-account"
+                    element={
+                        <Suspense fallback={<></>}>
+                            <RecoverAccount />
+                        </Suspense>
+                    }
+                />
+
+                {/* De aqui empieza lo que son los login */}
+
             </Routes>
         </GuestLayout>
     );
