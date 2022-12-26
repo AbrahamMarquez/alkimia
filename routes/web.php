@@ -27,4 +27,5 @@ require (__DIR__ . '/Auth.php');
 
 Route::get('/correo-anfitrion', function () {  return view('email.emailAnfitrion');})->name("home");
 Route::get('/code-validation', function () {  return view('email.codeValidation');})->name("home");
+Route::get('/recover-password', function () {  return view('email.recoverPassword');})->name("home");
 
