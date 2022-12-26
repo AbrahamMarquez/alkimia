@@ -14,11 +14,24 @@ const Header = ({ className }) => {
     const navigate = useNavigate();
 
     const url = useLocation();
+    
     useEffect(() => {
-        // if (url.pathname === "/hosts") {
-        //     console.log("first");
-            document.getElementById("HeaderColor").style.backgroundColor = "white";
-        // }
+        var header = document.getElementById("HeaderColor")
+
+        if(url.pathname === "/"){
+            console.log("Aqui es el home")
+            
+            return header.style.background = "linear-gradient(120deg, #3a8dde 3%, #8331a7 47%, #df1683 100%)";
+        }
+        else if(url.pathname == "/hosts"){
+            header.style.backgroundColor = "red";
+        }
+        
+       
+        
+        console.log(url)
+            
+        
     }, [url]);
 
     return (

@@ -14,38 +14,83 @@ import CardViewShort from "../../../components/organisms/CardViewShort/CardViewS
 
 const Blog = () => {
     const [openShare, setOpenShare] = useState(false);
-    const cards = [
+    const [cards, setCards] = useState([
         {
             id: 1,
             name: "Alkimia",
             date: "25 mar • 25 mar",
+            // emogi: `✒`,
             icon: Puntos,
             title: "Conoce México a través de sus Quesos",
             icon2: Heart,
             bg: Allmexicancheese,
             bgTrap: "rgba(0, 0, 0, 0.2)",
+            liked: false,
         },
         {
             id: 2,
             name: "Alkimia",
             date: "25 mar • 25 mar",
+            // emogi: "✒",
             icon: Puntos,
             title: "Guía de viaje por Campeche",
             icon2: Heart,
             bg: BgCampeche,
             bgTrap: "rgba(0, 0, 0, 0.2)",
+            liked: false,
         },
         {
             id: 3,
             name: "Alkimia",
             date: "25 mar • 25 mar",
+            // emogi: "✒",
             icon: Puntos,
             title: "5 vinos para maridar con mariscos",
             icon2: Heart,
             bg: Maridar,
             bgTrap: "rgba(0, 0, 0, 0.2)",
+            liked: false,
         },
-    ];
+    ]);
+
+    const [cardsShort, setCardsShort] = useState([
+        {
+            id: 1,
+            name: "Alkimia",
+            date: "25 mar • 25 mar",
+            // emogi: `✒`,
+            icon: Puntos,
+            title: "Conoce México a través de sus Quesos",
+            icon2: Heart,
+            bg: Allmexicancheese,
+            bgTrap: "rgba(0, 0, 0, 0.2)",
+            liked: false,
+        },
+        {
+            id: 2,
+            name: "Alkimia",
+            date: "25 mar • 25 mar",
+            // emogi: "✒",
+            icon: Puntos,
+            title: "Guía de viaje por Campeche",
+            icon2: Heart,
+            bg: BgCampeche,
+            bgTrap: "rgba(0, 0, 0, 0.2)",
+            liked: false,
+        },
+        {
+            id: 3,
+            name: "Alkimia",
+            date: "25 mar • 25 mar",
+            // emogi: "✒",
+            icon: Puntos,
+            title: "5 vinos para maridar con mariscos",
+            icon2: Heart,
+            bg: Maridar,
+            bgTrap: "rgba(0, 0, 0, 0.2)",
+            liked: false,
+        },
+    ]);
 
     return (
         <div className="Blog">
@@ -53,10 +98,10 @@ const Blog = () => {
                 <h1 className="secct-1-title">La guía del alkimista</h1>
             </div>
             <div className="first-cards">
-                <CardViews elements={cards} />
+                <CardViews elements={cards} setElements={setCards} />
             </div>
             <div className="seconds-cards">
-                <CardViewShort elements={cards} />
+                <CardViewShort elements={cardsShort} setElements={setCardsShort} />
             </div>
         </div>
     );

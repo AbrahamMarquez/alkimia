@@ -6,7 +6,7 @@ import Message from "../../../assets/icons/message.svg";
 
 import "./CardViewShort.scss";
 
-const CardViewShort = ({ elements }) => {
+const CardViewShort = ({ elements, setElements }) => {
     const [openShare, setOpenShare] = useState(false);
 
     const OpenShareModal = (id) => {
@@ -16,6 +16,14 @@ const CardViewShort = ({ elements }) => {
             setOpenShare(id);
         }
     };
+
+    const activeHeart = (id) => {
+        const likeIdx = elements.findIndex(item => item.id == id)
+        const copy = [...elements];
+        copy[likeIdx].liked = !copy[likeIdx].liked
+        setElements(copy)
+    };
+
 
     return (
         <div className="CardViewShort">
@@ -69,7 +77,8 @@ const CardViewShort = ({ elements }) => {
                             <img
                                 src={crd.icon2}
                                 alt="Heart"
-                                className="secct-2-heart"
+                                className={"secct-2-heart "+ (crd.liked && "likedFilter")}
+                                onClick={() => {activeHeart(crd.id)}}
                             />
                             <div className="secct-2-viewss">
                                 <div className="Eye-container">

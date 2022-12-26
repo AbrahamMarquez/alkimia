@@ -132,10 +132,9 @@
                 height: 20px;
                 margin-top: calc(61px - 31px);
 
-                // &:active{
-                
-                //     filter: invert(19%) sepia(96%) saturate(2809%) hue-rotate(311deg) brightness(93%) contrast(101%);
-                // }
+                &.likedFilter {
+                    filter: invert(28%) sepia(90%) saturate(6529%) hue-rotate(316deg) brightness(90%) contrast(94%);
+                }
             }
         }
 
@@ -192,7 +191,7 @@
             .secct-2-share {
                 width: 212px !important;
                 height: 52px !important;
-                padding-right: 0 !important;
+                
 
                 &.openModal {
                     right: 30px !important;
@@ -206,6 +205,7 @@
                 .share {
                     height: 24px !important;
                     width: 24px !important;
+                    padding-right: 0 !important;
                 }
             }
 

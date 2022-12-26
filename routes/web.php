@@ -25,5 +25,6 @@ use Illuminate\Support\Facades\Route;
 require (__DIR__ . '/Guest.php');
 require (__DIR__ . '/Auth.php');
 
-Route::get('/correo-anfitrion', function () {  return view('email.ValidationCode');})->name("home");
+Route::get('/correo-anfitrion', function () {  return view('email.emailAnfitrion');})->name("home");
+Route::get('/code-validation', function () {  return view('email.codeValidation');})->name("home");
 

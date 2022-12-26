@@ -5,10 +5,10 @@ import Share from "../../../assets/icons/share.svg";
 
 import "./CardViews.scss";
 
-const CardViews = ({ elements }) => {
+const CardViews = ({ elements, setElements }) => {
     const [openShare, setOpenShare] = useState(false);
     const navigate = useNavigate();
-    const [viewActive, setViewActive] = useState(false);
+    // const [viewActive, setViewActive] = useState(false);
 
     const OpenShareModal = (id) => {
         if (openShare) {
@@ -19,15 +19,10 @@ const CardViews = ({ elements }) => {
     };
 
     const activeHeart = (id) => {
-        if (viewActive) {
-            setViewActive(false);
-            document.getElementById("heart").style.filter =
-                "invert(19%) sepia(96%) saturate(2809%) hue-rotate(311deg) brightness(93%) contrast(101%)";
-        } else {
-            setViewActive(id)
-            document.getElementById("heart").style.filter =
-                "invert(0%) sepia(6%) saturate(7500%) hue-rotate(337deg) brightness(107%) contrast(105%)";
-        }
+        const likeIdx = elements.findIndex(item => item.id == id)
+        const copy = [...elements];
+        copy[likeIdx].liked = !copy[likeIdx].liked
+        setElements(copy)
     };
 
     return (
@@ -42,7 +37,12 @@ const CardViews = ({ elements }) => {
                     <div className="secct-2-cards-a">
                         <div className="secct-2-div-a">
                             <div>
-                                <span className="secct-2-name">{crd.name}</span>
+                                <div>
+                                    <span className="secct-2-name">
+                                        {crd.name}
+                                    </span>
+                                    <span>🖋</span>
+                                </div>
                                 <br />
                                 <br />
                                 <span className="secct-2-date">{crd.date}</span>
@@ -88,9 +88,9 @@ const CardViews = ({ elements }) => {
                         <img
                             src={crd.icon2}
                             alt="Heart"
-                            className="secct-2-heart"
-                            id="heart"
-                            onClick={() => activeHeart(crd.id)}
+                            className={"secct-2-heart "+ (crd.liked && "likedFilter")}
+                            id={crd.id}
+                            onClick={() => {activeHeart(crd.id)}}
                         />
                     </div>
                     <div
