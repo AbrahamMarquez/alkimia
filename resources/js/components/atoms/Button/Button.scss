@@ -25,6 +25,17 @@
     background: #df1683;
     // font-size: 21.16px;
 }
+.white {
+    border: 1px solid #edebeb;
+    border-radius: 20px;
+    background-color: #faf7f7;
+    background-size: cover;
+    font-family: "Metropolis";
+    color: #df1683;
+    text-decoration: none solid rgb(223, 22, 131);
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
 
 .degradado {
     background: linear-gradient(120deg, #3a8dde 3%, #8331a7 47%, #df1683 100%);
