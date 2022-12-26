@@ -17,6 +17,10 @@ const RecoverCode = () => {
         navigate("/recover-account");
     };
 
+    const nextPage = () => {
+        navigate("/update-access")
+    }
+
     return (
         <div className="RecoverCode">
             <div className="Codereco">
@@ -46,6 +50,7 @@ const RecoverCode = () => {
                     <Button
                         btnTitle={"Validar código"}
                         className={"degradado"}
+                        onClick={() => nextPage()}
                     />
                 </div>
                 <div className="rsecct4">

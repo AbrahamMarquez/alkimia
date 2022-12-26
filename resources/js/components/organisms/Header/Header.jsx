@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 //Assets
 import Alkimia from "../../../assets/icons/Alkimia.png";
+import AlkimiaColor from '../../../assets/icons/alkimiaColor.png'
 import Menu from "../../../assets/icons/menu.svg";
 import Close from "../../../assets/icons/close.svg";
 
@@ -14,31 +15,31 @@ const Header = ({ className }) => {
     const navigate = useNavigate();
 
     const url = useLocation();
-    
-    useEffect(() => {
-        var header = document.getElementById("HeaderColor")
 
-        if(url.pathname === "/"){
-            console.log("Aqui es el home")
-            
-            return header.style.background = "linear-gradient(120deg, #3a8dde 3%, #8331a7 47%, #df1683 100%)";
+    useEffect(() => {
+        var header = document.getElementById("HeaderColor");
+
+        if (url.pathname === "/") {
+            header.style.background =
+            "linear-gradient(120deg, #3a8dde 3%, #8331a7 47%, #df1683 100%)";
+        } else {
+            header.style.background = "#faf7f7";
+            header.style.boxShadow = "0 1px 25px rgba(0,0,0,0.2)"
+            header.style.zIndex = "1"
         }
-        else if(url.pathname == "/hosts"){
-            header.style.backgroundColor = "red";
-        }
-        
-       
-        
-        console.log(url)
-            
-        
     }, [url]);
+
+    const navLinks = ({ isActive }) => {
+        return {
+            color: isActive ? "#df1683" : null,
+        };
+    };
 
     return (
         <>
-            <nav className={`Header ${className}`} id="HeaderColor">
+            <nav className="Header" id="HeaderColor">
                 <div>
-                    <img src={Alkimia} alt="Logo" className="Header-logo" />
+                    <img src={url.pathname === "/" ? Alkimia : AlkimiaColor} alt="Logo" className="Header-logo" />
                 </div>
 
                 <div className="navA">
@@ -60,13 +61,25 @@ const Header = ({ className }) => {
                                 />
                             </div>
                             <div className="Side-links">
-                                <NavLink className="linkA" to="/">
+                                <NavLink
+                                    className="linkA"
+                                    to="/"
+                                    style={navLinks}
+                                >
                                     Inicio
                                 </NavLink>
-                                <NavLink className="linkA" to="/hosts">
+                                <NavLink
+                                    className="linkA"
+                                    to="/hosts"
+                                    style={navLinks}
+                                >
                                     Anfitriones
                                 </NavLink>
-                                <NavLink className="linkA" to="/blog">
+                                <NavLink
+                                    className="linkA"
+                                    to="/blog"
+                                    style={navLinks}
+                                >
                                     Blog
                                 </NavLink>
                             </div>
@@ -86,30 +99,33 @@ const Header = ({ className }) => {
                 </div>
 
                 <div className="header-right">
-                    <div className="enlaces-header">
-                        <NavLink className="linkA" to="/">
+                    <div className={url.pathname === "/" ? "enlaces-header" : "newEnlaces-header"}>
+                        <NavLink className="linkA" to="/" style={navLinks}>
                             Inicio
                         </NavLink>
-                        <NavLink className="linkA" to="/hosts">
+                        <NavLink className="linkA" to="/hosts" style={navLinks}>
                             Anfitriones
                         </NavLink>
-                        <NavLink className="linkA" to="blog">
+                        <NavLink className="linkA" to="blog" style={navLinks}>
                             Blog
                         </NavLink>
                     </div>
-
-                    <Button
-                        btnTitle={"¡Comenzar ahora!"}
-                        height={"40px"}
-                        className={"border"}
-                        onClick={() => navigate("/start")}
-                    />
-                    <Button
-                        btnTitle={"Descargar la app"}
-                        height={"40px"}
-                        className={"border"}
-                        onClick={() => navigate("downloadApp")}
-                    />
+                    <div className="h-return">
+                        <Button
+                            btnTitle={"¡Comenzar ahora!"}
+                            height={"40px"}
+                            className={url.pathname === "/" ? "border" : "border-color"}
+                            onClick={() => navigate("/start")}
+                        />
+                    </div>
+                    <div className="h-return">
+                        <Button
+                            btnTitle={"Descargar la app"}
+                            height={"40px"}
+                            className={url.pathname === "/" ? "border" : "border-color"}
+                            onClick={() => navigate("downloadApp")}
+                        />
+                    </div>
                 </div>
             </nav>
         </>

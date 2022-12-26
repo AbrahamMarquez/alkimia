@@ -12,6 +12,8 @@ Route::get('/contact', function () {  return view('main.index');});
 Route::get('/terms-conditions', function () {  return view('main.index');}); 
 Route::get('/politics-privacy', function () {  return view('main.index');});
 Route::get('/start', function () {  return view('main.index');});
+
 Route::get('/login', function () {  return view('main.index');}); 
 Route::get('/recover-account', function () {  return view('main.index');}); 
-Route::get('/recover-code', function () {  return view('main.index');}); 
+Route::get('/recover-code', function () {  return view('main.index');});
+Route::get('/update-access', function () {  return view('main.index');}); 
