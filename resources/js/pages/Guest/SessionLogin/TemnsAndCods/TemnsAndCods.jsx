@@ -25,6 +25,8 @@ const TemnsAndCods = () => {
                         doloribus error blanditiis libero deserunt perferendis
                         in reprehenderit vel soluta ipsa maxime, dicta aliquid
                         ducimus.
+
+                        
                     </div>
                 </div>
                 <div className="zsecct2">
