@@ -58,13 +58,13 @@ export default function ({
     hideRequired,
     onClick,
     style,
-
     inputClassName = "",
     notPoint = false,
-
     skeleton,
     onKeyDown,
     onBlur,
+    maxLength,
+    
 }) {
     return !skeleton ? (
         <>
@@ -80,9 +80,13 @@ export default function ({
                 onClick={() => onClick && onClick()}
             >
                 {
+                    <>
+                    
+                    <p className="title">{title}</p>
                     <div className="input-wrapper">
                         <input
                             type={"number"}
+                            maxLength={maxLength}
                             disabled={disabled}
                             id={id}
                             name={name}
@@ -113,6 +117,7 @@ export default function ({
                             onBlur={onBlur}
                         />
                     </div>
+                    </>
                 }
             </div>
         </>
