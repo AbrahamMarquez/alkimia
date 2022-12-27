@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import InputSearch from "../../../components/atoms/InputSearch/InputSearch";
-import Header from "../../../components/organisms/Header/Header";
 import Button from "../../../components/atoms/Button/Button";
-import CarouselSlick from "../../../components/organisms/CarouselSlick/CarouselSlick";
-import Footer from "../../../components/organisms/Footer/Footer";
 
 //assets
 import Arrow from "../../../assets/icons/arrow.svg";

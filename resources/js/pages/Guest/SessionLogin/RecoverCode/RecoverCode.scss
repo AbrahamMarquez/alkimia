@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 65px;
 
     .Codereco {
         padding: 0 21px;
@@ -86,6 +87,9 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .RecoverCode{
+        padding-top: 90px !important;
+    }
     .Codereco {
         display: flex !important;
         flex-direction: column !important;

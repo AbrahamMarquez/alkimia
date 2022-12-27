@@ -1,0 +1,17 @@
+.parent {
+    display: grid;
+    grid-template-columns: 368px 1fr;
+    grid-template-rows: 69px 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    .Side {
+        grid-area: 1 / 1 / 6 / 2;
+    }
+    .Header {
+        grid-area: 1 / 2 / 2 / 6;
+    }
+    .View {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}

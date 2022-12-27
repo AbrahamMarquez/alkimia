@@ -1,4 +1,6 @@
 .Blog {
+    padding-top: 65px;
+
     .secct1 {
         background: linear-gradient(
             120deg,
@@ -26,6 +28,7 @@
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
     .Blog{
+        padding-top: 90px;
         .secct1{
             height: 194px !important;
 

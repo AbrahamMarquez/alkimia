@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../../../components/atoms/Button/Button";
 
 import "./TemnsAndCods.scss";
 
 const TemnsAndCods = () => {
+
+    const navigate = useNavigate()
+
     const [isCheckedTerminos, setIsCheckedTerminos] = useState(false);
     const [isCheckedPoliticas, setIsCheckedPoliticas] = useState(false);
 
@@ -15,9 +19,15 @@ const TemnsAndCods = () => {
         setIsCheckedPoliticas(!isCheckedPoliticas);
     };
 
-    
+    const handleCancel = () => {
+        navigate("/register-info")
+    }
 
-    const handleCancel = () => {};
+    const handleSubmit = () => {
+        navigate("/welcome-user")
+    }
+
+
     return (
         <div className="TemnsAndCods">
             <div className="line-change"></div>
@@ -97,7 +107,7 @@ const TemnsAndCods = () => {
                     <Button
                         btnTitle={"Continuar"}
                         className={isCheckedPoliticas && isCheckedTerminos ? "degradado" : "disablee"}
-                        onClick={() => {}}
+                        onClick={isCheckedPoliticas && isCheckedTerminos ? () => handleSubmit() : null}
                     />
                 </div>
             </div>

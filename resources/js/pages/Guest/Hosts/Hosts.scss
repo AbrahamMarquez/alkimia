@@ -1,6 +1,7 @@
 .hosts {
     width: 100%;
     position: relative;
+    padding-top: 65px;
 
     .responses {
         font-family: "Metropolis";
@@ -206,6 +207,7 @@
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
     .hosts {
+        padding-top: 90px !important;
 
         .responses {
             font-size: 14.72px !important;
@@ -228,6 +230,7 @@
             .host-secct-1-A {
                 font-size: 46px !important;
                 text-align: center;
+                margin-top: 116px !important;
             }
 
             .host-secct-1-B {

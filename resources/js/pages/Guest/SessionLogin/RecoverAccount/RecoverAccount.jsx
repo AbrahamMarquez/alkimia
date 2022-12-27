@@ -11,10 +11,14 @@ import Google from "../../../../assets/icons/Google.png";
 import "./RecoverAccount.scss";
 import InputNumber from "../../../../components/atoms/InputNumber/InputNumber";
 import { useNavigate } from "react-router-dom";
-import { ColorValidation, SubmitValidation, UpdateValue } from "../../../../utilities/Validations";
+import {
+    ColorValidation,
+    SubmitValidation,
+    UpdateValue,
+} from "../../../../utilities/Validations";
 
 const RecoverAccount = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const networks = [
         {
             id: 1,
@@ -64,28 +68,22 @@ const RecoverAccount = () => {
         boxPhone.style.flexDirection = "column";
     };
 
-    // const [inputList, setInputList] = useState({
-    //     state: { value: null, validationType: "empty" },
-        
-    // });
+    const [inputList, setInputList] = useState({
+        state: { value: null, validationType: "empty" },
+    });
 
-    // useEffect(() => {
-    //     for (const propertyName in inputList) {
-    //         if (document.getElementById(propertyName)) {
-    //             ColorValidation(propertyName, inputList);
-    //         }
-    //         if (propertyName === "state") {
-    //             ColorValidation(propertyName, inputList, "state");
-    //         }
-    //     }
-    // }, [inputList]);
+    useEffect(() => {
+        for (const propertyName in inputList) {
+            if (document.getElementById(propertyName)) {
+                ColorValidation(propertyName, inputList);
+            }
+        }
+    }, [inputList]);
 
-    const handleSubmit =  () => {
-        // e.preventDefault();
-        // if (SubmitValidation(inputList, setInputList)) {
-        //     navigate("/");
-        // }
-        navigate("/recover-code")
+    const handleSubmit = () => {
+        if (SubmitValidation(inputList, setInputList)) {
+            navigate("/recover-code");
+        }
     };
 
     return (
@@ -121,11 +119,16 @@ const RecoverAccount = () => {
                             <Input
                                 title={"Correo electrónico"}
                                 placeholder={"Correo electrónico"}
-                                id={"email"}
+                                id={"state"}
                                 type={"email"}
-                                // onChange={(e) =>
-                                //     UpdateValue(e, "state", inputList, setInputList)
-                                // }
+                                onChange={(e) =>
+                                    UpdateValue(
+                                        e,
+                                        "state",
+                                        inputList,
+                                        setInputList
+                                    )
+                                }
                             />
                         </div>
                         <div id="divphoneId" className="input-number">
@@ -133,16 +136,25 @@ const RecoverAccount = () => {
                                 title={"Telefóno"}
                                 placeholder={"Número de telefóno"}
                                 id={"state"}
-                                // onChange={(e) =>
-                                //     UpdateValue(e, "state", inputList, setInputList)
-                                // }
+                                onChange={(e) =>
+                                    UpdateValue(
+                                        e,
+                                        "state",
+                                        inputList,
+                                        setInputList
+                                    )
+                                }
                             />
                         </div>
                     </div>
                 </div>
                 <div className="rsecct2">
                     <div className="rsecct-2-btns">
-                        <Button btnTitle={"Volver"} className={"white"} onClick={() => navigate("/login")}/>
+                        <Button
+                            btnTitle={"Volver"}
+                            className={"white"}
+                            onClick={() => navigate("/login")}
+                        />
                         <Button
                             btnTitle={"Enviar código"}
                             className={"degradado"}

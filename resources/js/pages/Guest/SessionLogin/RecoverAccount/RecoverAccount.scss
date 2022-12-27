@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 65px;
 
     .min-form {
         padding: 0 20px;
@@ -135,6 +136,7 @@
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
     .RecoverAccount {
+        padding-top: 90px !important;
         .min-form {
             width: 408px !important;
 

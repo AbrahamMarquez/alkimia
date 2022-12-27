@@ -32,6 +32,8 @@
         "react-router-dom": "^6.4.5",
         "react-slick": "^0.29.0",
         "react-verification-code-input": "^1.2.9",
+        "sweetalert2": "^11.6.16",
+        "sweetalert2-react-content": "^5.0.7",
         "swiper": "^8.4.5",
         "webpack": "^5.74.0",
         "webpack-dev-server": "^4.11.1"

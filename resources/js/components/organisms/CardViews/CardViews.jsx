@@ -41,7 +41,7 @@ const CardViews = ({ elements, setElements }) => {
                                     <span className="secct-2-name">
                                         {crd.name}
                                     </span>
-                                    <span>🖋</span>
+                                    <span>{" "}✒️</span>
                                 </div>
                                 <br />
                                 <br />

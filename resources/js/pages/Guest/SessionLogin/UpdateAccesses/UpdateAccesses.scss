@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 65px;
 
     .updatebody {
         width: 100%;
@@ -51,6 +52,7 @@
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
     .UpdateAccesses{
+        padding-top: 90px;
         .updatebody{
             width: 447px !important;
 

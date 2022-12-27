@@ -7,8 +7,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
     overflow: hidden;
+    z-index: 10;
 
     .Header-logo {
         width: 51px;
@@ -51,6 +52,17 @@
             }
 
             .Side-links {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                color: #fff;
+                font-size: 12.88px;
+                font-family: "Metropolis";
+                margin-top: 19px;
+                gap: 29px;
+            }
+
+            .Side-white-links{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
@@ -175,10 +187,12 @@
 
                 &:hover {
                     border: 2px solid #df1683;
+                    color: #fff !important;
                 }
 
                 &::after {
                     content: "" !important;
+                    
                     width: 100% !important;
                     position: absolute;
                     z-index: -1 !important;

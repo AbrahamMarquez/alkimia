@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+// import Swal from "sweetalert2";
+// import withReactContent from "sweetalert2-react-content";
 import Button from "../../../../components/atoms/Button/Button";
 import InputPassword from "../../../../components/atoms/InputPassword/InputPassword";
 import {
@@ -8,12 +10,13 @@ import {
     UpdateValue,
 } from "../../../../utilities/Validations";
 
-//Styles ✒
+//Styles ✒ ✒ ✒️
 import "./UpdateAccesses.scss";
 
 const UpdateAccesses = () => {
 
     const navigate = useNavigate()
+    // const MySwal = withReactContent(Swal);
 
     const [inputList, setInputList] = useState({
         password: { value: null, validationType: "empty" },
@@ -30,11 +33,20 @@ const UpdateAccesses = () => {
 
     const handleSubmit = () => {
         if (SubmitValidation(inputList, setInputList)) {
-            navigate("/login")
+            // MySwal.fire({
+            //     icon: "success",
+            //     title: "¡Se ha guardado con exito!",
+            //     confirmButtonText: "Aceptar",
+            //     customClass: "customModal",
+            //     didClose: () => navigate("/login"),
+            // });
+            
         }
     };
 
     const handleCancel = () => {
+
+        
         navigate("/recover-code")
     }
 

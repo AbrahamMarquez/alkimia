@@ -8,10 +8,12 @@ import "./RegisterInfo.scss";
 import Input from "../../../../components/atoms/Input/Input";
 import InputNumber from "../../../../components/atoms/InputNumber/InputNumber";
 import Select from "../../../../components/atoms/Select/Select";
-import { ColorValidation } from "../../../../utilities/Validations";
+import { ColorValidation, SubmitValidation, UpdateValue } from "../../../../utilities/Validations";
 import Button from "../../../../components/atoms/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const RegisterInfo = () => {
+    const navigate = useNavigate();
     const optionsGender = [
         {
             label: "Femenino",
@@ -23,12 +25,12 @@ const RegisterInfo = () => {
         },
         {
             label: "Prefiero no contestar",
-            value: null,
+            value: "Prefiero no contestar",
         },
     ];
 
     const [inputList, setInputList] = useState({
-        alias: { value: null, validationType: "email" },
+        alias: { value: null, validationType: "empty" },
         name: { value: null, validationType: "empty" },
         age: { value: null, validationType: "empty" },
         gender: { value: null, validationType: "empty" },
@@ -40,16 +42,22 @@ const RegisterInfo = () => {
             if (document.getElementById(propertyName)) {
                 ColorValidation(propertyName, inputList);
             }
-            if (propertyName === "email") {
-                ColorValidation(propertyName, inputList, "email");
-            }
-        }
-        if (inputList.gender.value?.length == 0) {
-            const newInputList = { ...inputList };
-            newInputList.gender.value = "";
-            setInputList(newInputList);
         }
     }, [inputList]);
+
+    console.log(inputList)
+
+    const handleCancel = () => {
+        navigate("/register-code");
+    };
+
+    const handleSubmit = () => {
+        console.log("Validations", SubmitValidation(inputList, setInputList))
+        if (SubmitValidation(inputList, setInputList)) {
+            console.log("entro")
+            navigate("/termin-and-conditions");
+        }
+    };
 
     return (
         <div className="RegisterInfo">
@@ -74,20 +82,31 @@ const RegisterInfo = () => {
                         title={"Alias de alkimista"}
                         placeholder={"Alias de alkimista"}
                         type="text"
+                        id={"alias"}
+                        onChange={(e) =>
+                            UpdateValue(e, "alias", inputList, setInputList)
+                        }
                     />
                     <Input
                         title={"Nombre"}
                         placeholder={"Nombre completo"}
                         type="text"
+                        id={"name"}
+                        onChange={(e) =>
+                            UpdateValue(e, "name", inputList, setInputList)
+                        }
                     />
                     <div className="ysecct-2-gender">
                         <InputNumber
                             title={"Edad"}
                             placeholder={"Edad"}
                             maxLength={2}
+                            id={"age"}
+                            onChange={(e) =>
+                                UpdateValue(e, "age", inputList, setInputList)
+                            }
                         />
                         <Select
-                        className={""}
                             placeholder={"Género"}
                             options={optionsGender}
                             value={inputList.gender.value}
@@ -106,11 +125,23 @@ const RegisterInfo = () => {
                     <InputNumber
                         title={"Teléfono"}
                         placeholder={"Número de teléfono"}
+                        id={"phone"}
+                        onChange={(e) =>
+                            UpdateValue(e, "phone", inputList, setInputList)
+                        }
                     />
                 </div>
                 <div className="ysecct3">
-                    <Button btnTitle={"Cancelar"} className={"white"} />
-                    <Button btnTitle={"Continuar"} className={"degradado"} />
+                    <Button
+                        btnTitle={"Cancelar"}
+                        className={"white"}
+                        onClick={() => handleCancel()}
+                    />
+                    <Button
+                        btnTitle={"Continuar"}
+                        className={"degradado"}
+                        onClick={() => handleSubmit()}
+                    />
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ import RecoverAccount from "../../../../pages/Guest/SessionLogin/RecoverAccount/
 import RecoverCode from "../../../../pages/Guest/SessionLogin/RecoverCode/RecoverCode";
 import Register from "../../../../pages/Guest/SessionLogin/Register/Register";
 import RegisterInfo from "../../../../pages/Guest/SessionLogin/RegisterInfo/RegisterInfo";
+import RegistrationCode from "../../../../pages/Guest/SessionLogin/RegistrationCode/RegistrationCode";
 import TemnsAndCods from "../../../../pages/Guest/SessionLogin/TemnsAndCods/TemnsAndCods";
 import UpdateAccesses from "../../../../pages/Guest/SessionLogin/UpdateAccesses/UpdateAccesses";
 import WelcomeRegistration from "../../../../pages/Guest/SessionLogin/WelcomeRegistration/WelcomeRegistration";
@@ -49,6 +50,14 @@ const UsersRoutes = () => {
                 element={
                     <Suspense fallback={<></>}>
                         <Register />
+                    </Suspense>
+                }
+            />
+             <Route
+                path="/register-code"
+                element={
+                    <Suspense fallback={<></>}>
+                        <RegistrationCode />
                     </Suspense>
                 }
             />
