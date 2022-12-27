@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 //Assets
 import Alkimia from "../../../assets/icons/Alkimia.png";
-import AlkimiaColor from '../../../assets/icons/alkimiaColor.png'
+import AlkimiaColor from "../../../assets/icons/alkimiaColor.png";
 import Menu from "../../../assets/icons/menu.svg";
 import Close from "../../../assets/icons/close.svg";
 
@@ -18,14 +18,18 @@ const Header = ({ className }) => {
 
     useEffect(() => {
         var header = document.getElementById("HeaderColor");
+        var side = document.getElementById("sideColor");
 
         if (url.pathname === "/") {
             header.style.background =
-            "linear-gradient(120deg, #3a8dde 3%, #8331a7 47%, #df1683 100%)";
+                "linear-gradient(120deg, #3a8dde 3%, #8331a7 47%, #df1683 100%)";
+            side.style.background =
+                "linear-gradient(-120deg, #3a8dde 3%, #8331a7 47%, #df1683 100%)";
         } else {
             header.style.background = "#faf7f7";
-            header.style.boxShadow = "0 1px 25px rgba(0,0,0,0.2)"
-            header.style.zIndex = "1"
+            side.style.background = "#faf7f7";
+            header.style.boxShadow = "0 1px 25px rgba(0,0,0,0.2)";
+            header.style.zIndex = "1";
         }
     }, [url]);
 
@@ -39,7 +43,11 @@ const Header = ({ className }) => {
         <>
             <nav className="Header" id="HeaderColor">
                 <div>
-                    <img src={url.pathname === "/" ? Alkimia : AlkimiaColor} alt="Logo" className="Header-logo" />
+                    <img
+                        src={url.pathname === "/" ? Alkimia : AlkimiaColor}
+                        alt="Logo"
+                        className="Header-logo"
+                    />
                 </div>
 
                 <div className="navA">
@@ -48,7 +56,7 @@ const Header = ({ className }) => {
                     </div>
                     <div className={`HeadSide ${openSide && "OpenSide"}`}>
                         <div className="side-black"></div>
-                        <div className="side-color">
+                        <div className="side-color" id="sideColor">
                             <div
                                 className="Side-close"
                                 onClick={() => setOpenSide(false)}
@@ -86,11 +94,16 @@ const Header = ({ className }) => {
                             <div className="side-btns">
                                 <Button
                                     btnTitle={"¡Comenzar ahora!"}
-                                    className={"border"}
+                                    className={
+                                        url.pathname === "/" ? "border" : "border-color"
+                                    }
+                                    onClick={() => navigate("/start")}
                                 />
                                 <Button
                                     btnTitle={"Descargar la app"}
-                                    className={"border"}
+                                    className={
+                                        url.pathname === "/" ? "border" : "border-color"
+                                    }
                                     onClick={() => navigate("downloadApp")}
                                 />
                             </div>
@@ -99,7 +112,13 @@ const Header = ({ className }) => {
                 </div>
 
                 <div className="header-right">
-                    <div className={url.pathname === "/" ? "enlaces-header" : "newEnlaces-header"}>
+                    <div
+                        className={
+                            url.pathname === "/"
+                                ? "enlaces-header"
+                                : "newEnlaces-header"
+                        }
+                    >
                         <NavLink className="linkA" to="/" style={navLinks}>
                             Inicio
                         </NavLink>
@@ -114,7 +133,9 @@ const Header = ({ className }) => {
                         <Button
                             btnTitle={"¡Comenzar ahora!"}
                             height={"40px"}
-                            className={url.pathname === "/" ? "border" : "border-color"}
+                            className={
+                                url.pathname === "/" ? "border" : "border-color"
+                            }
                             onClick={() => navigate("/start")}
                         />
                     </div>
@@ -122,7 +143,9 @@ const Header = ({ className }) => {
                         <Button
                             btnTitle={"Descargar la app"}
                             height={"40px"}
-                            className={url.pathname === "/" ? "border" : "border-color"}
+                            className={
+                                url.pathname === "/" ? "border" : "border-color"
+                            }
                             onClick={() => navigate("downloadApp")}
                         />
                     </div>

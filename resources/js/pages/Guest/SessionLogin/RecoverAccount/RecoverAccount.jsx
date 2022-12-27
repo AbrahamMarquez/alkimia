@@ -129,7 +129,6 @@ const RecoverAccount = () => {
                             />
                         </div>
                         <div id="divphoneId" className="input-number">
-                            <p className="phojek">Telefóno</p>
                             <InputNumber
                                 title={"Telefóno"}
                                 placeholder={"Número de telefóno"}

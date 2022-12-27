@@ -4,7 +4,10 @@ import Login from "../../../../pages/Guest/SessionLogin/Login/Login";
 import RecoverAccount from "../../../../pages/Guest/SessionLogin/RecoverAccount/RecoverAccount";
 import RecoverCode from "../../../../pages/Guest/SessionLogin/RecoverCode/RecoverCode";
 import Register from "../../../../pages/Guest/SessionLogin/Register/Register";
+import RegisterInfo from "../../../../pages/Guest/SessionLogin/RegisterInfo/RegisterInfo";
+import TemnsAndCods from "../../../../pages/Guest/SessionLogin/TemnsAndCods/TemnsAndCods";
 import UpdateAccesses from "../../../../pages/Guest/SessionLogin/UpdateAccesses/UpdateAccesses";
+import WelcomeRegistration from "../../../../pages/Guest/SessionLogin/WelcomeRegistration/WelcomeRegistration";
 
 const UsersRoutes = () => {
     return (
@@ -46,6 +49,30 @@ const UsersRoutes = () => {
                 element={
                     <Suspense fallback={<></>}>
                         <Register />
+                    </Suspense>
+                }
+            />
+             <Route
+                path="/register-info"
+                element={
+                    <Suspense fallback={<></>}>
+                        <RegisterInfo />
+                    </Suspense>
+                }
+            />
+            <Route
+                path="/termin-and-conditions"
+                element={
+                    <Suspense fallback={<></>}>
+                        <TemnsAndCods />
+                    </Suspense>
+                }
+            />
+             <Route
+                path="/welcome-user"
+                element={
+                    <Suspense fallback={<></>}>
+                        <WelcomeRegistration />
                     </Suspense>
                 }
             />

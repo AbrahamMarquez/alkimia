@@ -9,6 +9,10 @@ const Start = () => {
     const navigate = useNavigate();
 
     const nextPage = () => {
+        navigate("/login");
+    };
+
+    const register = () => {
         navigate("/register");
     };
     return (
@@ -25,7 +29,7 @@ const Start = () => {
                     <Button
                         btnTitle={"Registrarme"}
                         className={"border-color"}
-                        onClick={() => nextPage()}
+                        onClick={() => register()}
                     />
                 </div>
             </div>

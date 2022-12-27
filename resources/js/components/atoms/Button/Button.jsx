@@ -13,6 +13,7 @@ const Button = ({ btnTitle, className, onClick, skelton }) => {
                     // style={{ height: height }}
                     className={`styleButton ${className}`}
                     onClick={onClick}
+                    des
                 >
                     {btnTitle}
                 </button>

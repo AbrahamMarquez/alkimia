@@ -30,7 +30,7 @@ const UpdateAccesses = () => {
 
     const handleSubmit = () => {
         if (SubmitValidation(inputList, setInputList)) {
-            console.log("first")
+            navigate("/login")
         }
     };
 
@@ -38,6 +38,7 @@ const UpdateAccesses = () => {
         navigate("/recover-code")
     }
 
+    
     return (
         <div className="UpdateAccesses">
             <div className="updatebody">

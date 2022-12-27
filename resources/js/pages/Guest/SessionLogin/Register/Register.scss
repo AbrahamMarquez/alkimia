@@ -8,6 +8,7 @@
     .registroBody {
         width: 100%;
         padding: 0 20px;
+        
 
         .xsecct1 {
             margin-top: 28px;
@@ -34,17 +35,18 @@
         .xsecct3 {
             margin-top: 23px;
             font-family: "Metropolis";
-font-size: 12.88px;
-color: #8a8a8a;
-text-decoration: none solid rgb(138, 138, 138);
-line-height: 1px;
-text-align: center;
+            font-size: 12.88px;
+            color: #8a8a8a;
+            text-decoration: none solid rgb(138, 138, 138);
+            line-height: 1px;
+            text-align: center;
         }
 
         .xsecct4 {
             margin-top: 48px;
             display: flex;
             gap: 20px;
+            justify-content: center;
 
             .white {
                 width: 158px;
@@ -64,6 +66,31 @@ text-align: center;
             text-decoration: none solid rgb(138, 138, 138);
             line-height: 1px;
             text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .Register{
+
+        .registroBody{
+            width: 447px !important;
+
+            .xsecct2{
+                padding: 0 42px !important;
+            }
+
+            .xsecct4{
+
+                .white{
+                    width: 194px !important;
+                }
+
+                .degradado{
+                    width: 194px !important;
+                
+                }
+            }
         }
     }
 }
