@@ -1,4 +1,4 @@
-.RecoverCode {
+.RegistrationCode {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -87,39 +87,39 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
-    .RecoverCode{
-        padding-top: 90px !important;
-    }
-    .Codereco {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-
-        .rsecct1 {
-            .rsecct-1-title {
-                font-weight: bold !important;
-            }
-
-            .rsecct-1-sub {
-                margin-top: 5px !important;
-            }
-        }
-
-        .rsecct2 {
-            width: 333px !important;
+    .RegistrationCode {
+        padding-top: 90px;
+        .Codereco {
             display: flex !important;
-            justify-content: center !important;
+            flex-direction: column !important;
             align-items: center !important;
-        }
+            justify-content: center !important;
 
-        .rsecct3 {
-            .white {
-                width: 194px !important;
+            .rsecct1 {
+                .rsecct-1-title {
+                    font-weight: bold !important;
+                }
+
+                .rsecct-1-sub {
+                    margin-top: 5px !important;
+                }
             }
 
-            .degradado {
-                width: 194px !important;
+            .rsecct2 {
+                width: 333px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            .rsecct3 {
+                .white {
+                    width: 194px !important;
+                }
+
+                .degradado {
+                    width: 194px !important;
+                }
             }
         }
     }

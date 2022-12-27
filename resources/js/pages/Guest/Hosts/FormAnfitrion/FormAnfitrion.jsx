@@ -17,7 +17,7 @@ import "./FormAnfitrion.scss";
 const FormAnfitrion = () => {
     const navigate = useNavigate();
     const [inputList, setInputList] = useState({
-        email: { value: null, validationType: "email" },
+        email: { value: null, validationType: "empty" },
         password: { value: null, validationType: "empty" },
         ComfirmPassword: { value: null, validationType: "empty" },
         name: { value: null, validationType: "empty" },
@@ -35,16 +35,6 @@ const FormAnfitrion = () => {
             if (propertyName === "email") {
                 ColorValidation(propertyName, inputList, "email");
             }
-        }
-        if (inputList.state.value?.length == 0) {
-            const newInputList = { ...inputList };
-            newInputList.state.value = "";
-            setInputList(newInputList);
-        }
-        if (inputList.clave.value?.length == 0) {
-            const newInputList = { ...inputList };
-            newInputList.clave.value = "";
-            setInputList(newInputList);
         }
     }, [inputList]);
 

@@ -79,7 +79,7 @@ const Contact = () => {
                             }
                         />
                         <TextArea
-                            title={"Escribe un breve mesange"}
+                            title={"Escribe un breve mesanje"}
                             viewTitle
                             placeholder={"Escribe aquí..."}
                             id={"message"}

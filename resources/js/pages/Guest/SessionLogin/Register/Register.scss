@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 65px;
 
     .registroBody {
         width: 100%;
@@ -72,6 +73,7 @@
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
     .Register{
+        padding-top: 90px;
 
         .registroBody{
             width: 447px !important;

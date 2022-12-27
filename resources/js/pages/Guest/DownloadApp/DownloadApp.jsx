@@ -98,7 +98,7 @@ const DownloadApp = () => {
                             <img src={MockUp} alt="MockUp" className="MockUp" />
                             <div className="dsecct-1-video">
                                 <iframe
-                                className="dsecct-2-frame"
+                                    className="dsecct-2-frame"
                                     width="100%"
                                     height="100%"
                                     src="https://www.youtube.com/embed/ambCOKKaC2k"

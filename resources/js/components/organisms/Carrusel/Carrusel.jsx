@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Button from "../../atoms/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const Carrusel = ({
     places,
@@ -19,6 +20,9 @@ const Carrusel = ({
     viewButton = false,
     className,
 }) => {
+
+    const navigate = useNavigate()
+
     return (
         <Swiper
             modules={[Navigation]}
@@ -61,6 +65,7 @@ const Carrusel = ({
                                     <Button
                                         btnTitle={"¡Explorar!"}
                                         className={"border"}
+                                        onClick={() => navigate("/login")}
                                     />
                                 </div>
                             </div>

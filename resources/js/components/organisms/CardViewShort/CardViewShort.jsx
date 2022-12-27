@@ -18,12 +18,11 @@ const CardViewShort = ({ elements, setElements }) => {
     };
 
     const activeHeart = (id) => {
-        const likeIdx = elements.findIndex(item => item.id == id)
+        const likeIdx = elements.findIndex((item) => item.id == id);
         const copy = [...elements];
-        copy[likeIdx].liked = !copy[likeIdx].liked
-        setElements(copy)
+        copy[likeIdx].liked = !copy[likeIdx].liked;
+        setElements(copy);
     };
-
 
     return (
         <div className="CardViewShort">
@@ -37,7 +36,12 @@ const CardViewShort = ({ elements, setElements }) => {
                     <div className="secct-2-cards-a">
                         <div className="secct-2-div-a">
                             <div>
-                                <span className="secct-2-name">{crd.name}</span>
+                                <div>
+                                    <span className="secct-2-name">
+                                        {crd.name}
+                                    </span>
+                                    <span>{" "}✒️</span>
+                                </div>
                                 <br />
                                 <span className="secct-2-date">{crd.date}</span>
                             </div>
@@ -77,8 +81,13 @@ const CardViewShort = ({ elements, setElements }) => {
                             <img
                                 src={crd.icon2}
                                 alt="Heart"
-                                className={"secct-2-heart "+ (crd.liked && "likedFilter")}
-                                onClick={() => {activeHeart(crd.id)}}
+                                className={
+                                    "secct-2-heart " +
+                                    (crd.liked && "likedFilter")
+                                }
+                                onClick={() => {
+                                    activeHeart(crd.id);
+                                }}
                             />
                             <div className="secct-2-viewss">
                                 <div className="Eye-container">

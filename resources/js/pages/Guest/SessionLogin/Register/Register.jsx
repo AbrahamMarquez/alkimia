@@ -37,7 +37,7 @@ const Register = () => {
 
     const handleSubmit = () => {
         if (SubmitValidation(inputList, setInputList)) {
-            navigate("#");
+            navigate("/register-code");
         }
     };
 

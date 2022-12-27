@@ -1,6 +1,7 @@
 .TemnsAndCods {
     width: 100%;
     position: relative;
+    padding-top: 65px;
 
     .line-change {
         position: absolute;
@@ -123,6 +124,8 @@
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
     .TemnsAndCods {
+        padding-top: 90px;
+        
         .t-cards {
             padding: 119px 381px 197px 381px !important;
 
