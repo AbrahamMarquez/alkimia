@@ -54,7 +54,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
-                color: #fff;
+                color: #3b3b3b;
                 font-size: 12.88px;
                 font-family: "Metropolis";
                 margin-top: 19px;
@@ -69,6 +69,11 @@
                 justify-content: flex-end;
 
                 .border {
+                    height: 40px;
+                }
+
+                .border-color {
+                    width: 171px;
                     height: 40px;
                 }
             }

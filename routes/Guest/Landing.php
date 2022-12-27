@@ -19,4 +19,4 @@ Route::get('/recover-code', function () {  return view('main.index');});
 Route::get('/update-access', function () {  return view('main.index');}); 
 Route::get('/register', function () {  return view('main.index');}); 
 Route::get('/register-info', function () {  return view('main.index');});
-Route::get('/termin-and-conditions', function () {  return view('main.index');});
+Route::get('/welcome-user', function () {  return view('main.index');});

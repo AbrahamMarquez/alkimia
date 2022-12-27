@@ -94,11 +94,16 @@ const Header = ({ className }) => {
                             <div className="side-btns">
                                 <Button
                                     btnTitle={"¡Comenzar ahora!"}
-                                    className={"border"}
+                                    className={
+                                        url.pathname === "/" ? "border" : "border-color"
+                                    }
+                                    onClick={() => navigate("/start")}
                                 />
                                 <Button
                                     btnTitle={"Descargar la app"}
-                                    className={"border"}
+                                    className={
+                                        url.pathname === "/" ? "border" : "border-color"
+                                    }
                                     onClick={() => navigate("downloadApp")}
                                 />
                             </div>

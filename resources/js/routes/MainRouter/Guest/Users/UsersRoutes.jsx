@@ -7,6 +7,7 @@ import Register from "../../../../pages/Guest/SessionLogin/Register/Register";
 import RegisterInfo from "../../../../pages/Guest/SessionLogin/RegisterInfo/RegisterInfo";
 import TemnsAndCods from "../../../../pages/Guest/SessionLogin/TemnsAndCods/TemnsAndCods";
 import UpdateAccesses from "../../../../pages/Guest/SessionLogin/UpdateAccesses/UpdateAccesses";
+import WelcomeRegistration from "../../../../pages/Guest/SessionLogin/WelcomeRegistration/WelcomeRegistration";
 
 const UsersRoutes = () => {
     return (
@@ -64,6 +65,14 @@ const UsersRoutes = () => {
                 element={
                     <Suspense fallback={<></>}>
                         <TemnsAndCods />
+                    </Suspense>
+                }
+            />
+             <Route
+                path="/welcome-user"
+                element={
+                    <Suspense fallback={<></>}>
+                        <WelcomeRegistration />
                     </Suspense>
                 }
             />
