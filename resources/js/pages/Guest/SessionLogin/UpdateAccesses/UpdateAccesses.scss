@@ -49,4 +49,26 @@
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 2000px) {}
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .UpdateAccesses{
+        .updatebody{
+            width: 447px !important;
+
+            .usecct2{
+                    padding: 0 39px !important; 
+            }
+
+            .usecct3{
+                .white{
+                    width: 194px !important;
+                }
+
+                .degradado{
+                     width: 194px !important;
+                }
+            }
+
+        }
+    }
+
+}

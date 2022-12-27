@@ -6,13 +6,11 @@ import Button from "../../../components/atoms/Button/Button";
 import "./Start.scss";
 
 const Start = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const nextPage = () => {
-        console.log("first")
-        
-        navigate("/login")
-    }
+        navigate("/register");
+    };
     return (
         <div className="Start">
             <div className="sform1">
@@ -27,7 +25,7 @@ const Start = () => {
                     <Button
                         btnTitle={"Registrarme"}
                         className={"border-color"}
-                        
+                        onClick={() => nextPage()}
                     />
                 </div>
             </div>
