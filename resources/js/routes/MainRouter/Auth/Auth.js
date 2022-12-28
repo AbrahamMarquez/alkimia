@@ -2,10 +2,11 @@ import React from "react";
 import AuthLayout from "../../../components/organisms/AuthLayout/AuthLayout";
 import HomeRoutes from "./HomeRoutes/HomeRoutes";
 
-const Auth = () => {
+const Auth = ({ AuthFunctions }) => {
+
     return (
         <>
-            <AuthLayout>
+            <AuthLayout AuthFunctions={AuthFunctions}>
                 <HomeRoutes />
             </AuthLayout>
         </>

@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import AuthHeader from "../AuthHeader/AuthHeader";
 import AuthSiderBar from "../AuthSiderBar/AuthSiderBar";
 
-import "./AuthLayout.scss"
+import "./AuthLayout.scss";
 
-const AuthLayout = ({ children }) => {
+const AuthLayout = ({ children, AuthFunctions }) => {
+
+    const [close, setClose] = useState(false)
+
     return (
         <div className="AuthLayout">
             {children}
             <div className="AuthSider">
-                <AuthSiderBar />
+                <AuthSiderBar AuthFunctions={AuthFunctions}/>
             </div>
-            {/* <div class="Header"> </div>
-            <div class="View"> </div> */}
+            {/* <div className="AuthHeader">
+                <AuthHeader/>
+            </div> */}
         </div>
     );
 };

@@ -4,13 +4,17 @@ import Button from "../../../../components/atoms/Button/Button";
 import Input from "../../../../components/atoms/Input/Input";
 import InputPassword from "../../../../components/atoms/InputPassword/InputPassword";
 
-import { ColorValidation, SubmitValidation, UpdateValue } from "../../../../utilities/Validations";
+import {
+    ColorValidation,
+    SubmitValidation,
+    UpdateValue,
+} from "../../../../utilities/Validations";
 
 //Styles
 import "./Login.scss";
 
-const Login = () => {
-    const navigate = useNavigate()
+const Login = ({ AuthFunctions }) => {
+    const navigate = useNavigate();
     const [inputList, setInputList] = useState({
         email: { value: null, validationType: "email" },
         password: { value: null, validationType: "empty" },
@@ -29,9 +33,10 @@ const Login = () => {
 
     const handleSubmit = () => {
         if (SubmitValidation(inputList, setInputList)) {
-            navigate("#");
+            AuthFunctions.logIn();
+            navigate("/home");
         }
-    }
+    };
 
     return (
         <div className="Login">
@@ -66,7 +71,10 @@ const Login = () => {
                             />
                             <p className="lsecct-1-text-reme">Recuérdame</p>
                         </div>
-                        <NavLink to={"/recover-account"} className="lsecct-1-forgot">
+                        <NavLink
+                            to={"/recover-account"}
+                            className="lsecct-1-forgot"
+                        >
                             Olvide mi contraseña
                         </NavLink>
                     </div>

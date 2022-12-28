@@ -1,19 +1,43 @@
 .AuthLayout {
-    display: grid;
-    grid-template-columns: 368px 1fr;
-    grid-template-rows: 69px 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    
+    position: relative;
+    width: 100%;
 
     .AuthSider {
-        grid-area: 1 / 1 / 6 / 2;
-        background: #fff;
+       position: absolute;
+       top: 0;
+       left: -100%;
+    //    left: 0;
+       width: 100%;
+       display: flex;
+       transition: all 0.5s;
+
+       &.openSideBar{
+            left: 0;
+       }
     }
-    .Header {
-        grid-area: 1 / 2 / 2 / 6;
-    }
-    .View {
-        grid-area: 2 / 2 / 3 / 3;
+
+
+    
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .AuthLayout {
+        display: grid;
+        grid-template-columns: 368px 1fr;
+        grid-template-rows: 69px 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        .AuthSider {
+            grid-area: 1 / 1 / 6 / 2;
+            background: #fff;
+            position: static;
+        }
+        .AuthHeader {
+            grid-area: 1 / 2 / 2 / 6;
+        }
+        .AuthView {
+            grid-area: 2 / 2 / 3 / 3;
+        }
     }
 }

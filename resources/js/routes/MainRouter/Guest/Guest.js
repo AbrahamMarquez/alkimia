@@ -4,12 +4,12 @@ import GuestLayout from "../../../components/organisms/GuestLayout/GuestLayout";
 import LandingPageRoutes from "./LandingPageRoutes/LandingPageRoutes";
 import UsersRoutes from "./Users/UsersRoutes";
 
-const Guest = (props) => {
+const Guest = ({AuthFunctions}) => {
     return (
         
             <GuestLayout>
                 <LandingPageRoutes />
-                <UsersRoutes />
+                <UsersRoutes AuthFunctions={AuthFunctions}/>
             </GuestLayout>
         
     );
