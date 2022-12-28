@@ -4,27 +4,55 @@ import { BrowserRouter as Router, useParams } from "react-router-dom";
 import Auth from "./Auth/Auth";
 import Guest from "./Guest/Guest";
 
-import "./MainRouter.scss"
+import "./MainRouter.scss";
 
 // prime react
-import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
-import "primereact/resources/primereact.min.css";                  //core css
-import "primeicons/primeicons.css";                                //icons
+import "primereact/resources/themes/lara-light-indigo/theme.css"; //theme
+import "primereact/resources/primereact.min.css"; //core css
+import "primeicons/primeicons.css"; //icons
 
 export default function MainRoute() {
-    const [auth, setAuth] = useState(false);
+
+    const [fakeAuth, setFakeAuth] = useState("false");
+
+    const logIn = () => {
+        setFakeAuth("true");
+        localStorage.setItem("auth", "true");
+    };
+    const logOut = () => {
+        setFakeAuth("false");
+        localStorage.setItem("auth", "false");
+        window.location.href = "/";
+    };
+    const AuthFunctions = {
+        logIn: logIn,
+        logOut: logOut,
+    };
+
+    useEffect(() => {
+        if (localStorage.getItem("auth")) {
+            if (localStorage.getItem("auth") == "true") {
+                setFakeAuth("true");
+                localStorage.setItem("auth", "true");
+            } else {
+                setFakeAuth("false");
+                localStorage.setItem("auth", "false");
+            }
+        } else {
+            localStorage.setItem("auth", "false");
+        }
+    }, [fakeAuth]);
 
     return (
         <main>
             <Router>
-                {auth ? (
+                {fakeAuth == "true" ? (
                     <>
-                        <Auth />
+                        <Auth AuthFunctions={AuthFunctions} />
                     </>
                 ) : (
                     <>
-                    
-                        <Guest />
+                        <Guest AuthFunctions={AuthFunctions} />
                     </>
                 )}
             </Router>
@@ -44,9 +72,8 @@ export default function MainRoute() {
 if (document.getElementById("reactRoute")) {
     ReactDOM.render(
         // <React.StrictMode>
-            <MainRoute />,
-            document.getElementById("reactRoute")
+        <MainRoute />,
+        document.getElementById("reactRoute")
         // </React.StrictMode>,
-        
     );
 }

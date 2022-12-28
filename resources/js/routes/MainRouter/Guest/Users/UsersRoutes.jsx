@@ -10,14 +10,14 @@ import TemnsAndCods from "../../../../pages/Guest/SessionLogin/TemnsAndCods/Temn
 import UpdateAccesses from "../../../../pages/Guest/SessionLogin/UpdateAccesses/UpdateAccesses";
 import WelcomeRegistration from "../../../../pages/Guest/SessionLogin/WelcomeRegistration/WelcomeRegistration";
 
-const UsersRoutes = () => {
+const UsersRoutes = ({AuthFunctions}) => {
     return (
         <Routes>
             <Route
                 path="/login"
                 element={
                     <Suspense fallback={<></>}>
-                        <Login />
+                        <Login AuthFunctions={AuthFunctions}/>
                     </Suspense>
                 }
             />
