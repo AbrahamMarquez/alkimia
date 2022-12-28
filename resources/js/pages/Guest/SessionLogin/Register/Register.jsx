@@ -45,8 +45,8 @@ const Register = () => {
         <div className="Register">
             <div className="registroBody">
                 <div className="xsecct1">
-                    <p className="xsecct-1-title">Código de recuperación</p>
-                    <p className="xsecct-1-sub">Ingresa el código enviado</p>
+                    <p className="xsecct-1-title"><b>Registro</b></p>
+                    <p className="xsecct-1-sub">¡Convierteté en alkimista!</p>
                 </div>
                 <div className="xsecct2">
                     <Input
@@ -81,7 +81,9 @@ const Register = () => {
                     />
                 </div>
                 <div className="xsecct3">
-                    <NavLink to={"/login"} className="xsecct-link">Ya tengo cuenta</NavLink>
+                    <NavLink to={"/login"} className="xsecct-link">
+                        Ya tengo cuenta
+                    </NavLink>
                 </div>
                 <div className="xsecct4">
                     <Button

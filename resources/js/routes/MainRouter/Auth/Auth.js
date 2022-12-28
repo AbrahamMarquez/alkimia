@@ -1,12 +1,15 @@
-import React from 'react'
-import AuthRoutes from './AuthRoutes/AuthRoutes'
+import React from "react";
+import AuthLayout from "../../../components/organisms/AuthLayout/AuthLayout";
+import HomeRoutes from "./HomeRoutes/HomeRoutes";
 
 const Auth = () => {
-  return (
-    <>
-      <AuthRoutes />
-    </>
-  )
-}
+    return (
+        <>
+            <AuthLayout>
+                <HomeRoutes />
+            </AuthLayout>
+        </>
+    );
+};
 
-export default Auth
+export default Auth;
