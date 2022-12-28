@@ -7,7 +7,7 @@ const TmsCds = () => {
     return (
         <div className="TmsCds">
             <div className="tm-title">
-                <p>Terminos y condiciones</p>
+                <p>Términos y condiciones</p>
             </div>
             <div className="cards">
                 <p>

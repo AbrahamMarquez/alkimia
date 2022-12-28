@@ -1,12 +1,14 @@
-.parent {
+.AuthLayout {
     display: grid;
     grid-template-columns: 368px 1fr;
     grid-template-rows: 69px 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    
 
-    .Side {
+    .AuthSider {
         grid-area: 1 / 1 / 6 / 2;
+        background: #fff;
     }
     .Header {
         grid-area: 1 / 2 / 2 / 6;
