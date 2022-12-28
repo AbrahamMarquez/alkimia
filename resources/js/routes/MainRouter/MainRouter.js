@@ -12,7 +12,7 @@ import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
 
 export default function MainRoute() {
-    const [auth, setAuth] = useState(true);
+    const [auth, setAuth] = useState(false);
 
     return (
         <main>
