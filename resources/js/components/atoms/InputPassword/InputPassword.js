@@ -24,6 +24,7 @@ const InputPassword = ({
 }) => {
     const [passwordShown, setPasswordShown] = useState(false);
     const [iconsChange, setIconchange] = useState(true);
+    
     const togglePassword = () => {
         if (!disabled) {
             setPasswordShown(!passwordShown);
