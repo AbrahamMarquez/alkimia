@@ -177,9 +177,9 @@ const FormAnfitrion = () => {
                                     { label: "AR+54", value: "AR+54" },
                                     { label: "ES+34", value: "ES+34" },
                                 ]}
-                                value={inputList.phone.value}
+                                value={inputList.clave.value}
                                 title={"Teléfono"}
-                                id={"vlave"}
+                                id={"clave"}
                                 onChange={(e) =>
                                     UpdateValue(
                                         e,
@@ -192,6 +192,7 @@ const FormAnfitrion = () => {
                         </div>
                         <div className="form-container-number">
                             <InputNumber
+                                title={"Teléfono"}
                                 placeholder={"Teléfono"}
                                 id={"phone"}
                                 onChange={(e) =>

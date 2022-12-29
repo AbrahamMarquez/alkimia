@@ -29,13 +29,13 @@ import Maridar from "../../../../assets/icons/maridar.png";
 //styles
 import "./ShowBlog.scss";
 import { useNavigate, useParams } from "react-router-dom";
+import { Skeleton } from "primereact/skeleton";
 
-const ShowBlog = () => {
-
+const ShowBlogSkeleton = () => {
     const [openShare, setopenShare] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
     const { id } = useParams();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const Info = () => {
         return (
@@ -212,180 +212,44 @@ const ShowBlog = () => {
         <div className="ShowBlog">
             <div className="ssecct1">
                 <div className="ssecct-1-cont-img">
-                    <img
-                        src={Allmexicancheese}
-                        alt="allmexicancheese"
-                        className="ssecct-1-img"
-                    />
+                    <Skeleton width="100%" height="100%" />
                 </div>
                 <div className="ssecct-1-b">
-                    {datas.map((dt) => (
-                        <div key={dt.id}>
-                            <div className="ssecct-1-sub" >
-                                <div className="ssecct-1-nmas">
-                                    <p>{dt.name} ✒️</p>
-                                    <p>{dt.date}</p>
-                                </div>
-                                <div
-                                    onClick={() => setopenShare(!openShare)}
-                                    className="conqwe"
-                                >
-                                    <img
-                                        src={openShare ? Puntos : dt.icon}
-                                        alt="Menu"
-                                        className="ssecct-1-sub-img"
-                                    />
-
-                                    {openShare && (
-                                        <div className="ssecct-1-modal-a">
-                                            <div
-                                                className="modal-a"
-                                                onClick={() =>
-                                                    setOpenMenu(!openMenu)
-                                                }
-                                            >
-                                                Compartir
-                                            </div>
-                                            <img
-                                                src={ShareWhite}
-                                                alt="ShareWhite"
-                                                className="ShareWhite"
-                                            />
-
-                                            {openMenu && (
-                                                <div className="ssecct-1-modal-b">
-                                                    {netWorks.map((ntr) => (
-                                                        <div
-                                                            key={ntr.id}
-                                                            className="modal-b-conta"
-                                                        >
-                                                            <p className="modal-b-net">
-                                                                {ntr.network}
-                                                            </p>
-                                                            <img
-                                                                src={ntr.icon}
-                                                                alt="Networks"
-                                                                className="modal-b-networks"
-                                                            />
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                            <div className="ssecct-1-networks">
-                                <div className="net-a">
-                                    <img
-                                        src={dt.heart}
-                                        alt="Heart"
-                                        className="icons-icons"
-                                    />
-                                    <p>{dt.countH}</p>
-                                </div>
-                                <div className="net-a">
-                                    <img
-                                        src={dt.eye}
-                                        alt="Eye"
-                                        className="icons-icons eye"
-                                    />
-                                    <p>{dt.countEy}</p>
-                                </div>
-                                <div className="net-a">
-                                    <img
-                                        src={dt.message}
-                                        alt="Message"
-                                        className="icons-icons"
-                                    />
-                                    <p>{dt.countMs}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                    <Skeleton width="100%" height="20px" />
                 </div>
             </div>
             <div className="ssecct2">
-                <h3 className="ssecct2-title">
-                    Conoce México a través de sus Quesos
-                </h3>
+                <Skeleton width="350px" height="40px" />
                 <div className="ssecct-2-descrip">
-                    <Info />
-                    <p className="favorite">¿Cuál es tu favorito? ¡Comenta!</p>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: 15,
+                        }}
+                    >
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                        <Skeleton width="100%" height="10px" />
+                    </div>
                 </div>
             </div>
             <div className="ssecct3">
-                <img src={Quesos} alt="Quesos" className="ssecct-3-img" />
-            </div>
-            <div className="ssecct4">
-                <div className="ssecct-4-comen">Comentarios</div>
-                <div className="ssecct-4-min-form">
-                    <div className="ssecct-4-cont">
-                        <div>
-                            <img src={Oval} alt="profile" className="img-dfg" />
-                        </div>
-                    </div>
-                    <div className="ssecct-4-in-btn">
-                        <TextArea
-                            placeholder={"Escribe aquí..."}
-                            className="textArea-4"
-                            onChange={handleChange}
-                        />
-
-                        <div className="ssecct-4-cont-gh">
-                            <div className="btns45">
-                                <Button
-                                    btnTitle={"Publicar"}
-                                    className={"solid"}
-                                    onClick={handleSubmit}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="ssecct5">
-                    {comments.map((cms) => (
-                        <div className="ssecct-5-cms" key={cms.id}>
-                            <div className="cms-5">
-                                <img
-                                    src={cms.img}
-                                    alt="profile"
-                                    className="ssecct-5-img"
-                                />
-                            </div>
-                            <div>
-                                <p className="ssecct-5-come">{cms.comment}</p>
-                                <div className="ssecct-5-line"></div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="ssect6">
-                    <div className="ssect6-liine"></div>
-                    {newCards.map((crd) => {
-                        if (crd.id == id) {
-                            null;
-                        } else {
-                            return (
-                                <div className="ssect-6-cards" key={crd.id}>
-                                    <img
-                                        src={crd.bg}
-                                        alt="Cards"
-                                        className="new-cards-"
-                                    />
-                                    <div className="line-line-cards"></div>
-                                    <p className="title-cardss">{crd.title}</p>
-                                    <div className="asdfg" onClick={() => navigate(`/blog/${crd.id}/show`)}>
-                                            Leer
-                                    </div>
-                                </div>
-                            );
-                        }
-                    })}
-                </div>
+                <Skeleton width="100%" height="100%"/>
             </div>
         </div>
     );
 };
 
-export default ShowBlog;
+export default ShowBlogSkeleton;

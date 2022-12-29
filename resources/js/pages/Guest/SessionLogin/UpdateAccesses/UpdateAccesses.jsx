@@ -3,7 +3,9 @@ import { useNavigate } from "react-router";
 // import Swal from "sweetalert2";
 // import withReactContent from "sweetalert2-react-content";
 import Button from "../../../../components/atoms/Button/Button";
+
 import InputPassword from "../../../../components/atoms/InputPassword/InputPassword";
+import SaveModal from "../../../../components/molecules/SaveModal/SaveModal";
 import {
     ColorValidation,
     SubmitValidation,
@@ -14,9 +16,10 @@ import {
 import "./UpdateAccesses.scss";
 
 const UpdateAccesses = () => {
-
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     // const MySwal = withReactContent(Swal);
+    const [correct, setCorrect] = useState(false);
+    
 
     const [inputList, setInputList] = useState({
         password: { value: null, validationType: "empty" },
@@ -31,26 +34,26 @@ const UpdateAccesses = () => {
         }
     }, [inputList]);
 
+    useEffect(() => {
+        const myTimeout = setTimeout(validationEntry, 6000);
+    }, [])
+    
+
+    const validationEntry = () => {
+        setCorrect(false)
+        navigate("/login")
+    }
+
     const handleSubmit = () => {
         if (SubmitValidation(inputList, setInputList)) {
-            // MySwal.fire({
-            //     icon: "success",
-            //     title: "¡Se ha guardado con exito!",
-            //     confirmButtonText: "Aceptar",
-            //     customClass: "customModal",
-            //     didClose: () => navigate("/login"),
-            // });
-            
+            setCorrect(true);
         }
     };
 
     const handleCancel = () => {
+        navigate("/recover-code");
+    };
 
-        
-        navigate("/recover-code")
-    }
-
-    
     return (
         <div className="UpdateAccesses">
             <div className="updatebody">
@@ -72,15 +75,30 @@ const UpdateAccesses = () => {
                         placeholder={"Comfirmar contraseña"}
                         id={"comfirmPassword"}
                         onChange={(e) =>
-                            UpdateValue(e, "comfirmPassword", inputList, setInputList)
+                            UpdateValue(
+                                e,
+                                "comfirmPassword",
+                                inputList,
+                                setInputList
+                            )
                         }
                     />
                 </div>
                 <div className="usecct3">
-                    <Button btnTitle={"Cancelar"} className={"white"} onClick={() => handleCancel()}/>
-                    <Button btnTitle={"Guardar"} className={"degradado"} onClick={() => handleSubmit()}/>
+                    <Button
+                        btnTitle={"Cancelar"}
+                        className={"white"}
+                        onClick={() => handleCancel()}
+                    />
+                    <Button
+                        btnTitle={"Guardar"}
+                        className={"degradado"}
+                        onClick={() => handleSubmit()}
+                    />
                 </div>
             </div>
+
+            {correct && <SaveModal />}
         </div>
     );
 };

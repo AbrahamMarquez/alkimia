@@ -131,6 +131,17 @@
             display: flex;
             align-items: center;
 
+            &.active{
+
+                .xside-title{
+                    color: #fff
+                }
+
+                .x-icons{
+                    filter: brightness(10);
+                }
+            }
+
             .xside-links {
                 padding-left: 20px;
                 display: flex;

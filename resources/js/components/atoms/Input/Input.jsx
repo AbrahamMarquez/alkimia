@@ -1,9 +1,10 @@
+import { Skeleton } from "primereact/skeleton";
 import React from "react";
 
 import "./Input.scss"
 
-const Input = ({ title, type, placeholder, id, name, onChange }) => {
-  return (
+const Input = ({ title, type, placeholder, id, name, onChange, skeleton, width, className }) => {
+  return !skeleton ? (
     <>
       <p className="title">{title}</p>
       <div className="container-input">
@@ -17,7 +18,9 @@ const Input = ({ title, type, placeholder, id, name, onChange }) => {
         />
       </div>
     </>
-  );
+  ):(
+    <Skeleton width={width || "100%"} className={className} height="73px" />
+  )
 };
 
 export default Input;
