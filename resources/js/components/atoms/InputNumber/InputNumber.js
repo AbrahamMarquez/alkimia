@@ -122,6 +122,6 @@ export default function ({
             </div>
         </>
     ) : (
-        <Skeleton width={width || "100%"} className={className} height="73px" />
+        <Skeleton width={width || "100%"} className={className} height="48px" />
     );
 }
