@@ -24,7 +24,7 @@ import Close from "../../../assets/icons/close.svg";
 
 import "./SideBar.scss";
 
-const AuthSiderBar = ({AuthFunctions}) => {
+const AuthSiderBar = ({ AuthFunctions }) => {
     const linksA = [
         { id: 1, link: "/home", title: "Home", icon: Home },
         { id: 2, link: "/map", title: "Mapa", icon: Map },
@@ -44,8 +44,18 @@ const AuthSiderBar = ({AuthFunctions}) => {
     const linksC = [
         { id: 11, link: "/contact", title: "Contacto", icon: Contact },
         { id: 12, link: "/legals", title: "Legales", icon: Legals },
-        {id: 13, func: AuthFunctions.logOut, title: "Cerrar sesión", icon: LogOut},
+        {
+            id: 13,
+            link: "/logout",
+            title: "Cerrar sesión",
+            icon: LogOut,
+        },
     ];
+
+    const logOut = (e) => {
+        e.preventDefault();
+        AuthFunctions.logOut();
+    };
 
     const sideLinkx = ({ isActive }) => {
         return {
@@ -116,7 +126,7 @@ const AuthSiderBar = ({AuthFunctions}) => {
                                             id={id}
                                         />
                                     </div>
-                                    <div>{title}</div>
+                                    <div className="xside-title">{title}</div>
                                 </div>
                             </NavLink>
                         ))}
@@ -138,18 +148,19 @@ const AuthSiderBar = ({AuthFunctions}) => {
                                             id={id}
                                         />
                                     </div>
-                                    <div>{title}</div>
+                                    <div className="xside-title">{title}</div>
                                 </div>
                             </NavLink>
                         ))}
                     </div>
                     <div className="linksC">
                         <p className="links-title">Información</p>
-                        {linksC.map(({ id, link, title, icon, func }) => (
+                        {linksC.map(({ id, link, title, icon }) => (
                             <NavLink
                                 to={link}
                                 className="xsideBar"
                                 style={sideLinkx}
+                                onClick={link == "/logout" && logOut}
                             >
                                 <div className="xside-links">
                                     <div className="icons-xx">
@@ -160,7 +171,7 @@ const AuthSiderBar = ({AuthFunctions}) => {
                                             id={id}
                                         />
                                     </div>
-                                    <div>{title}</div>
+                                    <div className="xside-title">{title}</div>
                                 </div>
                             </NavLink>
                         ))}

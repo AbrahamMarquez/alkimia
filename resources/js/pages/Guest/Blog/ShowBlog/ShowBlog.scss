@@ -1,7 +1,6 @@
 .ShowBlog {
     // padding: 41px 380px 212px 380px; Es es en el deskatop
     padding: 82px 20px 70px 20px;
-    
 
     .ssecct1 {
         .ssecct-1-cont-img {
@@ -28,7 +27,7 @@
                 justify-content: space-between;
                 border-bottom: 2px solid #000;
 
-                height: 30px;
+                height: 50px;
 
                 .ssecct-1-nmas {
                     display: flex;
@@ -180,7 +179,7 @@
         }
         .ssecct-4-min-form {
             display: flex;
-           
+
             gap: 22px;
 
             .ssecct-4-cont {
@@ -338,7 +337,12 @@
         }
 
         .conqwe {
-            height: 30px !important;
+            height: 38px !important;
+        }
+
+        .ssecct-1-modal-a {
+            width: 212px !important;
+            height: 52px !important;
         }
 
         .ssecct2 {
@@ -364,81 +368,78 @@
             }
         }
 
-        .ssecct4{
+        .ssecct4 {
             margin-top: 90px !important;
 
-            .ssecct-4-comen{
+            .ssecct-4-comen {
                 padding: 15px 50px !important;
                 font-size: 36.8px !important;
                 font-weight: bold;
             }
 
-            .ssecct-4-min-form{
+            .ssecct-4-min-form {
                 margin-top: 35px !important;
                 padding: 0px 47px !important;
 
-                .ssecct-4-cont{
+                .ssecct-4-cont {
                     width: 87px !important;
                     height: 87px !important;
                 }
 
-                .textArea-4{
+                .textArea-4 {
                     height: 71px !important;
                 }
             }
 
-            .ssecct-4-cont{
+            .ssecct-4-cont {
                 width: 180px !important;
             }
         }
 
-
-        .ssecct5{
+        .ssecct5 {
             padding: 0px 47px !important;
 
-            .ssecct-5-cms{
-
-                .cms-5{
+            .ssecct-5-cms {
+                .cms-5 {
                     width: 58px !important;
                     height: 58px !important;
                 }
 
-                .ssecct-5-come{
+                .ssecct-5-come {
                     font-size: 14.72px !important;
                 }
 
-                .ssecct-5-line{
+                .ssecct-5-line {
                     width: 96% !important;
                 }
             }
         }
 
-        .ssect6{
-
-            .ssect6-liine{
+        .ssect6 {
+            .ssect6-liine {
                 width: 100%;
                 margin-top: 50px !important;
                 border-bottom: 2px solid #000 !important;
             }
 
-            .ssect-6-cards{
+            .ssect-6-cards {
                 margin-top: 30px !important;
                 width: 49% !important;
 
-                .new-cards-{
+                .new-cards- {
                     height: 556px !important;
                 }
 
-                .line-line-cards{
+                .line-line-cards {
                     margin-top: 30px !important;
                 }
 
-                .title-cardss{
+                .title-cardss {
                     margin-top: 30px !important;
                     font-size: 27.2px !important;
                 }
 
-                .asdfg{
+                .asdfg {
                     width: 100px !important;
                 }
             }

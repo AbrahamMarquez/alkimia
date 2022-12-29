@@ -9,17 +9,18 @@ const RecoverCode = () => {
     // const [code, setCode] = useState();
     const navigate = useNavigate();
 
-    const [inputList, setInputList] = useState({
-        code: { value: null, validationType: "empty" },
-    });
-
+    const [code, setCode] = useState(0);
     const backPage = () => {
         navigate("/recover-account");
     };
 
     const nextPage = () => {
-        navigate("/update-access")
-    }
+        code === 0
+            ? document
+                  .querySelector(".styles_react-code-input__CRulA")
+                  .classList.add("invalid")
+            : navigate("/update-access");
+    };
 
     return (
         <div className="RecoverCode">
@@ -34,11 +35,7 @@ const RecoverCode = () => {
                         fieldWidth={50}
                         fieldHeight={80}
                         className="input-code"
-                        // onComplete={(e) => setCode(e)}
-
-                        onChange={(e) =>
-                            UpdateValue(e, "code", inputList, setInputList)
-                        }
+                        onComplete={(e) => setCode(e)}
                     ></ReactCodeInput>
                 </div>
                 <div className="rsecct3">

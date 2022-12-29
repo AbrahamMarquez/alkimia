@@ -223,7 +223,7 @@ const ShowBlog = () => {
                         <div key={dt.id}>
                             <div className="ssecct-1-sub" >
                                 <div className="ssecct-1-nmas">
-                                    <p>{dt.name}</p>
+                                    <p>{dt.name} ✒️</p>
                                     <p>{dt.date}</p>
                                 </div>
                                 <div
