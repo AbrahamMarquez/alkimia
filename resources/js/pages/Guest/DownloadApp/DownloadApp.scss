@@ -3,6 +3,7 @@
     width: 100%;
     background-size: auto;
     background-repeat: no-repeat;
+    padding-top: 65px;
 
     .dsecct1 {
         width: 100%;
@@ -243,6 +244,9 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
+    .DownloadApp{
+        padding-top: 90px !important;
+    }
     .dsecct1 {
         display: flex;
         justify-content: center;

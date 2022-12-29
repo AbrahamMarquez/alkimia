@@ -1,16 +1,35 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import GuestLayout from "../../../../components/organisms/GuestLayout/GuestLayout";
+
+//Lazy
+const LandingPage = lazy(() =>
+    import("../../../../pages/Guest/LandingPage/LandingPage")
+);
+const Hosts = lazy(() => import("../../../../pages/Guest/Hosts/Hosts"));
+const DownloadApp = lazy(() =>
+    import("../../../../pages/Guest/DownloadApp/DownloadApp")
+);
+const FormAnfitrion = lazy(() =>
+    import("../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfitrion")
+);
+const ShowBlog = lazy(() =>
+    import("../../../../pages/Guest/Blog/ShowBlog/ShowBlog")
+);
+
 import Blog from "../../../../pages/Guest/Blog/Blog";
-import ShowBlog from "../../../../pages/Guest/Blog/ShowBlog/ShowBlog";
+
+import ShowBlogSkeleton from "../../../../pages/Guest/Blog/ShowBlog/ShowBlogSkeleton";
 import Contact from "../../../../pages/Guest/Contact/Contact";
-import DownloadApp from "../../../../pages/Guest/DownloadApp/DownloadApp";
-import FormAnfitrion from "../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfitrion";
-import Hosts from "../../../../pages/Guest/Hosts/Hosts";
-import LandingPage from "../../../../pages/Guest/LandingPage/LandingPage";
+
+import DownloadAppSkeleton from "../../../../pages/Guest/DownloadApp/DownloadAppSkeleton";
+
+import FormAnfitrionSkeleton from "../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfitrionSkeleton";
+
+import HostSkeleton from "../../../../pages/Guest/Hosts/HostSkeleton";
+
+import LandingSkeleton from "../../../../pages/Guest/LandingPage/LandingSkeleton";
 import Privacy from "../../../../pages/Guest/Privacy/Privacy";
-import Login from "../../../../pages/Guest/SessionLogin/Login/Login";
-import RecoverAccount from "../../../../pages/Guest/SessionLogin/RecoverAccount/RecoverAccount";
 import Start from "../../../../pages/Guest/Start/Start";
 import TmsCds from "../../../../pages/Guest/Terminos/TmsCds";
 
@@ -21,7 +40,7 @@ const LandingPageRoutes = () => {
             <Route
                 path="/"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<LandingSkeleton />}>
                         <LandingPage />
                     </Suspense>
                 }
@@ -29,7 +48,7 @@ const LandingPageRoutes = () => {
             <Route
                 path="/downloadApp"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<DownloadAppSkeleton />}>
                         <DownloadApp />
                     </Suspense>
                 }
@@ -37,7 +56,7 @@ const LandingPageRoutes = () => {
             <Route
                 path="/hosts"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<HostSkeleton />}>
                         <Hosts />
                     </Suspense>
                 }
@@ -45,7 +64,7 @@ const LandingPageRoutes = () => {
             <Route
                 path="/hosts/register"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<FormAnfitrionSkeleton />}>
                         <FormAnfitrion />
                     </Suspense>
                 }
@@ -61,7 +80,7 @@ const LandingPageRoutes = () => {
             <Route
                 path="/blog/:id/show"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<ShowBlogSkeleton />}>
                         <ShowBlog />
                     </Suspense>
                 }
