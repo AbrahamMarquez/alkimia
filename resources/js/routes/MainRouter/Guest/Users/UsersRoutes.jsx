@@ -1,30 +1,59 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Login from "../../../../pages/Guest/SessionLogin/Login/Login";
-import RecoverAccount from "../../../../pages/Guest/SessionLogin/RecoverAccount/RecoverAccount";
-import RecoverCode from "../../../../pages/Guest/SessionLogin/RecoverCode/RecoverCode";
-import Register from "../../../../pages/Guest/SessionLogin/Register/Register";
-import RegisterInfo from "../../../../pages/Guest/SessionLogin/RegisterInfo/RegisterInfo";
-import RegistrationCode from "../../../../pages/Guest/SessionLogin/RegistrationCode/RegistrationCode";
-import TemnsAndCods from "../../../../pages/Guest/SessionLogin/TemnsAndCods/TemnsAndCods";
-import UpdateAccesses from "../../../../pages/Guest/SessionLogin/UpdateAccesses/UpdateAccesses";
-import WelcomeRegistration from "../../../../pages/Guest/SessionLogin/WelcomeRegistration/WelcomeRegistration";
 
-const UsersRoutes = ({AuthFunctions}) => {
+const Login = lazy(() =>
+    import("../../../../pages/Guest/SessionLogin/Login/Login")
+);
+
+const RecoverAccount = lazy(() =>
+    import("../../../../pages/Guest/SessionLogin/RecoverAccount/RecoverAccount")
+);
+const RecoverCode = lazy(() =>
+    import("../../../../pages/Guest/SessionLogin/RecoverCode/RecoverCode")
+);
+const Register = lazy(() =>
+    import("../../../../pages/Guest/SessionLogin/Register/Register")
+);
+const RegisterInfo = lazy(() =>
+    import("../../../../pages/Guest/SessionLogin/RegisterInfo/RegisterInfo")
+);
+const RegistrationCode = lazy(() =>
+    import(
+        "../../../../pages/Guest/SessionLogin/RegistrationCode/RegistrationCode"
+    )
+);
+const TemnsAndCods = lazy(() =>
+    import("../../../../pages/Guest/SessionLogin/TemnsAndCods/TemnsAndCods")
+);
+const UpdateAccesses = lazy(() =>
+    import("../../../../pages/Guest/SessionLogin/UpdateAccesses/UpdateAccesses")
+);
+const WelcomeRegistration = lazy(() =>
+    import(
+        "../../../../pages/Guest/SessionLogin/WelcomeRegistration/WelcomeRegistration"
+    )
+);
+
+//Skeletons
+import LoginSkelton from "../../../../pages/Guest/SessionLogin/Login/LoginSkelton";
+import RecoverAccountSkeleton from "../../../../pages/Guest/SessionLogin/RecoverAccount/RecoverAccountSkeleton";
+import RecoverCodeSkeleton from "../../../../pages/Guest/SessionLogin/RecoverCode/RecoverCodeSkeleton";
+
+const UsersRoutes = ({ AuthFunctions }) => {
     return (
         <Routes>
             <Route
                 path="/login"
                 element={
-                    <Suspense fallback={<></>}>
-                        <Login AuthFunctions={AuthFunctions}/>
+                    <Suspense fallback={<LoginSkelton />}>
+                        <Login AuthFunctions={AuthFunctions} />
                     </Suspense>
                 }
             />
             <Route
                 path="/recover-account"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<RecoverAccountSkeleton />}>
                         <RecoverAccount />
                     </Suspense>
                 }
@@ -33,11 +62,12 @@ const UsersRoutes = ({AuthFunctions}) => {
                 path="/recover-code"
                 element={
                     <Suspense fallback={<></>}>
-                        <RecoverCode />
+                        {/* <RecoverCode /> */}
+                        <RecoverCodeSkeleton />
                     </Suspense>
                 }
             />
-             <Route
+            <Route
                 path="/update-access"
                 element={
                     <Suspense fallback={<></>}>
@@ -45,7 +75,7 @@ const UsersRoutes = ({AuthFunctions}) => {
                     </Suspense>
                 }
             />
-             <Route
+            <Route
                 path="/register"
                 element={
                     <Suspense fallback={<></>}>
@@ -53,7 +83,7 @@ const UsersRoutes = ({AuthFunctions}) => {
                     </Suspense>
                 }
             />
-             <Route
+            <Route
                 path="/register-code"
                 element={
                     <Suspense fallback={<></>}>
@@ -61,7 +91,7 @@ const UsersRoutes = ({AuthFunctions}) => {
                     </Suspense>
                 }
             />
-             <Route
+            <Route
                 path="/register-info"
                 element={
                     <Suspense fallback={<></>}>
@@ -77,7 +107,7 @@ const UsersRoutes = ({AuthFunctions}) => {
                     </Suspense>
                 }
             />
-             <Route
+            <Route
                 path="/welcome-user"
                 element={
                     <Suspense fallback={<></>}>

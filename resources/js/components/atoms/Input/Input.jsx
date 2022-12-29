@@ -19,7 +19,7 @@ const Input = ({ title, type, placeholder, id, name, onChange, skeleton, width, 
       </div>
     </>
   ):(
-    <Skeleton width={width || "100%"} className={className} height="73px" />
+    <Skeleton width={width || "100%"} className={className} height="48px" />
   )
 };
 
