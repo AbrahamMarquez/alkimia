@@ -16,7 +16,7 @@ import "./Login.scss";
 const Login = ({ AuthFunctions }) => {
     const navigate = useNavigate();
     const [inputList, setInputList] = useState({
-        email: { value: null, validationType: "email" },
+        email: { value: null, validationType: "empty" },
         password: { value: null, validationType: "empty" },
     });
 

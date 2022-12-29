@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, useParams } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+
 import Auth from "./Auth/Auth";
 import Guest from "./Guest/Guest";
 

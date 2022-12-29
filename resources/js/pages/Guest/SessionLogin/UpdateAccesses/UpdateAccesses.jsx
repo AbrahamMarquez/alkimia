@@ -19,7 +19,6 @@ const UpdateAccesses = () => {
     const navigate = useNavigate();
     // const MySwal = withReactContent(Swal);
     const [correct, setCorrect] = useState(false);
-    
 
     const [inputList, setInputList] = useState({
         password: { value: null, validationType: "empty" },
@@ -35,14 +34,15 @@ const UpdateAccesses = () => {
     }, [inputList]);
 
     useEffect(() => {
-        const myTimeout = setTimeout(validationEntry, 6000);
-    }, [])
-    
+        if (correct) {
+            const myTimeout = setTimeout(validationEntry, 3000);
+        }
+    }, [correct]);
 
     const validationEntry = () => {
-        setCorrect(false)
-        navigate("/login")
-    }
+        setCorrect(false);
+        navigate("/login");
+    };
 
     const handleSubmit = () => {
         if (SubmitValidation(inputList, setInputList)) {
@@ -71,8 +71,8 @@ const UpdateAccesses = () => {
                         }
                     />
                     <InputPassword
-                        title={"Comfirmar contraseña"}
-                        placeholder={"Comfirmar contraseña"}
+                        title={"Confirmar contraseña"}
+                        placeholder={"Confirmar tu contraseña"}
                         id={"comfirmPassword"}
                         onChange={(e) =>
                             UpdateValue(
