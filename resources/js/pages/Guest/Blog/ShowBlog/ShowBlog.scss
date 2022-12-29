@@ -42,45 +42,56 @@
                 .conqwe {
                     height: 24px;
                     position: relative;
+                    transition: all 0.2s;
 
                     .ssecct-1-sub-img {
                         height: 100%;
-                    }
-                }
-
-                .ssecct-1-modal-a {
-                    position: absolute;
-                    top: -5px;
-                    right: 0;
-                    width: 145px;
-                    height: 30px;
-                    border-top-left-radius: 30px;
-                    border-bottom-left-radius: 30px;
-                    background-color: #3b3b3b;
-
-                    display: flex;
-                    align-items: center;
-                    padding: 0 10px 0 29px;
-                    gap: 10px;
-                    z-index: -1;
-
-                    .modal-a {
-                        font-family: "Metropolis";
-                        font-size: 13.8px;
-                        color: #fff;
+                        z-index: 2;
+                        position: relative;
                     }
 
-                    .ShareWhite {
-                        width: 15px;
-                        height: 15px;
+                    .ssecct-1-modal-a {
+                        position: absolute;
+                        top: -5px;
+                        right: 0;
+                        width: 145px;
+                        height: 30px;
+                        border-top-left-radius: 30px;
+                        border-bottom-left-radius: 30px;
+                        background-color: #3b3b3b;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 15px;
+                        // padding: 0 10px 0 29px;
+                        gap: 10px;
+                        z-index: 0;
+                        opacity: 0;
+                        transition: all 0.5s;
+                        pointer-events: none;
+
+                        &.share-hidenx {
+                            opacity: 1;
+                            pointer-events: all;
+                        }
+
+                        .modal-a {
+                            font-family: "Metropolis";
+                            font-size: 13.8px;
+                            color: #fff;
+                        }
+
+                        .ShareWhite {
+                            width: 15px;
+                            height: 15px;
+                        }
                     }
 
                     .ssecct-1-modal-b {
                         position: absolute;
-                        top: 30px;
-                        left: 0;
+                        top: 23px;
+                        right: 0;
                         background-color: #3b3b3b;
-
                         border-bottom-right-radius: 20px;
                         border-bottom-left-radius: 20px;
                         height: 162px;
@@ -88,15 +99,19 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-
-                        padding: 8px 28px;
+                        padding: 8px 21px;
                         gap: 21px;
+                        opacity: 0;
+                        transition: all 0.5s;
+                        pointer-events: none;
 
                         .modal-b-conta {
                             background-color: transparent;
                             display: flex;
+                            align-items: center;
                             justify-content: space-between;
                             width: 100%;
+                            gap: 10px;
 
                             .modal-b-net {
                                 font-family: "Metropolis";
@@ -108,6 +123,11 @@
                                 width: 21px;
                                 height: 21px;
                             }
+                        }
+
+                        &.opacitymodal {
+                            opacity: 1;
+                            pointer-events: all;
                         }
                     }
                 }
@@ -258,7 +278,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         margin-top: 25px;
 
         .ssect-6-cards {
@@ -332,17 +352,52 @@
             height: 651px !important;
         }
 
+        .ssecct-1-sub {
+            height: 68px !important;
+        }
+
         .ssecct-1-nmas {
             font-size: 15.64px !important;
         }
 
         .conqwe {
             height: 38px !important;
-        }
 
-        .ssecct-1-modal-a {
-            width: 212px !important;
-            height: 52px !important;
+            .ssecct-1-modal-a {
+                width: 0 !important;
+                height: 52px !important;
+                padding-left: 30px !important;
+                gap: 22px !important;
+
+                &.share-hidenx {
+                    width: 212px !important;
+                }
+            }
+
+            .ssecct-1-modal-b {
+                width: 212px !important;
+                top: 46px !important;
+                padding-right: 54px !important;
+                padding-left: 33px !important;
+                height: 203px !important;
+
+                .modal-b-net {
+                    font-size: 16.56px !important;
+                }
+                .modal-b-networks {
+                    width: 30px !important;
+                    height: 30px !important;
+                }
+            }
+
+            .modal-a {
+                font-size: 16.56px !important;
+            }
+
+            .ShareWhite {
+                width: 24px !important;
+                height: 24px !important;
+            }
         }
 
         .ssecct2 {
@@ -416,6 +471,9 @@
         }
 
         .ssect6 {
+            gap: 20px !important;
+            justify-content: space-between !important;
+
             .ssect6-liine {
                 width: 100%;
                 margin-top: 50px !important;
@@ -424,7 +482,7 @@
 
             .ssect-6-cards {
                 margin-top: 30px !important;
-                width: 49% !important;
+                width: 44% !important;
 
                 .new-cards- {
                     height: 556px !important;
@@ -440,7 +498,11 @@
                 }
 
                 .asdfg {
-                    width: 100px !important;
+                    width: 126px !important;
+                    font-size: 21px !important;
+                    height: 46px !important;
+                    top: calc(50% - 75px) !important;
+                    left: calc(50% - 69px) !important;
                 }
             }
         }

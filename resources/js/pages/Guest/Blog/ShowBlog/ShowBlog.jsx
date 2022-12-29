@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../../../components/atoms/Button/Button";
 import TextArea from "../../../../components/atoms/TeaxtArea/TextArea";
 
@@ -29,13 +29,25 @@ import Maridar from "../../../../assets/icons/maridar.png";
 //styles
 import "./ShowBlog.scss";
 import { useNavigate, useParams } from "react-router-dom";
+import { ColorValidation, SubmitValidation } from "../../../../utilities/Validations";
 
 const ShowBlog = () => {
-
     const [openShare, setopenShare] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
     const { id } = useParams();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const [inputList, setInputList] = useState({
+        message: { value: null, validationType: "empty" },
+    });
+
+    useEffect(() => {
+        for (const propertyName in inputList) {
+            if (document.getElementById(propertyName)) {
+                ColorValidation(propertyName, inputList);
+            }
+        }
+    }, [inputList]);
 
     const Info = () => {
         return (
@@ -192,21 +204,27 @@ const ShowBlog = () => {
         },
     ];
 
-    const [publisher, setPublisher] = useState({
-        message: "",
-    });
+    const handleSubmit = () => {
+        if (SubmitValidation(inputList, setInputList)) {
+            
+        }
 
-    const handleChange = (e) => {
-        setPublisher({
-            ...publisher,
-            [e.target.name]: e.target.value,
-        });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (publisher.message === "") return 0;
-    };
+    useEffect(() => {
+
+        console.log(openMenu)
+        if (openMenu) {
+            document.querySelector(
+                ".ssecct-1-modal-a"
+            ).style.borderBottomLeftRadius = 0;
+        }
+        else if(!openMenu){   
+            document.querySelector(
+                ".ssecct-1-modal-a"
+            ).style.borderBottomLeftRadius = "30px";
+        }
+    }, [openMenu]);
 
     return (
         <div className="ShowBlog">
@@ -221,58 +239,63 @@ const ShowBlog = () => {
                 <div className="ssecct-1-b">
                     {datas.map((dt) => (
                         <div key={dt.id}>
-                            <div className="ssecct-1-sub" >
+                            <div className="ssecct-1-sub">
                                 <div className="ssecct-1-nmas">
                                     <p>{dt.name} ✒️</p>
                                     <p>{dt.date}</p>
                                 </div>
-                                <div
-                                    onClick={() => setopenShare(!openShare)}
-                                    className="conqwe"
-                                >
+                                <div className="conqwe">
                                     <img
                                         src={openShare ? Puntos : dt.icon}
                                         alt="Menu"
                                         className="ssecct-1-sub-img"
+                                        onClick={() => {
+                                            setopenShare(!openShare),
+                                                setOpenMenu(false);
+                                        }}
                                     />
 
-                                    {openShare && (
-                                        <div className="ssecct-1-modal-a">
-                                            <div
-                                                className="modal-a"
-                                                onClick={() =>
-                                                    setOpenMenu(!openMenu)
-                                                }
-                                            >
-                                                Compartir
-                                            </div>
-                                            <img
-                                                src={ShareWhite}
-                                                alt="ShareWhite"
-                                                className="ShareWhite"
-                                            />
-
-                                            {openMenu && (
-                                                <div className="ssecct-1-modal-b">
-                                                    {netWorks.map((ntr) => (
-                                                        <div
-                                                            key={ntr.id}
-                                                            className="modal-b-conta"
-                                                        >
-                                                            <p className="modal-b-net">
-                                                                {ntr.network}
-                                                            </p>
-                                                            <img
-                                                                src={ntr.icon}
-                                                                alt="Networks"
-                                                                className="modal-b-networks"
-                                                            />
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            )}
+                                    <div
+                                        className={`ssecct-1-modal-a ${
+                                            openShare && "share-hidenx"
+                                        }`}
+                                    >
+                                        <div
+                                            className="modal-a"
+                                            onClick={() =>
+                                                setOpenMenu(!openMenu)
+                                            }
+                                        >
+                                            Compartir
                                         </div>
-                                    )}
+                                        <img
+                                            src={ShareWhite}
+                                            alt="ShareWhite"
+                                            className="ShareWhite"
+                                        />
+                                    </div>
+
+                                    <div
+                                        className={`ssecct-1-modal-b ${
+                                            openMenu && "opacitymodal"
+                                        }`}
+                                    >
+                                        {netWorks.map((ntr) => (
+                                            <div
+                                                key={ntr.id}
+                                                className="modal-b-conta"
+                                            >
+                                                <p className="modal-b-net">
+                                                    {ntr.network}
+                                                </p>
+                                                <img
+                                                    src={ntr.icon}
+                                                    alt="Networks"
+                                                    className="modal-b-networks"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                             <div className="ssecct-1-networks">
@@ -329,7 +352,10 @@ const ShowBlog = () => {
                         <TextArea
                             placeholder={"Escribe aquí..."}
                             className="textArea-4"
-                            onChange={handleChange}
+                            id={"message"}
+                            onChange={(e) =>
+                                UpdateValue(e, "message", inputList, setInputList)
+                            }
                         />
 
                         <div className="ssecct-4-cont-gh">
@@ -337,7 +363,7 @@ const ShowBlog = () => {
                                 <Button
                                     btnTitle={"Publicar"}
                                     className={"solid"}
-                                    onClick={handleSubmit}
+                                    onClick={() => handleSubmit()}
                                 />
                             </div>
                         </div>
@@ -375,8 +401,13 @@ const ShowBlog = () => {
                                     />
                                     <div className="line-line-cards"></div>
                                     <p className="title-cardss">{crd.title}</p>
-                                    <div className="asdfg" onClick={() => navigate(`/blog/${crd.id}/show`)}>
-                                            Leer
+                                    <div
+                                        className="asdfg"
+                                        onClick={() =>
+                                            navigate(`/blog/${crd.id}/show`)
+                                        }
+                                    >
+                                        Leer
                                     </div>
                                 </div>
                             );

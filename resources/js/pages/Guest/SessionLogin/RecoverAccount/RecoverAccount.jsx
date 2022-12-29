@@ -133,8 +133,8 @@ const RecoverAccount = () => {
                         </div>
                         <div id="divphoneId" className="input-number">
                             <InputNumber
-                                title={"Telefóno"}
-                                placeholder={"Número de telefóno"}
+                                title={"Teléfono"}
+                                placeholder={"Número de teléfono"}
                                 id={"state"}
                                 onChange={(e) =>
                                     UpdateValue(
