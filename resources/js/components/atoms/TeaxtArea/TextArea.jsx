@@ -1,3 +1,4 @@
+import { Skeleton } from "primereact/skeleton";
 import React from "react";
 
 import "./TextArea.scss";
@@ -10,8 +11,10 @@ const TextArea = ({
     onChange,
     className,
     viewTitle = false,
+    skeleton,
+    width
 }) => {
-    return (
+    return ! skeleton ? (
         <>
             {viewTitle && <p className="title-area">{title}</p>}
             <div className={`container-textarea ${className}`}>
@@ -24,6 +27,8 @@ const TextArea = ({
                 />
             </div>
         </>
+    ): (
+        <Skeleton width={width || "100%"} className={className} height="150px" />
     );
 };
 
