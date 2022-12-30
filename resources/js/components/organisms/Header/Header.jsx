@@ -40,7 +40,7 @@ const Header = ({ className }) => {
             close.style.filter =
                 "invert(28%) sepia(90%) saturate(6529%) hue-rotate(316deg) brightness(90%) contrast(94%)";
             header.style.boxShadow = "0 1px 25px rgba(0,0,0,0.2)";
-            header.style.zIndex = "1";
+            header.style.zIndex = "2";
         }
     }, [url]);
 

@@ -2,19 +2,11 @@ import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
 //Lazy
-const LandingPage = lazy(() =>
-    import("../../../../pages/Guest/LandingPage/LandingPage")
-);
+const LandingPage = lazy(() => import("../../../../pages/Guest/LandingPage/LandingPage"));
 const Hosts = lazy(() => import("../../../../pages/Guest/Hosts/Hosts"));
-const DownloadApp = lazy(() =>
-    import("../../../../pages/Guest/DownloadApp/DownloadApp")
-);
-const FormAnfitrion = lazy(() =>
-    import("../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfitrion")
-);
-const ShowBlog = lazy(() =>
-    import("../../../../pages/Guest/Blog/ShowBlog/ShowBlog")
-);
+const DownloadApp = lazy(() => import("../../../../pages/Guest/DownloadApp/DownloadApp"));
+const FormAnfitrion = lazy(() => import("../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfitrion"));
+const ShowBlog = lazy(() => import("../../../../pages/Guest/Blog/ShowBlog/ShowBlog"));
 const Start = lazy(() => import("../../../../pages/Guest/Start/Start"));
 const Blog = lazy(() => import("../../../../pages/Guest/Blog/Blog"));
 const Contact = lazy(() => import("../../../../pages/Guest/Contact/Contact"));
@@ -28,6 +20,10 @@ import FormAnfitrionSkeleton from "../../../../pages/Guest/Hosts/FormAnfitrion/F
 import HostSkeleton from "../../../../pages/Guest/Hosts/HostSkeleton";
 import LandingSkeleton from "../../../../pages/Guest/LandingPage/LandingSkeleton";
 import StartSkeleton from "../../../../pages/Guest/Start/StartSkeleton";
+import BlogSkeleton from "../../../../pages/Guest/Blog/BlogSkeleton";
+import ContactSkeleton from "../../../../pages/Guest/Contact/ContactSkeleton";
+import TmsCdsSkeletons from "../../../../pages/Guest/Terminos/TmsCdsSkeletons";
+import PrivacySkeletons from "../../../../pages/Guest/Privacy/PrivacySkeletons";
 
 const LandingPageRoutes = () => {
     return (
@@ -68,7 +64,7 @@ const LandingPageRoutes = () => {
             <Route
                 path="/blog"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<BlogSkeleton />}>
                         <Blog />
                     </Suspense>
                 }
@@ -84,7 +80,7 @@ const LandingPageRoutes = () => {
             <Route
                 path="/contact"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<ContactSkeleton />}>
                         <Contact />
                     </Suspense>
                 }
@@ -92,7 +88,7 @@ const LandingPageRoutes = () => {
             <Route
                 path="/terms-conditions"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<TmsCdsSkeletons />}>
                         <TmsCds />
                     </Suspense>
                 }
@@ -100,7 +96,7 @@ const LandingPageRoutes = () => {
             <Route
                 path="/politics-privacy"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<PrivacySkeletons />}>
                         <Privacy />
                     </Suspense>
                 }
