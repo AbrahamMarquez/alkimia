@@ -55,7 +55,7 @@ const LandingSkeleton = () => {
                     />
                     <div className="sub-filter-img">
                         <InputSearch skeleton />
-                        <Skeleton width="1325px" height="111px" />
+                        <Skeleton width="100%" height="111px" />
                     </div>
                 </div>
                 <div className="page-secct2">
