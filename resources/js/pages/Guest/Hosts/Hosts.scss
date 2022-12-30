@@ -62,6 +62,14 @@
         .host-secct-c {
             width: 100%;
         }
+
+        .host-secct-b-sub {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+            font-family: "Metropolis";
+        }
     }
 
     .first-div-sep {
@@ -82,16 +90,17 @@
             font-family: "Abril Fatface";
             font-size: 18.4px;
             color: #ffffff;
-            text-decoration: none solid rgb(255, 255, 255);
+            font-weight: 400;
             text-align: center;
         }
 
         .host-secct-2-body {
             font-family: "Metropolis";
             font-size: 13.8px;
-            color: #ffffff;
-            text-decoration: none solid rgb(255, 255, 255);
+            color: #fff;
             text-align: center;
+            margin-top: 31px;
+            line-height: 20px;
         }
 
         .host-secct-2-btn {
@@ -147,7 +156,6 @@
                 height: 533px;
                 background-color: #fff;
                 overflow: auto;
-
 
                 .swiper {
                     height: 100%;
@@ -213,15 +221,15 @@
 
         .responses {
             font-size: 14.72px !important;
-    
+
             .respo-a {
                 margin-top: 21px;
                 line-height: 20px;
             }
-    
+
             .resp-list {
                 margin-left: 10px;
-    
+
                 .repo-li {
                     line-height: 20px;
                     margin-left: 10px;

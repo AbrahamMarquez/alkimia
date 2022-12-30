@@ -17,17 +17,21 @@ import "./Carousel.scss";
 
 const Carousel = ({ object }) => {
     const [viewStart, setViewStart] = useState(5);
-    const [desvice, setDesvice] = useState(window.innerWidth);
+    const [desvice, setDesvice] = useState(screen.width);
     const [space, setSpace] = useState(0);
     const [margen, setMargen] = useState(0);
+    const [group, setGroup] = useState(0)
 
     useEffect(() => {
-        if (desvice <= 440) {
+        if (desvice <= 450) {
             setSpace(2);
+            setGroup(2)
+
         } else {
             setSpace(3);
+            setGroup(3)
         }
-    }, []);
+    }, [desvice]);
 
     const score = [
         {
@@ -58,9 +62,8 @@ const Carousel = ({ object }) => {
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={space}
+                slidesPerGroup={group}
                 navigation
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log("slide change")}
             >
                 {object.map((e, id) => (
                     <SwiperSlide id={e.id}>
