@@ -6,19 +6,20 @@ import Button from "../../../../components/atoms/Button/Button";
 import "./RegistrationCode.scss";
 
 const RegistrationCode = () => {
-    // const [code, setCode] = useState();
     const navigate = useNavigate();
 
-    const [inputList, setInputList] = useState({
-        code: { value: null, validationType: "empty" },
-    });
+    const [code, setCode] = useState(0);
 
     const backPage = () => {
         navigate("/register");
     };
 
     const nextPage = () => {
-        navigate("/register-info")
+          code === 0
+            ? document
+                  .querySelector(".styles_react-code-input__CRulA")
+                  .classList.add("invalid")
+            : navigate("/register-info");
     }
 
     return (
@@ -34,11 +35,7 @@ const RegistrationCode = () => {
                         fieldWidth={50}
                         fieldHeight={80}
                         className="input-code"
-                        // onComplete={(e) => setCode(e)}
-
-                        onChange={(e) =>
-                            UpdateValue(e, "code", inputList, setInputList)
-                        }
+                        onComplete={(e) => setCode(e)}
                     ></ReactCodeInput>
                 </div>
                 <div className="rsecct3">

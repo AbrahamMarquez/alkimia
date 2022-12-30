@@ -38,6 +38,12 @@ const WelcomeRegistration = lazy(() =>
 import LoginSkelton from "../../../../pages/Guest/SessionLogin/Login/LoginSkelton";
 import RecoverAccountSkeleton from "../../../../pages/Guest/SessionLogin/RecoverAccount/RecoverAccountSkeleton";
 import RecoverCodeSkeleton from "../../../../pages/Guest/SessionLogin/RecoverCode/RecoverCodeSkeleton";
+import RegisterSkeleton from "../../../../pages/Guest/SessionLogin/Register/RegisterSkeleton";
+import RegisterInfoSkeleton from "../../../../pages/Guest/SessionLogin/RegisterInfo/RegisterInfoSkeleton";
+import RegistrationCodeSkeleton from "../../../../pages/Guest/SessionLogin/RegistrationCode/RegistrationCodeSkeleton";
+import TemnsAndCodsSkeleton from "../../../../pages/Guest/SessionLogin/TemnsAndCods/TemnsAndCodsSkeleton";
+import UpdateAccessesSkeleton from "../../../../pages/Guest/SessionLogin/UpdateAccesses/UpdateAccessesSkeleton";
+import WelcomeRegistrationSkeleton from "../../../../pages/Guest/SessionLogin/WelcomeRegistration/WelcomeRegistrationSkeleton";
 
 const UsersRoutes = ({ AuthFunctions }) => {
     return (
@@ -61,16 +67,15 @@ const UsersRoutes = ({ AuthFunctions }) => {
             <Route
                 path="/recover-code"
                 element={
-                    <Suspense fallback={<></>}>
-                        {/* <RecoverCode /> */}
-                        <RecoverCodeSkeleton />
+                    <Suspense fallback={<RecoverCodeSkeleton />}>
+                        <RecoverCode />
                     </Suspense>
                 }
             />
             <Route
                 path="/update-access"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<UpdateAccessesSkeleton />}>
                         <UpdateAccesses />
                     </Suspense>
                 }
@@ -78,7 +83,7 @@ const UsersRoutes = ({ AuthFunctions }) => {
             <Route
                 path="/register"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<RegisterSkeleton />}>
                         <Register />
                     </Suspense>
                 }
@@ -86,7 +91,7 @@ const UsersRoutes = ({ AuthFunctions }) => {
             <Route
                 path="/register-code"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<RegistrationCodeSkeleton />}>
                         <RegistrationCode />
                     </Suspense>
                 }
@@ -94,7 +99,7 @@ const UsersRoutes = ({ AuthFunctions }) => {
             <Route
                 path="/register-info"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<RegisterInfoSkeleton />}>
                         <RegisterInfo />
                     </Suspense>
                 }
@@ -102,7 +107,7 @@ const UsersRoutes = ({ AuthFunctions }) => {
             <Route
                 path="/termin-and-conditions"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<TemnsAndCodsSkeleton />}>
                         <TemnsAndCods />
                     </Suspense>
                 }
@@ -110,7 +115,7 @@ const UsersRoutes = ({ AuthFunctions }) => {
             <Route
                 path="/welcome-user"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<WelcomeRegistrationSkeleton />}>
                         <WelcomeRegistration />
                     </Suspense>
                 }

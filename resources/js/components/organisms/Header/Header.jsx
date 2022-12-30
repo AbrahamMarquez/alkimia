@@ -47,6 +47,8 @@ const Header = ({ className }) => {
     const navLinks = ({ isActive }) => {
         return {
             color: isActive ? "#df1683" : null,
+            borderBottom: isActive ? "2px solid #df1683" : null,
+            paddingBottom: isActive ? "4px" : null
         };
     };
 
