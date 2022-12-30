@@ -6,7 +6,6 @@ import Button from "../../../../components/atoms/Button/Button";
 import "./RecoverCode.scss";
 
 const RecoverCode = () => {
-    // const [code, setCode] = useState();
     const navigate = useNavigate();
 
     const [code, setCode] = useState(0);

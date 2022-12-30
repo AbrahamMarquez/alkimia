@@ -54,6 +54,18 @@
                 text-align: center;
                 box-shadow: inset 2px 1px 5px rgba(0, 0, 0, 0.12);
             }
+
+            .invalid > input{
+                border: 1px solid red;
+                border-radius: 10px;
+                background-color: #ffffff;
+                font-family: "Metropolis";
+                font-size: 35px;
+                font-weight: bold;
+                color: #000000;
+                text-align: center;
+                box-shadow: inset 2px 1px 5px rgba(0, 0, 0, 0.12);
+            }
         }
 
         .rsecct3 {

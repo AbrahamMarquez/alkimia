@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import GuestLayout from "../../../../components/organisms/GuestLayout/GuestLayout";
 
 //Lazy
 const LandingPage = lazy(() =>
@@ -16,22 +15,19 @@ const FormAnfitrion = lazy(() =>
 const ShowBlog = lazy(() =>
     import("../../../../pages/Guest/Blog/ShowBlog/ShowBlog")
 );
+const Start = lazy(() => import("../../../../pages/Guest/Start/Start"));
+const Blog = lazy(() => import("../../../../pages/Guest/Blog/Blog"));
+const Contact = lazy(() => import("../../../../pages/Guest/Contact/Contact"));
+const Privacy = lazy(() => import("../../../../pages/Guest/Privacy/Privacy"));
+const TmsCds = lazy(() => import("../../../../pages/Guest/Terminos/TmsCds"));
 
-import Blog from "../../../../pages/Guest/Blog/Blog";
-
+//Skeletons
 import ShowBlogSkeleton from "../../../../pages/Guest/Blog/ShowBlog/ShowBlogSkeleton";
-import Contact from "../../../../pages/Guest/Contact/Contact";
-
 import DownloadAppSkeleton from "../../../../pages/Guest/DownloadApp/DownloadAppSkeleton";
-
 import FormAnfitrionSkeleton from "../../../../pages/Guest/Hosts/FormAnfitrion/FormAnfitrionSkeleton";
-
 import HostSkeleton from "../../../../pages/Guest/Hosts/HostSkeleton";
-
 import LandingSkeleton from "../../../../pages/Guest/LandingPage/LandingSkeleton";
-import Privacy from "../../../../pages/Guest/Privacy/Privacy";
-import Start from "../../../../pages/Guest/Start/Start";
-import TmsCds from "../../../../pages/Guest/Terminos/TmsCds";
+import StartSkeleton from "../../../../pages/Guest/Start/StartSkeleton";
 
 const LandingPageRoutes = () => {
     return (
@@ -112,13 +108,12 @@ const LandingPageRoutes = () => {
             <Route
                 path="/start"
                 element={
-                    <Suspense fallback={<></>}>
+                    <Suspense fallback={<StartSkeleton />}>
                         <Start />
                     </Suspense>
                 }
             />
         </Routes>
-        // </GuestLayout>
     );
 };
 

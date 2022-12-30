@@ -2,90 +2,14 @@ import React, { useEffect, useState } from "react";
 import Button from "../../../../components/atoms/Button/Button";
 import Input from "../../../../components/atoms/Input/Input";
 
-//Assets
-import Facebook from "../../../../assets/icons/fb.svg";
-import Instagram from "../../../../assets/icons/instagram.png";
-import Google from "../../../../assets/icons/Google.png";
-
 //Styles
 import "./RecoverAccount.scss";
 import InputNumber from "../../../../components/atoms/InputNumber/InputNumber";
-import { useNavigate } from "react-router-dom";
-import {
-    ColorValidation,
-    SubmitValidation,
-    UpdateValue,
-} from "../../../../utilities/Validations";
 import { Skeleton } from "primereact/skeleton";
 
 const RecoverAccountSkeleton = () => {
-    const navigate = useNavigate();
-    const networks = [
-        {
-            id: 1,
-            icon: Facebook,
-        },
-        {
-            id: 2,
-            icon: Google,
-        },
-        {
-            id: 3,
-            icon: Instagram,
-        },
-    ];
-
-    const isSelectEmail = () => {
-        var boxEmail = document.getElementById("divemailId");
-        var boxPhone = document.getElementById("divphoneId");
-        var textEmail = document.getElementById("text_correo");
-        var textPhone = document.getElementById("text_phone");
-        textEmail.style.borderBottomWidth = "1px";
-        textEmail.style.borderStyle = "solid";
-        textEmail.style.borderColor = "#df1683";
-        textEmail.style.color = "#df1683";
-        textPhone.style.color = "#8a8a8a";
-        textPhone.style.borderColor = "transparent";
-
-        boxEmail.style.display = "flex";
-        boxEmail.style.flexDirection = "column";
-        boxPhone.style.display = "none";
-    };
-    const isSelectPhone = () => {
-        var boxEmail = document.getElementById("divemailId");
-        var boxPhone = document.getElementById("divphoneId");
-        var textEmail = document.getElementById("text_correo");
-        var textPhone = document.getElementById("text_phone");
-        textPhone.style.borderBottomWidth = "1px";
-        textPhone.style.borderStyle = "solid";
-        textPhone.style.borderColor = "#df1683";
-        textPhone.style.color = "#df1683";
-
-        textEmail.style.color = "#8a8a8a";
-        textEmail.style.borderColor = "transparent";
-
-        boxEmail.style.display = "none";
-        boxPhone.style.display = "flex";
-        boxPhone.style.flexDirection = "column";
-    };
-
-    const [inputList, setInputList] = useState({
-        state: { value: null, validationType: "empty" },
-    });
-
-    useEffect(() => {
-        for (const propertyName in inputList) {
-            if (document.getElementById(propertyName)) {
-                ColorValidation(propertyName, inputList);
-            }
-        }
-    }, [inputList]);
-
-    const handleSubmit = () => {
-        if (SubmitValidation(inputList, setInputList)) {
-            navigate("/recover-code");
-        }
-    };
+  
+    
 
     return (
         <div className="RecoverAccount">

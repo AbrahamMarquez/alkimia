@@ -1,86 +1,16 @@
 import React, { useEffect, useState } from "react";
 import InputSearch from "../../../components/atoms/InputSearch/InputSearch";
-import Button from "../../../components/atoms/Button/Button";
 
-//assets
-import Arrow from "../../../assets/icons/arrow.svg";
 import Apoyo from "../../../assets/icons/apoyo.svg";
 import Grape from "../../../assets/icons/grape.svg";
 import Shape from "../../../assets/icons/Shape.svg";
 import Pago from "../../../assets/icons/pago.svg";
-import Phone from "../../../assets/icons/phoneA.png";
 import Vino from "../../../assets//icons/vino.png";
-import LogoColor from "../../../assets/icons/logob.png";
-
-import Bed from "../../../assets//icons/test/034-bed.svg";
-import Vela from "../../../assets//icons/test/Combined Shape.svg";
-import House from "../../../assets//icons/test/Combined Shape (1).svg";
-import Botella from "../../../assets//icons/test/Combined Shape (2).svg";
-import Granja from "../../../assets//icons/test/Combined Shape (3).svg";
-import Food from "../../../assets//icons/test/Combined Shape (4).svg";
-import Autencilios from "../../../assets//icons/test/Combined Shape (5).svg";
-import Sol from "../../../assets//icons/test/Combined Shape (6).svg";
-import Globo from "../../../assets//icons/test/globo-aerostatico.svg";
-
-import Cheese from "../../../assets/icons/cheese.png";
-import Campeche from "../../../assets/icons/campechex.png";
-import Breanch_grape from "../../../assets/icons/breanch_grape.png";
-import Olive from "../../../assets/icons/olive.png";
-
-import ExpA from "../../../assets/icons/expA.svg";
-import ExpB from "../../../assets/icons/expB.svg";
-import ExpC from "../../../assets/icons/expC.svg";
-import ExpD from "../../../assets/icons/expD.svg";
-import ExpE from "../../../assets/icons/expE.svg";
-import ExpF from "../../../assets/icons/expF.svg";
-
-import PaseoA from "../../../assets/icons/Paseo.svg";
-import PaseoB from "../../../assets/icons/PaseoB.svg";
-import PaseoC from "../../../assets/icons/PaseoC.svg";
-import PaseoD from "../../../assets/icons/PaseoD.svg";
-import PaseoE from "../../../assets/icons/PaseoE.svg";
-import PaseoF from "../../../assets/icons/PaseoF.svg";
-
-import GasA from "../../../assets/icons/gasA.svg";
-import GasB from "../../../assets/icons/gasB.svg";
-import GasC from "../../../assets/icons/gasC.svg";
-import GasD from "../../../assets/icons/gasD.svg";
-import GasE from "../../../assets/icons/gasE.svg";
-import GasF from "../../../assets/icons/gasF.svg";
-
-import AlkimiaB from "../../../assets/icons/alkimiaB.png";
-import GoogleStore from "../../../assets/icons/googleStore.png";
-import AppleStore from "../../../assets/icons/appleStore.png";
-import PhoneB from "../../../assets/icons/phoneB.png";
-
-import Experiencias from "../../../assets/icons/Experiencias.svg";
 
 import "./LandingPage.scss";
-import PostCardViewx from "../../../components/molecules/PostCardView/PostCardViewx";
-import Carousel from "../../../components/molecules/Carousel/Carousel";
-import Map from "../../../components/molecules/Maps/Maps";
-import { useNavigate } from "react-router-dom";
-import Carrusel from "../../../components/organisms/Carrusel/Carrusel";
 import { Skeleton } from "primereact/skeleton";
 
 const LandingSkeleton = () => {
-    const [openPlace, setOpenPlace] = useState(false);
-    const [openCategory, setOpenCategory] = useState(false); //-250
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            window.addEventListener("scroll", () => {
-                if (window.pageYOffset > 400) {
-                    document.getElementById("secct-3-device").style.left =
-                        "20px";
-                    document.getElementById("secct-3-device").style.transition =
-                        "all 0.5s";
-                }
-            });
-        }
-    }, []);
-
-    const navigate = useNavigate();
 
     const helpTravel = [
         {

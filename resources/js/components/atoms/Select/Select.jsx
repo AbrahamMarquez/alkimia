@@ -40,6 +40,6 @@ export default function ({
             </div>
         </div>
     ) : (
-        <Skeleton width={width || "100%"} className={className} height="34px" />
+        <Skeleton width={width || "100%"} className={className} height="48px" />
     );
 }
