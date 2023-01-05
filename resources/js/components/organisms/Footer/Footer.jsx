@@ -58,7 +58,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="contact-as">
-                        <p className="contactar-title">Contactato</p>
+                        <p className="contactar-title">Contacto</p>
                         <button
                             className="contac-as-a"
                             onClick={() => navigate("contact")}
